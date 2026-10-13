@@ -1,0 +1,242 @@
+
+/* *** OCEAN GLOW — PORTFOLIO THEME *** */
+
+/* *** 1. COLOUR PALETTE *** */
+:root {
+  --ice-blue: #DDF4FA;
+  --turquoise: #55D6D2;
+  --lilac: #B9A7E8;
+  --ivory: #F5F0E8;
+  --sage: #9BB7A5;
+  --navy: #22283D;
+  --white: #FFFFFF;
+
+  --background: var(--ivory);
+  --surface: rgba(255, 255, 255, 0.78);
+  --text: var(--navy);
+  --muted: #626B7C;
+
+  --radius: 22px;
+  --shadow: 0 12px 35px rgba(34, 40, 61, 0.09);
+}
+
+/* *** 2. RESET AND PAGE BASE *** */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 10% 5%,
+      rgba(85, 214, 210, 0.20),
+      transparent 36%
+    ),
+    radial-gradient(
+      ellipse at 90% 25%,
+      rgba(185, 167, 232, 0.20),
+      transparent 32%
+    ),
+    var(--background);
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* *** 3. HEADINGS *** */
+h1, h2, h3 {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+p {
+  color: var(--muted);
+}
+
+/* *** 4. NAVIGATION *** */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 7%;
+  background: rgba(245, 240, 232, 0.82);
+  border-bottom: 1px solid rgba(34, 40, 61, 0.08);
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 8px;
+}
+
+nav a:hover {
+  color: #168F91;
+}
+
+/* *** 5. SECTIONS *** */
+section {
+  padding: 80px 8%;
+  scroll-margin-top: 30px;
+}
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(
+    135deg,
+    rgba(221, 244, 250, 0.8),
+    rgba(245, 240, 232, 0.5),
+    rgba(185, 167, 232, 0.22)
+  );
+}
+
+.hero p {
+  max-width: 650px;
+  font-size: 1.15rem;
+}
+
+.accent {
+  color: #168F91;
+}
+
+/* *** 6. BUTTONS *** */
+.button,
+button {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--turquoise);
+  color: var(--navy);
+  text-decoration: none;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(85, 214, 210, 0.3);
+}
+
+/* *** 7. PROJECT AND CONTENT CARDS *** */
+.projects,
+.project-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 250px), 1fr)
+  );
+  gap: 24px;
+}
+
+.card,
+.project-card,
+.skill-card {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid rgba(34, 40, 61, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover,
+.project-card:hover,
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--turquoise);
+}
+
+/* *** 8. PROJECT IMAGES *** */
+.project-card img,
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* *** 9. LINKS *** */
+a {
+  transition: color 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #168F91;
+  outline-offset: 4px;
+}
+
+/* *** 10. CONTACT AND FOOTER *** */
+footer {
+  padding: 35px 8%;
+  text-align: center;
+  background: var(--navy);
+  color: var(--white);
+}
+
+footer p {
+  color: var(--ice-blue);
+}
+
+/* *** 11. MOBILE RESPONSIVENESS *** */
+@media (max-width: 600px) {
+  nav {
+    padding: 18px 5%;
+  }
+
+  nav a {
+    margin: 0 5px;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
+
+  .hero {
+    min-height: 65vh;
+  }
+
+  .card,
+  .project-card,
+  .skill-card {
+    padding: 22px;
+  }
+}
+
+/* *** 12. REDUCED MOTION ACCESSIBILITY *** */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
