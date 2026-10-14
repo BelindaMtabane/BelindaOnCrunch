@@ -3,6 +3,29 @@
    BELINDA ON CRUNCH — PROTECTED CV PAGE
    ========================================== */
 
+/* *** Updated: Match the Home page font pairing. */
+.cv-page {
+    font-family: "Inter", sans-serif;
+}
+
+.cv-page h1,
+.cv-page h2,
+.cv-page h3,
+.cv-page .cv-brand,
+.cv-page .brand,
+.cv-page .footer-brand {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* *** Updated: Use Inter consistently for normal text and controls. */
+.cv-page p,
+.cv-page a,
+.cv-page button,
+.cv-page input,
+.cv-page label {
+    font-family: "Inter", sans-serif;
+}
+
 /* *** Updated: Use a consistent, readable font and base size. */
 .cv-page {
     --cv-aqua: #55d6d9;
@@ -812,4 +835,5 @@
         transition-duration: .01ms !important;
     }
 }
+
 
