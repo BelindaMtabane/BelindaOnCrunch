@@ -4,553 +4,268 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- *** ADDED: Responsive layout for desktop and mobile. -->
+    <!-- *** Added: Responsive layout and browser theme. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e7fbfc">
 
-    <title>Private CV | BELINDA ON CRUNCH</title>
-    <meta
-        name="description"
-        content="Access Belinda's professional game development CV."
-    >
+    <title>My CV | BELINDA ON CRUNCH</title>
+    <meta name="description" content="View Belinda's professional CV with authorised access.">
 
-    <!-- Reuse the stylesheet from your existing portfolio. -->
+    <!-- Reuse your existing website styling. -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- *** ADDED: CV-specific visual styling. -->
-    <style>
-        .cv-gate-page {
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            background:
-                radial-gradient(
-                    circle at 15% 15%,
-                    rgba(105, 231, 218, 0.16),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 85% 75%,
-                    rgba(171, 145, 255, 0.18),
-                    transparent 35%
-                ),
-                var(--bg, #f7f9ff);
-            color: var(--text, #202642);
-        }
-
-        .cv-gate-page *,
-        .cv-gate-page *::before,
-        .cv-gate-page *::after {
-            box-sizing: border-box;
-        }
-
-        .cv-topbar {
-            position: relative;
-            z-index: 2;
-            width: min(1120px, calc(100% - 40px));
-            margin: 0 auto;
-            padding: 25px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .cv-brand {
-            text-decoration: none;
-            color: inherit;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            font-size: 0.9rem;
-        }
-
-        .cv-brand span {
-            color: #46bdb6;
-        }
-
-        .cv-back-link {
-            text-decoration: none;
-            color: inherit;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
-        }
-
-        .cv-back-link:hover {
-            opacity: 1;
-        }
-
-        .cv-gate-main {
-            flex: 1;
-            width: min(1120px, calc(100% - 40px));
-            margin: 0 auto;
-            padding: 55px 0 90px;
-            display: grid;
-            grid-template-columns: 1fr minmax(320px, 440px);
-            align-items: center;
-            gap: 70px;
-        }
-
-        .cv-intro {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cv-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            margin-bottom: 20px;
-            color: #368f94;
-            font-size: 0.76rem;
-            font-weight: 800;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-
-        .cv-eyebrow::before {
-            content: "";
-            width: 27px;
-            height: 2px;
-            background: linear-gradient(90deg, #55d5ca, #a58bff);
-        }
-
-        .cv-intro h1 {
-            margin: 0 0 22px;
-            max-width: 650px;
-            font-size: clamp(2.8rem, 6vw, 5.4rem);
-            line-height: 1.04;
-            letter-spacing: -0.055em;
-        }
-
-        .cv-gradient-text {
-            background: linear-gradient(
-                110deg,
-                #39bdb5,
-                #8c79e8 70%,
-                #b29cff
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .cv-intro > p {
-            max-width: 570px;
-            font-size: 1.05rem;
-            line-height: 1.85;
-            opacity: 0.8;
-        }
-
-        .cv-tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 27px;
-        }
-
-        .cv-tech-tags span {
-            padding: 9px 13px;
-            border: 1px solid rgba(100, 139, 174, 0.2);
-            border-radius: 100px;
-            background: rgba(255, 255, 255, 0.56);
-            font-size: 0.78rem;
-            font-weight: 650;
-        }
-
-        .cv-lock-card {
-            position: relative;
-            z-index: 1;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            border-radius: 26px;
-            background: rgba(255, 255, 255, 0.76);
-            box-shadow:
-                0 24px 75px rgba(61, 73, 120, 0.12),
-                inset 0 1px 0 rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(18px);
-        }
-
-        .cv-card-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 27px;
-        }
-
-        .cv-window-dots {
-            display: flex;
-            gap: 6px;
-        }
-
-        .cv-window-dots span {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: #7ed9d0;
-        }
-
-        .cv-window-dots span:nth-child(2) {
-            background: #b5a1ff;
-        }
-
-        .cv-window-dots span:nth-child(3) {
-            background: #d9dff0;
-        }
-
-        .cv-status {
-            color: #71809c;
-            font-size: 0.68rem;
-            font-weight: 800;
-            letter-spacing: 0.1em;
-        }
-
-        .cv-lock-icon {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 21px;
-            display: grid;
-            place-items: center;
-            border: 1px solid rgba(96, 201, 195, 0.35);
-            border-radius: 20px;
-            background: linear-gradient(
-                135deg,
-                rgba(100, 224, 212, 0.22),
-                rgba(172, 149, 255, 0.22)
-            );
-            color: #398f96;
-            font-size: 1.8rem;
-        }
-
-        .cv-lock-card h2 {
-            margin: 0 0 10px;
-            font-size: 1.65rem;
-            letter-spacing: -0.035em;
-        }
-
-        .cv-lock-card > p {
-            margin: 0 0 24px;
-            color: #6b7590;
-            font-size: 0.92rem;
-            line-height: 1.7;
-        }
-
-        .cv-password-label {
-            display: block;
-            margin-bottom: 9px;
-            font-size: 0.82rem;
-            font-weight: 750;
-        }
-
-        .cv-password-input {
-            width: 100%;
-            min-height: 52px;
-            padding: 13px 15px;
-            border: 1px solid #dce2f1;
-            border-radius: 13px;
-            outline: none;
-            background: rgba(255, 255, 255, 0.9);
-            color: #202642;
-            font: inherit;
-            transition:
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .cv-password-input:focus {
-            border-color: #65cfc7;
-            box-shadow: 0 0 0 4px rgba(101, 207, 199, 0.16);
-        }
-
-        .cv-submit-button {
-            width: 100%;
-            min-height: 52px;
-            margin-top: 13px;
-            border: 0;
-            border-radius: 13px;
-            background: linear-gradient(110deg, #55d2c7, #a28af5);
-            color: #17213a;
-            font: inherit;
-            font-weight: 800;
-            cursor: pointer;
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .cv-submit-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(114, 139, 218, 0.22);
-        }
-
-        .cv-submit-button:disabled {
-            cursor: wait;
-            opacity: 0.65;
-            transform: none;
-        }
-
-        .cv-feedback {
-            min-height: 24px;
-            margin-top: 12px;
-            color: #9b3e60;
-            font-size: 0.82rem;
-            line-height: 1.5;
-        }
-
-        .cv-security-note {
-            display: flex;
-            align-items: flex-start;
-            gap: 9px;
-            margin-top: 17px;
-            color: #77819a;
-            font-size: 0.75rem;
-            line-height: 1.6;
-        }
-
-        .cv-security-note span {
-            color: #429b96;
-        }
-
-        .cv-binary-decoration {
-            position: absolute;
-            top: 23%;
-            right: 42%;
-            color: rgba(95, 151, 173, 0.17);
-            font-family: monospace;
-            font-size: 0.8rem;
-            line-height: 2;
-            letter-spacing: 0.22em;
-            pointer-events: none;
-            transform: rotate(-8deg);
-        }
-
-        .cv-footer {
-            position: relative;
-            z-index: 1;
-            padding: 24px 20px;
-            background: #171d38;
-            color: #e9ecfb;
-            text-align: center;
-            font-size: 0.8rem;
-        }
-
-        .cv-footer p {
-            margin: 0;
-            opacity: 0.76;
-        }
-
-        /* *** ADDED: Hide decorative elements on smaller screens. */
-        @media (max-width: 800px) {
-            .cv-gate-main {
-                grid-template-columns: 1fr;
-                gap: 38px;
-                padding-top: 35px;
-            }
-
-            .cv-intro h1 {
-                font-size: clamp(2.8rem, 12vw, 4.5rem);
-            }
-
-            .cv-lock-card {
-                width: 100%;
-                max-width: 520px;
-            }
-
-            .cv-binary-decoration {
-                top: 15%;
-                right: 4%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .cv-topbar,
-            .cv-gate-main {
-                width: min(100% - 28px, 1120px);
-            }
-
-            .cv-topbar {
-                padding: 20px 0;
-            }
-
-            .cv-gate-main {
-                padding-top: 25px;
-            }
-
-            .cv-lock-card {
-                padding: 23px;
-                border-radius: 21px;
-            }
-
-            .cv-intro > p {
-                font-size: 0.96rem;
-            }
-
-            .cv-binary-decoration {
-                display: none;
-            }
-        }
-    </style>
+    <!-- *** Added: CV-specific visual design. -->
+    <link rel="stylesheet" href="cv.css">
 </head>
 
-<body>
-    <div class="cv-gate-page">
+<body class="cv-page">
 
-        <!-- *** ADDED: Matching portfolio navigation header. -->
-        <header class="cv-topbar">
-            <a class="cv-brand" href="index.html">
-                BELINDA <span>ON CRUNCH</span>
-            </a>
+    <div class="cv-background-glow glow-one"></div>
+    <div class="cv-background-glow glow-two"></div>
 
-            <a class="cv-back-link" href="index.html">
-                ← Back to portfolio
-            </a>
-        </header>
-
-        <!-- Decorative code-inspired detail. -->
-        <div class="cv-binary-decoration" aria-hidden="true">
-            01001000 01001111<br>
-            10110100 01001010<br>
-            01000011 10101001<br>
-            11001010 01001101
-        </div>
-
-        <main class="cv-gate-main">
-
-            <!-- *** ADDED: CV introduction and skills preview. -->
-            <section class="cv-intro">
-                <div class="cv-eyebrow">
-                    Professional profile
-                </div>
-
-                <h1>
-                    My work.<br>
-                    My journey.<br>
-                    <span class="cv-gradient-text">My CV.</span>
-                </h1>
-
-                <p>
-                    Welcome to my professional profile. Explore my journey
-                    in game design and development, programming, interactive
-                    systems, tutoring, and creative technology.
-                </p>
-
-                <div class="cv-tech-tags" aria-label="Technical skills">
-                    <span>Unity</span>
-                    <span>Unreal Engine</span>
-                    <span>C#</span>
-                    <span>C++</span>
-                    <span>Blueprints</span>
-                    <span>Blender</span>
-                </div>
-            </section>
-
-            <!-- *** ADDED: Password entry card.
-                 IMPORTANT: This is only the visual front end.
-                 The secure backend must be configured before launch. -->
-            <section class="cv-lock-card" aria-labelledby="cv-lock-title">
-                <div class="cv-card-top">
-                    <div class="cv-window-dots" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <span class="cv-status">PRIVATE ACCESS</span>
-                </div>
-
-                <div class="cv-lock-icon" aria-hidden="true">
-                    &#128274;
-                </div>
-
-                <h2 id="cv-lock-title">A closer look</h2>
-
-                <p>
-                    This professional CV is password-protected.
-                    Enter the password provided to you to request access.
-                </p>
-
-                <form id="cv-access-form">
-                    <label
-                        class="cv-password-label"
-                        for="cv-password"
-                    >
-                        Access password
-                    </label>
-
-                    <input
-                        class="cv-password-input"
-                        type="password"
-                        id="cv-password"
-                        name="password"
-                        placeholder="Enter your password"
-                        autocomplete="current-password"
-                        required
-                        minlength="1"
-                    >
-
-                    <button
-                        class="cv-submit-button"
-                        id="cv-submit-button"
-                        type="submit"
-                    >
-                        Request secure access →
-                    </button>
-
-                    <p
-                        class="cv-feedback"
-                        id="cv-feedback"
-                        role="status"
-                        aria-live="polite"
-                    ></p>
-                </form>
-
-                <div class="cv-security-note">
-                    <span aria-hidden="true">&#9679;</span>
-                    <span>
-                        Access is intended for authorised visitors.
-                        The secure password verification service must
-                        be connected before this page goes live.
-                    </span>
-                </div>
-            </section>
-        </main>
-
-        <!-- *** ADDED: Footer matching the portfolio's dark navy theme. -->
-        <footer class="cv-footer">
-            <p>
-                © 2026 BELINDA ON CRUNCH · Thoughtfully built. Boldly imagined.
-            </p>
-        </footer>
+    <!-- *** Added: Decorative code details. -->
+    <div class="cv-code-decoration code-left" aria-hidden="true">
+        01000010<br>
+        01000101<br>
+        01001100<br>
+        01001001<br>
+        01001110<br>
+        01000100<br>
+        01000001
     </div>
 
-    <!--
-        *** SECURITY NOTE:
-        This page intentionally does not check the password in JavaScript.
-        A public HTML page cannot securely protect private CV content by itself.
+    <header class="cv-navbar">
+        <a class="cv-brand" href="index.html" aria-label="Return to homepage">
+            <span class="brand-symbol">B</span>
+            <span>BELINDA <strong>ON CRUNCH</strong></span>
+        </a>
 
-        After the backend is configured, this form should send the password
-        over HTTPS to the secure authentication endpoint. The server must
-        verify it and return an authorised session before protected CV content
-        or the PDF can be requested.
-    -->
+        <nav class="cv-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <!-- Update about.html if your About page uses another filename. -->
+            <a href="about.html">About</a>
+            <a class="cv-nav-active" href="cv.html" aria-current="page">My CV</a>
+        </nav>
+    </header>
 
-    <script>
-        // *** ADDED: Safe placeholder while the secure backend is not connected.
-        // This prevents the form from pretending that password protection works.
-        const cvAccessForm = document.getElementById("cv-access-form");
-        const cvFeedback = document.getElementById("cv-feedback");
-        const cvSubmitButton = document.getElementById("cv-submit-button");
+    <main class="cv-main">
 
-        cvAccessForm.addEventListener("submit", function (event) {
-            event.preventDefault();
+        <section class="cv-heading">
+            <span class="cv-eyebrow">
+                <span class="status-dot"></span>
+                PERSONAL PORTFOLIO / PRIVATE DOCUMENT
+            </span>
 
-            cvFeedback.textContent =
-                "Secure access is not connected yet. Please finish the backend setup before using this page.";
+            <h1>
+                My work.<br>
+                My journey.<br>
+                <span>My CV.</span>
+            </h1>
 
-            cvSubmitButton.textContent = "Backend setup required";
-        });
-    </script>
+            <p>
+                A closer look at my experience, technical skills, creative
+                projects and journey in game development.
+            </p>
+
+            <div class="cv-skills" aria-label="Areas of expertise">
+                <span>Unity</span>
+                <span>Unreal Engine</span>
+                <span>C#</span>
+                <span>C++</span>
+                <span>Blueprints</span>
+                <span>Blender</span>
+                <span>Game Design</span>
+            </div>
+        </section>
+
+        <section class="cv-document-section" aria-label="Protected CV document">
+
+            <div class="document-topline">
+                <div>
+                    <span class="document-kicker">DOCUMENT 01</span>
+                    <h2>Curriculum Vitae</h2>
+                </div>
+
+                <span class="private-badge">
+                    <span aria-hidden="true">●</span> PRIVATE ACCESS
+                </span>
+            </div>
+
+            <!--
+              *** Security: This is only a decorative preview.
+              The real PDF is NOT loaded until the server authorises access.
+            -->
+            <div class="cv-document-shell" id="cv-document-shell">
+
+                <div class="cv-placeholder-preview" id="cv-placeholder-preview"
+                     aria-hidden="true">
+
+                    <div class="fake-cv-page">
+                        <div class="fake-cv-header">
+                            <div class="fake-avatar">B</div>
+                            <div class="fake-header-text">
+                                <span class="fake-name"></span>
+                                <span class="fake-role"></span>
+                                <span class="fake-contact"></span>
+                            </div>
+                        </div>
+
+                        <div class="fake-section">
+                            <span class="fake-section-title">PROFILE</span>
+                            <span class="fake-line long"></span>
+                            <span class="fake-line"></span>
+                            <span class="fake-line medium"></span>
+                        </div>
+
+                        <div class="fake-section">
+                            <span class="fake-section-title">EDUCATION</span>
+                            <span class="fake-line long"></span>
+                            <span class="fake-line medium"></span>
+                        </div>
+
+                        <div class="fake-section">
+                            <span class="fake-section-title">EXPERIENCE</span>
+                            <span class="fake-line long"></span>
+                            <span class="fake-line"></span>
+                            <span class="fake-line medium"></span>
+                        </div>
+
+                        <div class="fake-section">
+                            <span class="fake-section-title">TECHNICAL SKILLS</span>
+                            <div class="fake-skill-lines">
+                                <span></span><span></span><span></span>
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+
+                        <div class="fake-section">
+                            <span class="fake-section-title">PROJECTS</span>
+                            <span class="fake-line long"></span>
+                            <span class="fake-line medium"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- *** Added: Actual PDF viewer stays empty until authorised. -->
+                <div class="cv-pdf-container" id="cv-pdf-container" hidden>
+                    <iframe
+                        id="cv-pdf-viewer"
+                        title="Authorised CV document"
+                        loading="lazy"
+                        referrerpolicy="no-referrer">
+                    </iframe>
+                </div>
+
+                <!-- *** Added: Frosted-glass password gate. -->
+                <div class="cv-gate-overlay" id="cv-gate-overlay">
+                    <div class="cv-gate-card">
+
+                        <div class="lock-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="10" width="16" height="11"
+                                      rx="3" stroke="currentColor"
+                                      stroke-width="1.7"/>
+                                <path d="M8 10V7a4 4 0 0 1 8 0v3"
+                                      stroke="currentColor"
+                                      stroke-width="1.7"
+                                      stroke-linecap="round"/>
+                                <circle cx="12" cy="15" r="1.3"
+                                        fill="currentColor"/>
+                            </svg>
+                        </div>
+
+                        <span class="gate-eyebrow">SECURE DOCUMENT ACCESS</span>
+
+                        <h2>Curious to know more?</h2>
+
+                        <p>
+                            This CV is protected. Enter the access password
+                            to view the full document.
+                        </p>
+
+                        <form id="cv-access-form">
+                            <label for="cv-password">Access password</label>
+
+                            <div class="password-input-wrap">
+                                <input
+                                    type="password"
+                                    id="cv-password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                    minlength="1"
+                                    maxlength="256">
+
+                                <button
+                                    type="button"
+                                    id="cv-toggle-password"
+                                    class="password-toggle"
+                                    aria-label="Show password">
+                                    Show
+                                </button>
+                            </div>
+
+                            <button type="submit" class="cv-unlock-button"
+                                    id="cv-unlock-button">
+                                <span id="cv-button-text">Unlock my CV</span>
+                                <span aria-hidden="true">↗</span>
+                            </button>
+
+                            <p class="cv-feedback" id="cv-feedback"
+                               role="status" aria-live="polite"></p>
+                        </form>
+
+                        <div class="secure-note">
+                            <span aria-hidden="true">✦</span>
+                            Protected access · Private document
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- *** Added: Lock control appears after successful access. -->
+            <div class="cv-viewer-controls" id="cv-viewer-controls" hidden>
+                <span class="access-granted">
+                    <span class="status-dot"></span>
+                    Authorised access granted
+                </span>
+                <button type="button" id="cv-lock-button" class="cv-lock-button">
+                    Lock document
+                </button>
+            </div>
+
+        </section>
+
+        <section class="cv-bottom-note">
+            <span class="note-star" aria-hidden="true">✳</span>
+            <p>
+                Creativity meets technology. Every project is another
+                opportunity to learn, build and grow.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Match this footer to your existing footer if its wording differs. -->
+    <footer class="cv-footer">
+        <a href="index.html" class="footer-brand">BELINDA ON CRUNCH</a>
+        <p>Thoughtfully built. Boldly imagined.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="cv.html">My CV</a>
+        </div>
+
+        <span class="footer-copyright">
+            © 2026 BELINDA ON CRUNCH. All rights reserved.
+        </span>
+    </footer>
+
+    <!-- *** Added: Page interaction script. -->
+    <script src="cv.js" defer></script>
+
 </body>
 </html>
