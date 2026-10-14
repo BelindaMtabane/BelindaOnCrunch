@@ -895,16 +895,15 @@
     display: none !important;
 }
 
-/* *** Fix: Prevent shared Home page hero decorations from appearing on the CV page. */
-.cv-page .hero,
-.cv-page .hero-content,
+/* *** Fix: Keep Home page hero decorations off the CV page. */
+.cv-page .cv-background-glow,
+.cv-page .cv-code-decoration,
 .cv-page .hero-visual,
 .cv-page .hero-decoration,
-.cv-page .floating-card,
 .cv-page .code-window,
 .cv-page .code-card,
+.cv-page .floating-code,
 .cv-page .tech-stack,
 .cv-page .hero-badges {
     display: none !important;
 }
-
