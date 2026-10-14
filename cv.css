@@ -888,13 +888,23 @@
 .cv-page button {
     font-family: "Inter", sans-serif;
 }
-/* *** Hide Home-page hero decorations if shared styles display them on the CV page. */
+
+/* *** Fix: Hide decorative Home page elements on the CV page only. */
+.cv-page .cv-background-glow,
+.cv-page .cv-code-decoration {
+    display: none !important;
+}
+
+/* *** Fix: Prevent shared Home page hero decorations from appearing on the CV page. */
 .cv-page .hero,
-.cv-page .hero-section,
+.cv-page .hero-content,
 .cv-page .hero-visual,
+.cv-page .hero-decoration,
+.cv-page .floating-card,
+.cv-page .code-window,
 .cv-page .code-card,
-.cv-page .floating-code,
-.cv-page .tech-tags {
+.cv-page .tech-stack,
+.cv-page .hero-badges {
     display: none !important;
 }
 
