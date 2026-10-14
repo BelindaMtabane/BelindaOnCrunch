@@ -2652,4 +2652,91 @@ footer .copyright {
   }
 }
 
+/* *** FIX: SHARED FOOTER FOR HOMEPAGE AND ABOUT PAGE *** */
+
+.site-footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 48px 24px 28px;
+  background: var(--deep-navy);
+  color: var(--white);
+}
+
+/* *** FIX: Stack the footer content vertically and centre it. */
+.site-footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+
+  width: min(var(--page-width), 100%);
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* *** FIX: Centre the brand at the top. */
+.site-footer .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.site-footer .footer-brand small {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* *** FIX: Style the footer description. */
+.site-footer .footer-content > p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}
+
+/* *** FIX: Keep the links side by side in their own row. */
+.site-footer .footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.site-footer .footer-links a {
+  color: var(--ice-blue);
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: var(--turquoise);
+}
+
+/* *** FIX: Give copyright its own row below the links. */
+.site-footer .copyright {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 27px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 11px;
+  text-align: center;
+}
+
+/* *** FIX: Adjust spacing on smaller screens. */
+@media (max-width: 680px) {
+  .site-footer {
+    padding: 40px 18px 24px;
+  }
+
+  .site-footer .footer-links {
+    gap: 20px;
+  }
+}
+
 
