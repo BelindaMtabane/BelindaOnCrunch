@@ -3,188 +3,203 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <!-- *** Added: Responsive layout and browser theme. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#e7fbfc">
+    <meta name="theme-color" content="#22283D">
+    <meta name="description" content="View Belinda Mtabane's protected CV, game development experience, app development skills and creative technology background.">
 
-    <title>My CV | BELINDA ON CRUNCH</title>
-    <meta name="description" content="View Belinda's professional CV with authorised access.">
+    <title>My CV | Belinda On Crunch</title>
 
-    <!-- Reuse your existing website styling. -->
+    <!-- *** Match the Home page stylesheet. -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- *** Added: CV-specific visual design. -->
     <link rel="stylesheet" href="cv.css">
+
+    <!-- *** Match the exact fonts used on the Home page. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- *** Keep the existing password-protection JavaScript. -->
+    <script src="cv.js" defer></script>
 </head>
 
 <body class="cv-page">
 
-    <div class="cv-background-glow glow-one"></div>
-    <div class="cv-background-glow glow-two"></div>
+    <!-- DECORATIVE BACKGROUND -->
+    <div class="cv-background-glow glow-one" aria-hidden="true"></div>
+    <div class="cv-background-glow glow-two" aria-hidden="true"></div>
 
-    <!-- *** Added: Decorative code details. -->
     <div class="cv-code-decoration code-left" aria-hidden="true">
-        01000010<br>
-        01000101<br>
-        01001100<br>
-        01001001<br>
+        01001000<br>
+        10110101<br>
         01001110<br>
-        01000100<br>
-        01000001
+        11001001<br>
+        00110110<br>
+        10101001
     </div>
 
+    <!-- NAVIGATION -->
     <header class="cv-navbar">
-        <a class="cv-brand" href="index.html" aria-label="Return to homepage">
+        <a class="cv-brand" href="index.html" aria-label="Belinda On Crunch home">
             <span class="brand-symbol">B</span>
-            <span>BELINDA <strong>ON CRUNCH</strong></span>
+            <span>
+                BELINDA ON CRUNCH
+                <strong>GAME &amp; APP DEVELOPMENT</strong>
+            </span>
         </a>
 
         <nav class="cv-navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <!-- Update about.html if your About page uses another filename. -->
+            <a href="projects.html">Projects</a>
+            <a href="showcase.html">Showcase</a>
             <a href="about.html">About</a>
-            <a class="cv-nav-active" href="cv.html" aria-current="page">My CV</a>
+            <a href="contact.html">Contact</a>
+            <a href="cv.html" class="cv-nav-active" aria-current="page">CV</a>
         </nav>
     </header>
 
     <main class="cv-main">
 
+        <!-- INTRODUCTION -->
         <section class="cv-heading">
             <span class="cv-eyebrow">
                 <span class="status-dot"></span>
-                PERSONAL PORTFOLIO / PRIVATE DOCUMENT
+                CREATIVE TECHNOLOGY · GAME DEVELOPMENT
             </span>
 
             <h1>
-                My work.<br>
-                My journey.<br>
-                <span>My CV.</span>
+                My professional<br>
+                <span>journey.</span>
             </h1>
 
             <p>
-                A closer look at my experience, technical skills, creative
-                projects and journey in game development.
+                Explore my background, technical skills and development journey.
+                My CV is protected to help keep my personal information private.
             </p>
 
-            <div class="cv-skills" aria-label="Areas of expertise">
+            <div class="cv-skills" aria-label="Core technologies">
                 <span>Unity</span>
                 <span>Unreal Engine</span>
                 <span>C#</span>
                 <span>C++</span>
-                <span>Blueprints</span>
-                <span>Blender</span>
-                <span>Game Design</span>
+                <span>Kotlin</span>
+                <span>Game Development</span>
             </div>
         </section>
 
-        <section class="cv-document-section" aria-label="Protected CV document">
+        <!-- PROTECTED CV DOCUMENT -->
+        <section class="cv-document-section" aria-labelledby="cv-document-title">
 
             <div class="document-topline">
                 <div>
-                    <span class="document-kicker">DOCUMENT 01</span>
-                    <h2>Curriculum Vitae</h2>
+                    <span class="document-kicker">
+                        PRIVATE DOCUMENT
+                    </span>
+
+                    <h2 id="cv-document-title">Curriculum Vitae</h2>
                 </div>
 
                 <span class="private-badge">
-                    <span aria-hidden="true">●</span> PRIVATE ACCESS
+                    <span aria-hidden="true">✦</span>
+                    PASSWORD PROTECTED
                 </span>
             </div>
 
-            <!--
-              *** Security: This is only a decorative preview.
-              The real PDF is NOT loaded until the server authorises access.
-            -->
-            <div class="cv-document-shell" id="cv-document-shell">
+            <div class="cv-document-shell">
 
-                <div class="cv-placeholder-preview" id="cv-placeholder-preview"
-                     aria-hidden="true">
-
+                <!-- DECORATIVE PREVIEW: NOT THE ACTUAL CV PDF -->
+                <div class="cv-placeholder-preview" id="cv-placeholder-preview" aria-hidden="true">
                     <div class="fake-cv-page">
+
                         <div class="fake-cv-header">
                             <div class="fake-avatar">B</div>
+
                             <div class="fake-header-text">
-                                <span class="fake-name"></span>
-                                <span class="fake-role"></span>
-                                <span class="fake-contact"></span>
+                                <div class="fake-name"></div>
+                                <div class="fake-role"></div>
+                                <div class="fake-contact"></div>
                             </div>
                         </div>
 
                         <div class="fake-section">
-                            <span class="fake-section-title">PROFILE</span>
-                            <span class="fake-line long"></span>
-                            <span class="fake-line"></span>
-                            <span class="fake-line medium"></span>
+                            <div class="fake-section-title">PROFILE</div>
+                            <div class="fake-line long"></div>
+                            <div class="fake-line long"></div>
+                            <div class="fake-line medium"></div>
                         </div>
 
                         <div class="fake-section">
-                            <span class="fake-section-title">EDUCATION</span>
-                            <span class="fake-line long"></span>
-                            <span class="fake-line medium"></span>
+                            <div class="fake-section-title">EDUCATION</div>
+                            <div class="fake-line long"></div>
+                            <div class="fake-line medium"></div>
+                            <div class="fake-line long"></div>
                         </div>
 
                         <div class="fake-section">
-                            <span class="fake-section-title">EXPERIENCE</span>
-                            <span class="fake-line long"></span>
-                            <span class="fake-line"></span>
-                            <span class="fake-line medium"></span>
-                        </div>
+                            <div class="fake-section-title">TECHNICAL SKILLS</div>
 
-                        <div class="fake-section">
-                            <span class="fake-section-title">TECHNICAL SKILLS</span>
                             <div class="fake-skill-lines">
-                                <span></span><span></span><span></span>
-                                <span></span><span></span><span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
 
                         <div class="fake-section">
-                            <span class="fake-section-title">PROJECTS</span>
-                            <span class="fake-line long"></span>
-                            <span class="fake-line medium"></span>
+                            <div class="fake-section-title">PROJECT EXPERIENCE</div>
+                            <div class="fake-line long"></div>
+                            <div class="fake-line long"></div>
+                            <div class="fake-line medium"></div>
+                            <div class="fake-line long"></div>
                         </div>
+
+                        <div class="fake-section">
+                            <div class="fake-section-title">EXPERIENCE</div>
+                            <div class="fake-line long"></div>
+                            <div class="fake-line medium"></div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- *** Added: Actual PDF viewer stays empty until authorised. -->
-                <div class="cv-pdf-container" id="cv-pdf-container" hidden>
-                    <iframe
-                        id="cv-pdf-viewer"
-                        title="Authorised CV document"
-                        loading="lazy"
-                        referrerpolicy="no-referrer">
-                    </iframe>
-                </div>
-
-                <!-- *** Added: Frosted-glass password gate. -->
+                <!-- PASSWORD GATE -->
                 <div class="cv-gate-overlay" id="cv-gate-overlay">
                     <div class="cv-gate-card">
 
                         <div class="lock-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <rect x="4" y="10" width="16" height="11"
-                                      rx="3" stroke="currentColor"
-                                      stroke-width="1.7"/>
-                                <path d="M8 10V7a4 4 0 0 1 8 0v3"
-                                      stroke="currentColor"
-                                      stroke-width="1.7"
-                                      stroke-linecap="round"/>
-                                <circle cx="12" cy="15" r="1.3"
-                                        fill="currentColor"/>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect x="4" y="10" width="16" height="11" rx="2"></rect>
+                                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                                <path d="M12 14v3"></path>
                             </svg>
                         </div>
 
-                        <span class="gate-eyebrow">SECURE DOCUMENT ACCESS</span>
+                        <span class="gate-eyebrow">
+                            PRIVATE ACCESS
+                        </span>
 
-                        <h2>Curious to know more?</h2>
+                        <h2>Unlock my CV.</h2>
 
                         <p>
-                            This CV is protected. Enter the access password
-                            to view the full document.
+                            Enter the password provided to you to view my
+                            professional CV.
                         </p>
 
                         <form id="cv-access-form">
-                            <label for="cv-password">Access password</label>
+
+                            <label for="cv-password">
+                                CV password
+                            </label>
 
                             <div class="password-input-wrap">
                                 <input
@@ -194,78 +209,121 @@
                                     placeholder="Enter your password"
                                     autocomplete="current-password"
                                     required
-                                    minlength="1"
-                                    maxlength="256">
+                                >
 
                                 <button
                                     type="button"
-                                    id="cv-toggle-password"
                                     class="password-toggle"
-                                    aria-label="Show password">
+                                    id="cv-toggle-password"
+                                    aria-controls="cv-password"
+                                    aria-pressed="false"
+                                >
                                     Show
                                 </button>
                             </div>
 
-                            <button type="submit" class="cv-unlock-button"
-                                    id="cv-unlock-button">
-                                <span id="cv-button-text">Unlock my CV</span>
+                            <button
+                                type="submit"
+                                class="cv-unlock-button"
+                                id="cv-unlock-button"
+                            >
+                                <span id="cv-button-text">Unlock CV</span>
                                 <span aria-hidden="true">↗</span>
                             </button>
 
-                            <p class="cv-feedback" id="cv-feedback"
-                               role="status" aria-live="polite"></p>
+                            <p
+                                class="cv-feedback"
+                                id="cv-feedback"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+
                         </form>
 
                         <div class="secure-note">
                             <span aria-hidden="true">✦</span>
-                            Protected access · Private document
+                            Protected access · Secure document
                         </div>
+
                     </div>
+                </div>
+
+                <!-- AUTHENTICATED PDF: HIDDEN UNTIL ACCESS IS GRANTED -->
+                <div class="cv-pdf-container" id="cv-pdf-container" hidden>
+                    <iframe
+                        id="cv-pdf-viewer"
+                        title="Belinda Mtabane's protected CV"
+                        loading="lazy"
+                    ></iframe>
                 </div>
 
             </div>
 
-            <!-- *** Added: Lock control appears after successful access. -->
+            <!-- DOCUMENT CONTROLS -->
             <div class="cv-viewer-controls" id="cv-viewer-controls" hidden>
-                <span class="access-granted">
-                    <span class="status-dot"></span>
-                    Authorised access granted
-                </span>
-                <button type="button" id="cv-lock-button" class="cv-lock-button">
-                    Lock document
+                <div class="access-granted">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Access granted
+                </div>
+
+                <button
+                    type="button"
+                    class="cv-lock-button"
+                    id="cv-lock-button"
+                >
+                    Lock CV
                 </button>
             </div>
 
         </section>
 
+        <!-- BOTTOM NOTE -->
         <section class="cv-bottom-note">
-            <span class="note-star" aria-hidden="true">✳</span>
+            <span class="note-star" aria-hidden="true">✧</span>
+
             <p>
-                Creativity meets technology. Every project is another
-                opportunity to learn, build and grow.
+                Thank you for taking the time to explore my work.
+                I am continuing to learn, build and improve through
+                game development, app development and creative technology.
             </p>
         </section>
 
     </main>
 
-    <!-- Match this footer to your existing footer if its wording differs. -->
-    <footer class="cv-footer">
-        <a href="index.html" class="footer-brand">BELINDA ON CRUNCH</a>
-        <p>Thoughtfully built. Boldly imagined.</p>
+    <!-- FOOTER: MATCH THE HOME PAGE CONTENT -->
+    <footer class="site-footer cv-site-footer">
+        <div class="footer-content">
 
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="cv.html">My CV</a>
+            <a class="brand footer-brand" href="index.html" aria-label="Belinda On Crunch home">
+                <span class="brand-mark">B</span>
+
+                <span>
+                    BELINDA ON CRUNCH
+                    <small>GAME &amp; APP DEVELOPMENT</small>
+                </span>
+            </a>
+
+            <p>Thoughtfully built. Boldly imagined.</p>
+
+            <div class="footer-links">
+                <a
+                    href="https://github.com/BelindaMtabane"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub ↗
+                </a>
+
+                <a href="contact.html">Contact</a>
+                <a href="cv.html">CV</a>
+            </div>
+
+            <p class="copyright">
+                &copy; 2026 Belinda Mtabane. All rights reserved.
+            </p>
+
         </div>
-
-        <span class="footer-copyright">
-            © 2026 BELINDA ON CRUNCH. All rights reserved.
-        </span>
     </footer>
-
-    <!-- *** Added: Page interaction script. -->
-    <script src="cv.js" defer></script>
 
 </body>
 </html>
