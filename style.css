@@ -2885,6 +2885,67 @@ footer .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 11px;
 }
+<CodeBlock language="css" editable>
+/* *** ABOUT PAGE FOOTER — MATCH HOMEPAGE LAYOUT *** */
+
+.about-page footer {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+gap: 0;
+padding: 48px 24px 28px;
+background: var(--deep-navy);
+color: var(--white);
+text-align: center;
+}
+.about-page footer .footer-brand {
+display: inline-flex;
+justify-content: center;
+margin-bottom: 20px;
+color: var(--white);
+}
+.about-page footer .footer-brand small {
+color: rgba(255, 255, 255, 0.58);
+}
+.about-page footer > p {
+color: rgba(255, 255, 255, 0.7);
+font-size: 13px;
+}
+.about-page footer .footer-links {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 25px;
+margin: 25px 0;
+}
+.about-page footer .footer-links a {
+color: var(--ice-blue);
+font-size: 12px;
+font-weight: 600;
+}
+.about-page footer .footer-links a:hover {
+color: var(--turquoise);
+}
+.about-page footer .copyright {
+width: 100%;
+margin-top: 27px;
+padding-top: 22px;
+border-top: 1px solid rgba(255, 255, 255, 0.12);
+font-size: 11px;
+text-align: center;
+}
+@media (max-width: 680px) {
+.about-page footer {
+padding: 40px 18px 24px;
+}
+.about-page footer .footer-links {
+gap: 20px;
+}
+}
+</CodeBlock>
 
 
 
