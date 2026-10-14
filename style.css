@@ -2806,100 +2806,86 @@ footer .copyright {
 
 /* *** ABOUT PAGE FOOTER FIX — keep this at the VERY END of style.css *** */
 
-.about-page .site-footer {
-    display: block !important;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 0;
-    padding: 42px 24px 24px;
-    background: var(--deep-navy);
-    color: var(--white);
-}
 
+<!-- *** SAME FOOTER STRUCTURE AS THE HOMEPAGE *** -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">B</span>
+      <span>
+        BELINDA ON CRUNCH
+        <small>GAME &amp; APP DEVELOPMENT</small>
+      </span>
+    </a>
+
+    <p>Thoughtfully built. Boldly imagined.</p>
+
+    <div class="footer-links">
+      <a href="https://github.com/BelindaMtabane"
+         target="_blank"
+         rel="noopener noreferrer">GitHub ↗</a>
+      <a href="contact.html">Contact</a>
+      <a href="cv.html">CV</a>
+    </div>
+
+    <p class="copyright">
+      &copy; <span id="current-year"></span> Belinda Mtabane. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("current-year").textContent =
+    new Date().getFullYear();
+</script>
+
+/* *** ABOUT FOOTER: MATCH THE HOMEPAGE STACKED LAYOUT *** */
 .about-page .site-footer .footer-content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 18px;
-    width: 100%;
-    max-width: var(--page-width);
-    margin: 0 auto;
-    text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-page .site-footer .footer-brand {
-    display: inline-flex !important;
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin: 0;
-    color: var(--white);
-    text-decoration: none;
-}
-
-.about-page .site-footer .footer-brand > span:last-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.about-page .site-footer .footer-brand small {
-    display: block;
-    margin-top: 4px;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--white);
 }
 
 .about-page .site-footer .footer-content > p {
-    margin: 0;
-    text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
 }
 
 .about-page .site-footer .footer-links {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center !important;
-    gap: 22px;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 25px 0;
 }
 
 .about-page .site-footer .footer-links a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.about-page .site-footer .footer-links a:hover {
-    color: var(--turquoise);
+  color: var(--ice-blue);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .about-page .site-footer .copyright {
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 8px !important;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 0.88rem;
-    text-align: center;
+  width: 100%;
+  margin-top: 27px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 11px;
 }
 
-/* *** Keep the footer neat on smaller screens *** */
-@media (max-width: 600px) {
-    .about-page .site-footer {
-        padding: 32px 18px 20px;
-    }
-
-    .about-page .site-footer .footer-content {
-        gap: 16px;
-    }
-
-    .about-page .site-footer .footer-links {
-        gap: 14px 20px;
-    }
-}
 
 
 
