@@ -1296,3 +1296,27 @@ body > footer .copyright {
   color: var(--turquoise);
   font-weight: 700;
 }
+
+/* *** FIX: Match the Projects header text to the Home page */
+.projects-page .site-header .brand,
+.projects-page .site-header .brand > span:last-child,
+.projects-page .site-header .nav-links a {
+  color: #172640;
+}
+
+/* *** Keep the brand logo accent colour */
+.projects-page .site-header .brand .brand-mark {
+  color: #7869c8;
+}
+
+/* *** Highlight the active Projects link */
+.projects-page .site-header .nav-links a[aria-current="page"] {
+  color: #172640;
+  font-weight: 700;
+}
+
+/* *** Keep the navigation colour consistent on hover */
+.projects-page .site-header .nav-links a:hover {
+  color: #7869c8;
+}
+
