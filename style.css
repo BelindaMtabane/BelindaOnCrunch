@@ -907,17 +907,30 @@ p {
 }
 
 
-/* 10. FOOTER */
 
+/* 10. FOOTER — SHARED HOMEPAGE AND ABOUT PAGE */
+
+/* *** FIX: Stack footer content vertically and centre it. */
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  box-sizing: border-box;
   padding: 48px 24px 28px;
+  gap: 0;
 
   background: var(--deep-navy);
   color: var(--white);
   text-align: center;
 }
 
+/* *** FIX: Keep the brand centred above the other footer content. */
 .footer-brand {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   color: var(--white);
@@ -927,17 +940,20 @@ footer {
   color: rgba(255, 255, 255, 0.58);
 }
 
+/* *** FIX: Centre the footer description. */
 footer > p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
 }
 
+/* *** FIX: Keep the links together on their own row. */
 .footer-links {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-
   margin: 25px 0;
 }
 
@@ -945,7 +961,6 @@ footer > p {
   color: var(--ice-blue);
   font-size: 12px;
   font-weight: 600;
-
   transition: color 0.2s ease;
 }
 
@@ -953,14 +968,27 @@ footer > p {
   color: var(--turquoise);
 }
 
+/* *** FIX: Give the copyright its own full-width row. */
 footer .copyright {
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 27px;
   padding-top: 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-
   font-size: 11px;
+  text-align: center;
 }
 
+/* *** FIX: Adjust spacing on smaller screens. */
+@media (max-width: 680px) {
+  footer {
+    padding: 40px 18px 24px;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+}
 
 /* 11. GENERAL PAGE COMPONENTS
    These styles can also be used on your other pages. */
@@ -1784,29 +1812,6 @@ footer .copyright {
   justify-content: center;
 }
 
-/* FOOTER */
-.about-page .site-footer {
-  padding: 24px 0;
-}
-
-.about-page .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.about-page .footer-content p {
-  margin: 0;
-}
-
-.about-page .footer-content a {
-  color: #357E83;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 /* KEYBOARD ACCESSIBILITY */
 .about-page a:focus-visible {
   outline: 3px solid #357E83;
@@ -2385,160 +2390,6 @@ footer .copyright {
   line-height: 1.9;
 }
 
-/* EDUCATION */
-.about-education-section {
-  background: linear-gradient(
-    135deg,
-    rgba(232, 227, 247, 0.65),
-    rgba(221, 244, 250, 0.7)
-  );
-}
-
-.about-education-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  align-items: start;
-  gap: 55px;
-}
-
-.about-education-grid > div:first-child h2 {
-  margin-bottom: 18px;
-  font-size: clamp(30px, 4vw, 43px);
-  letter-spacing: -0.04em;
-}
-
-.about-education-grid > div:first-child > p:last-child {
-  line-height: 1.9;
-}
-
-.about-education-card {
-  padding: 30px;
-  border: 1px solid rgba(34, 40, 61, 0.1);
-  border-radius: var(--radius-medium);
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: var(--shadow-soft);
-}
-
-.about-education-date {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: #357E83;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.about-education-card h3 {
-  margin-bottom: 9px;
-  font-size: 22px;
-}
-
-.about-education-card .about-education-place {
-  margin-bottom: 12px;
-  color: var(--deep-navy);
-  font-weight: 700;
-}
-
-.about-education-card > p {
-  margin-bottom: 22px;
-  font-size: 14px;
-}
-
-.about-education-card h4 {
-  margin-bottom: 13px;
-  font-size: 14px;
-}
-
-.about-education-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.about-education-tags span {
-  padding: 7px 10px;
-  border: 1px solid var(--border-light);
-  border-radius: 999px;
-  background: var(--white);
-  color: var(--navy-soft);
-  font-size: 11px;
-  font-weight: 600;
-}
-
-/* EXPERIENCE */
-.about-experience-list {
-  display: grid;
-  gap: 18px;
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-.about-experience-card {
-  padding: 27px 30px;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-medium);
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.about-experience-heading {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 17px;
-}
-
-.about-experience-type {
-  margin-bottom: 7px;
-  color: #357E83;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-
-.about-experience-heading h3 {
-  margin-bottom: 6px;
-  font-size: 20px;
-}
-
-.about-experience-place {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.about-experience-date {
-  flex-shrink: 0;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: var(--ice-blue);
-  color: #357E83;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.about-experience-card > p {
-  margin-bottom: 12px;
-  font-size: 14px;
-  line-height: 1.85;
-}
-
-.about-experience-card ul {
-  padding-left: 20px;
-  color: var(--text-muted);
-}
-
-.about-experience-card li {
-  margin-bottom: 7px;
-  padding-left: 3px;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.about-experience-card li::marker {
-  color: #357E83;
-}
 
 /* GOALS */
 .about-goals-section {
@@ -2775,9 +2626,7 @@ footer .copyright {
 
   .about-process-card,
   .about-team-card,
-  .about-skill-card,
-  .about-education-card,
-  .about-experience-card {
+  .about-skill-card{
     padding: 21px;
   }
 
@@ -2802,152 +2651,5 @@ footer .copyright {
     transition-duration: 0.01ms !important;
   }
 }
-
-
-/* *** ABOUT PAGE FOOTER FIX — keep this at the VERY END of style.css *** */
-
-
-<!-- *** SAME FOOTER STRUCTURE AS THE HOMEPAGE *** -->
-<footer class="site-footer">
-  <div class="footer-content">
-    <a class="brand footer-brand" href="index.html">
-      <span class="brand-mark">B</span>
-      <span>
-        BELINDA ON CRUNCH
-        <small>GAME &amp; APP DEVELOPMENT</small>
-      </span>
-    </a>
-
-    <p>Thoughtfully built. Boldly imagined.</p>
-
-    <div class="footer-links">
-      <a href="https://github.com/BelindaMtabane"
-         target="_blank"
-         rel="noopener noreferrer">GitHub ↗</a>
-      <a href="contact.html">Contact</a>
-      <a href="cv.html">CV</a>
-    </div>
-
-    <p class="copyright">
-      &copy; <span id="current-year"></span> Belinda Mtabane. All rights reserved.
-    </p>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("current-year").textContent =
-    new Date().getFullYear();
-</script>
-
-/* *** ABOUT FOOTER: MATCH THE HOMEPAGE STACKED LAYOUT *** */
-.about-page .site-footer .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 100%;
-  max-width: var(--page-width);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-page .site-footer .footer-brand {
-  display: inline-flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  color: var(--white);
-}
-
-.about-page .site-footer .footer-content > p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 13px;
-}
-
-.about-page .site-footer .footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin: 25px 0;
-}
-
-.about-page .site-footer .footer-links a {
-  color: var(--ice-blue);
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.about-page .site-footer .copyright {
-  width: 100%;
-  margin-top: 27px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 11px;
-}
-<CodeBlock language="css" editable>
-/* *** ABOUT PAGE FOOTER — MATCH HOMEPAGE LAYOUT *** */
-
-.about-page footer {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-gap: 0;
-padding: 48px 24px 28px;
-background: var(--deep-navy);
-color: var(--white);
-text-align: center;
-}
-.about-page footer .footer-brand {
-display: inline-flex;
-justify-content: center;
-margin-bottom: 20px;
-color: var(--white);
-}
-.about-page footer .footer-brand small {
-color: rgba(255, 255, 255, 0.58);
-}
-.about-page footer > p {
-color: rgba(255, 255, 255, 0.7);
-font-size: 13px;
-}
-.about-page footer .footer-links {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-gap: 25px;
-margin: 25px 0;
-}
-.about-page footer .footer-links a {
-color: var(--ice-blue);
-font-size: 12px;
-font-weight: 600;
-}
-.about-page footer .footer-links a:hover {
-color: var(--turquoise);
-}
-.about-page footer .copyright {
-width: 100%;
-margin-top: 27px;
-padding-top: 22px;
-border-top: 1px solid rgba(255, 255, 255, 0.12);
-font-size: 11px;
-text-align: center;
-}
-@media (max-width: 680px) {
-.about-page footer {
-padding: 40px 18px 24px;
-}
-.about-page footer .footer-links {
-gap: 20px;
-}
-}
-</CodeBlock>
-
-
-
 
 
