@@ -1393,19 +1393,19 @@ body > footer .copyright {
   flex-direction: row;
   align-items: center;
   flex-shrink: 0;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .projects-page .site-header .brand > span:last-child {
   display: flex;
   flex-direction: column;
-  color: #000000;
+  color: #ffffff;
 }
 
 .projects-page .site-header .brand small {
   display: block;
-  color: #000000;
+  color: #ffffff;
 }
 
 .projects-page .site-header .brand .brand-mark {
@@ -1422,7 +1422,7 @@ body > footer .copyright {
 }
 
 .projects-page .site-header .nav-links a {
-  color: #000000;
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
@@ -1434,7 +1434,7 @@ body > footer .copyright {
 }
 
 .projects-page .site-header .nav-links a[aria-current="page"] {
-  color: #000000;
+  color: #dce9ff;
   font-weight: 800;
 }
 
