@@ -3613,7 +3613,7 @@ footer .copyright {
 /* Small labels and introductory text */
 .home-page .home-intro-label,
 .home-page .home-profile-kicker {
-    font-size: 0.95rem !important;
+    font-size: 1.95rem !important;
 }
 
 /* Quick statistics */
@@ -3622,7 +3622,7 @@ footer .copyright {
 }
 
 .home-page .home-quick-stats small {
-    font-size: 0.95rem !important;
+    font-size: 1.95rem !important;
 }
 
 /* Profile card */
@@ -3634,7 +3634,7 @@ footer .copyright {
 }
 
 .home-page .home-profile-footer {
-    font-size: 0.9rem !important;
+    font-size: 1.9rem !important;
 }
 
 /* Section headings */
@@ -3668,7 +3668,7 @@ footer .copyright {
 .home-page .home-project-type,
 .home-page .home-project-status,
 .home-page .home-skill-detail {
-    font-size: 0.9rem !important;
+    font-size: 1.9rem !important;
     line-height: 1.6;
 }
 
