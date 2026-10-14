@@ -895,15 +895,16 @@
     display: none !important;
 }
 
-/* *** Fix: Keep Home page hero decorations off the CV page. */
-.cv-page .cv-background-glow,
-.cv-page .cv-code-decoration,
-.cv-page .hero-visual,
-.cv-page .hero-decoration,
-.cv-page .code-window,
-.cv-page .code-card,
-.cv-page .floating-code,
-.cv-page .tech-stack,
-.cv-page .hero-badges {
+
+/* *** Prevent Home page decorative visuals from appearing on the CV page */
+.cv-page .home-visual-stage,
+.cv-page .mini-code-window,
+.cv-page .binary-mini-panel,
+.cv-page .floating-tech,
+.cv-page .visual-orbit,
+.cv-page .binary-decoration,
+.cv-page .home-glow,
+.cv-page .home-closing-glow {
     display: none !important;
 }
+
