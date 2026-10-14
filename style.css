@@ -3704,4 +3704,29 @@ footer .copyright {
 }
 
 
+/* *** Footer colours: white and light blue text *** */
+.site-footer {
+  background-color: #172640; /* Navy background */
+  color: #ffffff; /* White footer text */
+}
+
+.site-footer .brand,
+.site-footer .footer-links a,
+.site-footer .copyright {
+  color: #ffffff; /* White text */
+}
+
+.site-footer .brand-mark {
+  background-color: #a9eee7; /* Light aqua */
+  color: #172640; /* Navy B */
+}
+
+.site-footer .brand small {
+  color: #a9eee7; /* Light aqua subtitle */
+}
+
+.site-footer .footer-links a:hover {
+  color: #a9eee7; /* Light aqua when hovering */
+}
+
 
