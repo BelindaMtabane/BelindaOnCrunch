@@ -1348,3 +1348,116 @@ body > footer .copyright {
   }
 }
 
+/* *** Shared footer colours for Projects and Contact pages *** */
+.site-footer {
+  background-color: #172640;
+  color: #ffffff;
+}
+
+.site-footer p,
+.site-footer .brand,
+.site-footer .footer-links a,
+.site-footer .copyright {
+  color: #ffffff;
+}
+
+.site-footer .brand-mark {
+  background-color: #a9eee7;
+  color: #172640;
+}
+
+.site-footer .brand small {
+  color: #a9eee7;
+}
+
+.site-footer .footer-links a:hover {
+  color: #a9eee7;
+}
+
+/* =========================================================
+   *** SHARED HEADER — PROJECTS PAGE
+   Same horizontal layout as the homepage.
+   ========================================================= */
+
+.projects-page .site-header {
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 32px;
+}
+
+.projects-page .site-header .navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.projects-page .site-header .brand {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  color: #000000;
+  text-decoration: none;
+}
+
+.projects-page .site-header .brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+
+.projects-page .site-header .brand small {
+  display: block;
+  color: #000000;
+}
+
+.projects-page .site-header .brand .brand-mark {
+  color: var(--contact-lavender-dark, #7869c8);
+}
+
+.projects-page .site-header .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.projects-page .site-header .nav-links a {
+  color: #000000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.projects-page .site-header .nav-links a:hover {
+  color: #7869c8;
+}
+
+.projects-page .site-header .nav-links a[aria-current="page"] {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* *** Keep the header aligned on smaller screens. */
+@media (max-width: 768px) {
+  .projects-page .site-header {
+    padding-inline: 16px;
+  }
+
+  .projects-page .site-header .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-page .site-header .nav-links {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+}
+
