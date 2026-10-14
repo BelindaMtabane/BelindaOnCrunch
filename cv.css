@@ -837,3 +837,55 @@
 }
 
 
+/* *** Updated: Keep the shared Home page footer styling on the CV page. */
+
+/* *** Do not apply the old CV-specific footer brand styling to the shared footer. */
+.cv-page .cv-footer .footer-brand {
+    color: #168d9a;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+/* *** Scope the old CV footer paragraph styles to the old footer only. */
+.cv-page .cv-footer > p {
+    margin: 10px 0 18px;
+    color: #777c90;
+    font-size: 13px;
+}
+
+/* *** Scope the old CV footer link layout to the old footer only. */
+.cv-page .cv-footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.cv-page .cv-footer .footer-links a {
+    color: #62677b;
+    font-size: 13px;
+}
+
+.cv-page .cv-footer .footer-links a:hover {
+    color: #168d9a;
+}
+
+/* *** Match the exact font pairing used on the Home page. */
+.cv-page {
+    font-family: "Inter", sans-serif;
+}
+
+.cv-page h1,
+.cv-page h2,
+.cv-page h3 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* *** Keep form controls consistent with the site's body font. */
+.cv-page input,
+.cv-page button {
+    font-family: "Inter", sans-serif;
+}
+
