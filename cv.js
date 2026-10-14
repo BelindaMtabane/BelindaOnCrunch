@@ -4,8 +4,10 @@
 // ==========================================
 
 // *** Configure this after deploying your Supabase Edge Function.
+
 const CV_UNLOCK_ENDPOINT =
-    "https://YOUR_PROJECT_REF.supabase.co/functions/v1/unlock-cv";
+    "https://apclgxwjhweoftzkppyi.supabase.co/functions/v1/unlock-cv";
+
 
 const form = document.getElementById("cv-access-form");
 const passwordInput = document.getElementById("cv-password");
