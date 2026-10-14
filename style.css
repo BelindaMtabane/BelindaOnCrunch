@@ -1357,4 +1357,22 @@ footer .copyright {
   }
 }
 
+/* *** REMOVE DECORATIVE CIRCLES AROUND THE PORTRAIT *** */
+.avatar-placeholder .orbit,
+.avatar-placeholder .orbit-one,
+.avatar-placeholder .orbit-two {
+  display: none !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* *** REMOVE ANY CIRCLE DECORATIONS FROM THE CONTAINER *** */
+.avatar-placeholder::before,
+.avatar-placeholder::after {
+  content: none !important;
+  display: none !important;
+}
+
+
 
