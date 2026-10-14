@@ -1291,3 +1291,8 @@ body > footer .copyright {
     gap: 14px 20px;
   }
 }
+/* Highlight the active Projects navigation link */
+.projects-page .nav-links a[aria-current="page"] {
+  color: var(--turquoise);
+  font-weight: 700;
+}
