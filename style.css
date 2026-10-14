@@ -2803,64 +2803,104 @@ footer .copyright {
   }
 }
 
-/* *** About page: introductory highlight cards *** */
-.about-highlights {
-    padding: 10px 0 55px;
+
+/* *** ABOUT PAGE FOOTER FIX — keep this at the VERY END of style.css *** */
+
+.about-page .site-footer {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 42px 24px 24px;
+    background: var(--deep-navy);
+    color: var(--white);
 }
 
-.about-highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+.about-page .site-footer .footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px;
+    width: 100%;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    text-align: center !important;
 }
 
-.about-highlight-card {
-    padding: 24px;
-    border: 1px solid rgba(34, 40, 61, 0.10);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.72);
-    box-shadow: 0 12px 35px rgba(34, 40, 61, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.about-highlight-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 38px rgba(34, 40, 61, 0.10);
-}
-
-.about-highlight-icon {
-    display: inline-flex;
+.about-page .site-footer .footer-brand {
+    display: inline-flex !important;
+    flex-direction: row !important;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
-    margin-bottom: 12px;
-    border-radius: 14px;
-    background: rgba(85, 214, 210, 0.18);
-    color: #22283D;
-    font-size: 22px;
-}
-
-.about-highlight-card h3 {
-    margin: 0 0 8px;
-    font-family: "Space Grotesk", sans-serif;
-}
-
-.about-highlight-card p {
+    gap: 12px;
     margin: 0;
-    color: #667085;
-    line-height: 1.7;
+    color: var(--white);
+    text-decoration: none;
 }
 
-@media (max-width: 760px) {
-    .about-highlights-grid {
-        grid-template-columns: 1fr;
+.about-page .site-footer .footer-brand > span:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.about-page .site-footer .footer-brand small {
+    display: block;
+    margin-top: 4px;
+}
+
+.about-page .site-footer .footer-content > p {
+    margin: 0;
+    text-align: center;
+}
+
+.about-page .site-footer .footer-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center !important;
+    gap: 22px;
+    margin: 0;
+}
+
+.about-page .site-footer .footer-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.about-page .site-footer .footer-links a:hover {
+    color: var(--turquoise);
+}
+
+.about-page .site-footer .copyright {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px !important;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.88rem;
+    text-align: center;
+}
+
+/* *** Keep the footer neat on smaller screens *** */
+@media (max-width: 600px) {
+    .about-page .site-footer {
+        padding: 32px 18px 20px;
     }
 
-    .about-highlights {
-        padding-bottom: 35px;
+    .about-page .site-footer .footer-content {
+        gap: 16px;
+    }
+
+    .about-page .site-footer .footer-links {
+        gap: 14px 20px;
     }
 }
+
 
 
 
