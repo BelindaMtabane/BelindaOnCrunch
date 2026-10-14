@@ -3596,3 +3596,132 @@ footer .copyright {
   }
 }
 
+/* *** BIGGER HOMEPAGE TEXT — READABILITY FIX *** */
+
+/* Main hero heading */
+.home-page .home-hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.5rem) !important;
+    line-height: 1.12;
+}
+
+/* Main hero description */
+.home-page .home-hero p {
+    font-size: 1.2rem !important;
+    line-height: 1.8;
+}
+
+/* Small labels and introductory text */
+.home-page .home-intro-label,
+.home-page .home-profile-kicker {
+    font-size: 0.95rem !important;
+}
+
+/* Quick statistics */
+.home-page .home-quick-stats strong {
+    font-size: 1.4rem !important;
+}
+
+.home-page .home-quick-stats small {
+    font-size: 0.95rem !important;
+}
+
+/* Profile card */
+.home-page .home-profile-card p,
+.home-page .home-profile-row,
+.home-page .home-profile-note {
+    font-size: 1rem !important;
+    line-height: 1.7;
+}
+
+.home-page .home-profile-footer {
+    font-size: 0.9rem !important;
+}
+
+/* Section headings */
+.home-page h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem) !important;
+    line-height: 1.2;
+}
+
+/* Section descriptions */
+.home-page .home-intro-strip p,
+.home-page .home-section-heading p,
+.home-page .home-closing-copy {
+    font-size: 1.1rem !important;
+    line-height: 1.8;
+}
+
+/* Project card headings */
+.home-page .home-project-card h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+}
+
+/* Project descriptions */
+.home-page .home-project-card p {
+    font-size: 1rem !important;
+    line-height: 1.75;
+}
+
+/* Tags, labels and status text */
+.home-page .home-project-tags,
+.home-page .home-project-type,
+.home-page .home-project-status,
+.home-page .home-skill-detail {
+    font-size: 0.9rem !important;
+    line-height: 1.6;
+}
+
+/* Project buttons and links */
+.home-page .home-project-card a,
+.home-page .home-text-link {
+    font-size: 1rem !important;
+}
+
+/* Creative process cards */
+.home-page .home-process-card h3,
+.home-page .home-skill-card h3 {
+    font-size: 1.3rem !important;
+}
+
+.home-page .home-process-card p,
+.home-page .home-skill-card p {
+    font-size: 1rem !important;
+    line-height: 1.75;
+}
+
+/* Increase spacing so the larger text has room */
+.home-page .home-project-card,
+.home-page .home-process-card,
+.home-page .home-skill-card {
+    padding: 1.75rem !important;
+}
+
+/* Mobile readability */
+@media (max-width: 680px) {
+    .home-page .home-hero h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .home-page .home-hero p {
+        font-size: 1.1rem !important;
+    }
+
+    .home-page h2 {
+        font-size: 2rem !important;
+    }
+
+    .home-page .home-project-card h3 {
+        font-size: 1.35rem !important;
+    }
+
+    .home-page .home-project-card p,
+    .home-page .home-process-card p,
+    .home-page .home-skill-card p,
+    .home-page .home-intro-strip p,
+    .home-page .home-section-heading p {
+        font-size: 1rem !important;
+    }
+}
+
+
