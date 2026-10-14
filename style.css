@@ -2803,40 +2803,64 @@ footer .copyright {
   }
 }
 
-/* *** ABOUT PAGE: Fit project images inside their boxes *** */
-.about-page .about-project-card {
-    overflow: hidden;
-    min-width: 0;
+/* *** About page: introductory highlight cards *** */
+.about-highlights {
+    padding: 10px 0 55px;
 }
 
-.about-page .about-project-card img {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
+.about-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
 }
 
-/* *** ABOUT PAGE: Keep linked images within the card *** */
-.about-page .about-project-card a {
-    display: block;
-    max-width: 100%;
-    overflow: hidden;
+.about-highlight-card {
+    padding: 24px;
+    border: 1px solid rgba(34, 40, 61, 0.10);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 12px 35px rgba(34, 40, 61, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.about-page .about-project-card a img {
-    transition: transform 0.3s ease;
+.about-highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(34, 40, 61, 0.10);
 }
 
-.about-page .about-project-card a:hover img {
-    transform: scale(1.03);
+.about-highlight-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    background: rgba(85, 214, 210, 0.18);
+    color: #22283D;
+    font-size: 22px;
 }
 
-/* *** ABOUT PAGE: Responsive image sizing *** */
-@media (max-width: 600px) {
-    .about-page .about-project-card img {
-        height: 190px;
+.about-highlight-card h3 {
+    margin: 0 0 8px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.about-highlight-card p {
+    margin: 0;
+    color: #667085;
+    line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+    .about-highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-highlights {
+        padding-bottom: 35px;
     }
 }
+
 
 
