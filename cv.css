@@ -3,7 +3,7 @@
    BELINDA ON CRUNCH — PROTECTED CV PAGE
    ========================================== */
 
-/* *** Added: Keep CV styles scoped to this page. */
+/* *** Updated: Use a consistent, readable font and base size. */
 .cv-page {
     --cv-aqua: #55d6d9;
     --cv-aqua-dark: #168d9a;
@@ -21,7 +21,8 @@
         radial-gradient(ellipse at 10% 15%, rgba(85, 214, 217, .20), transparent 34%),
         radial-gradient(ellipse at 90% 30%, rgba(169, 154, 255, .23), transparent 36%),
         linear-gradient(145deg, #f7ffff 0%, #f5f2ff 55%, #eafcfc 100%);
-    font-family: inherit;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
 }
 
 .cv-page *,
@@ -94,7 +95,7 @@
     display: inline-flex;
     align-items: center;
     gap: 11px;
-    font-size: 13px;
+    font-size: 14px; /* *** Updated: Larger brand text. */
     font-weight: 800;
     letter-spacing: 1.5px;
 }
@@ -126,7 +127,8 @@
     padding: 10px 15px;
     border-radius: 30px;
     color: #62677b;
-    font-size: 13px;
+    font-size: 14px; /* *** Updated: More readable navigation. */
+    font-weight: 500;
     transition: background .2s ease, color .2s ease;
 }
 
@@ -159,7 +161,7 @@
     align-items: center;
     gap: 9px;
     color: #168d9a;
-    font-size: 10px;
+    font-size: 11px; /* *** Updated: Larger section labels. */
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -194,7 +196,7 @@
     max-width: 570px;
     margin: 0 auto;
     color: var(--cv-muted);
-    font-size: 15px;
+    font-size: 17px; /* *** Updated: Larger introductory paragraph. */
     line-height: 1.9;
 }
 
@@ -212,7 +214,7 @@
     border-radius: 30px;
     color: #535b78;
     background: rgba(255, 255, 255, .55);
-    font-size: 11px;
+    font-size: 13px; /* *** Updated: Larger skill labels. */
     font-weight: 700;
     backdrop-filter: blur(8px);
 }
@@ -240,12 +242,12 @@
 }
 
 .document-kicker {
-    font-size: 9px;
+    font-size: 11px; /* *** Updated: Consistent label sizing. */
 }
 
 .document-topline h2 {
     margin: 8px 0 0;
-    font-size: 23px;
+    font-size: 26px; /* *** Updated: Larger document heading. */
     letter-spacing: -.7px;
 }
 
@@ -258,7 +260,7 @@
     border-radius: 30px;
     color: #7260c4;
     background: rgba(169, 154, 255, .12);
-    font-size: 9px;
+    font-size: 11px; /* *** Updated: Improved badge readability. */
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -434,7 +436,7 @@
 }
 
 .gate-eyebrow {
-    font-size: 9px;
+    font-size: 11px; /* *** Updated: Easier-to-read security label. */
     letter-spacing: 1.7px;
 }
 
@@ -447,7 +449,7 @@
 .cv-gate-card > p {
     margin: 0 auto 23px;
     color: #74798c;
-    font-size: 13px;
+    font-size: 15px; /* *** Updated: Larger password instructions. */
     line-height: 1.8;
 }
 
@@ -459,7 +461,7 @@
     display: block;
     margin-bottom: 9px;
     color: #434960;
-    font-size: 12px;
+    font-size: 14px; /* *** Updated: Larger form label. */
     font-weight: 750;
 }
 
@@ -488,7 +490,7 @@
     color: #30354a;
     background: transparent;
     font: inherit;
-    font-size: 13px;
+    font-size: 15px; /* *** Updated: Larger input text. */
 }
 
 .password-toggle {
@@ -496,7 +498,7 @@
     border: 0;
     color: #7467bf;
     background: transparent;
-    font-size: 11px;
+    font-size: 13px; /* *** Updated: Larger show/hide control. */
     font-weight: 800;
     cursor: pointer;
 }
@@ -514,7 +516,8 @@
     color: #fff;
     background: linear-gradient(100deg, #25aeb8, #8c78e7);
     box-shadow: 0 10px 23px rgba(102, 134, 204, .25);
-    font-size: 13px;
+    font-family: inherit; /* *** Updated: Keep button font consistent. */
+    font-size: 15px; /* *** Updated: Larger button text. */
     font-weight: 800;
     cursor: pointer;
     transition: transform .2s ease, box-shadow .2s ease;
@@ -535,7 +538,7 @@
     min-height: 20px;
     margin: 12px 0 0;
     color: #b23c60;
-    font-size: 12px;
+    font-size: 14px; /* *** Updated: More readable feedback. */
     line-height: 1.6;
 }
 
@@ -554,7 +557,7 @@
     gap: 8px;
     margin-top: 16px;
     color: #898da0;
-    font-size: 10px;
+    font-size: 12px; /* *** Updated: Larger security note. */
 }
 
 .secure-note span {
@@ -594,7 +597,7 @@
     align-items: center;
     gap: 10px;
     color: #278775;
-    font-size: 12px;
+    font-size: 14px; /* *** Updated: Larger access status. */
     font-weight: 700;
 }
 
@@ -604,7 +607,8 @@
     border-radius: 10px;
     color: #5c5f78;
     background: #fff;
-    font-size: 12px;
+    font-family: inherit; /* *** Updated: Consistent button font. */
+    font-size: 14px; /* *** Updated: Larger lock button text. */
     font-weight: 700;
     cursor: pointer;
 }
@@ -630,7 +634,7 @@
 
 .cv-bottom-note p {
     color: #73788c;
-    font-size: 13px;
+    font-size: 15px; /* *** Updated: Larger bottom note. */
     line-height: 1.8;
 }
 
@@ -643,7 +647,7 @@
 
 .footer-brand {
     color: #168d9a;
-    font-size: 12px;
+    font-size: 13px; /* *** Updated: Larger footer brand. */
     font-weight: 900;
     letter-spacing: 1.5px;
 }
@@ -651,7 +655,7 @@
 .cv-footer > p {
     margin: 10px 0 18px;
     color: #777c90;
-    font-size: 12px;
+    font-size: 13px; /* *** Updated: Larger footer text. */
 }
 
 .footer-links {
@@ -664,7 +668,7 @@
 
 .footer-links a {
     color: #62677b;
-    font-size: 12px;
+    font-size: 13px; /* *** Updated: Larger footer links. */
 }
 
 .footer-links a:hover {
@@ -673,7 +677,7 @@
 
 .footer-copyright {
     color: #9699a9;
-    font-size: 10px;
+    font-size: 11px; /* *** Updated: Slightly larger copyright. */
 }
 
 /* *** Added: Accessibility and responsive layouts. */
@@ -705,6 +709,7 @@
 
     .cv-navigation a {
         padding: 9px 12px;
+        font-size: 14px; /* *** Updated: Consistent mobile navigation. */
     }
 
     .cv-main {
@@ -721,7 +726,11 @@
     }
 
     .cv-heading > p {
-        font-size: 14px;
+        font-size: 16px; /* *** Updated: Readable mobile introduction. */
+    }
+
+    .cv-skills span {
+        font-size: 12px; /* *** Updated: Fits mobile skill labels. */
     }
 
     .cv-document-section {
@@ -734,12 +743,12 @@
     }
 
     .document-topline h2 {
-        font-size: 19px;
+        font-size: 21px; /* *** Updated: Slightly larger mobile heading. */
     }
 
     .private-badge {
         padding: 8px;
-        font-size: 8px;
+        font-size: 9px; /* *** Updated: Readable mobile badge. */
     }
 
     .cv-document-shell {
@@ -766,6 +775,14 @@
         font-size: 23px;
     }
 
+    .cv-gate-card > p {
+        font-size: 14px; /* *** Updated: Keeps instructions readable on mobile. */
+    }
+
+    .cv-gate-card label {
+        font-size: 14px;
+    }
+
     .cv-viewer-controls {
         align-items: flex-start;
         flex-direction: column;
@@ -774,6 +791,10 @@
     .cv-bottom-note {
         margin: 40px auto 55px;
         padding: 0 8px;
+    }
+
+    .cv-bottom-note p {
+        font-size: 14px; /* *** Updated: Balanced mobile note size. */
     }
 
     .code-left {
@@ -791,3 +812,4 @@
         transition-duration: .01ms !important;
     }
 }
+
