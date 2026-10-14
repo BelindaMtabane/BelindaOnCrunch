@@ -1169,3 +1169,125 @@ a {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ==========================================
+   SHARED PORTFOLIO HEADER AND FOOTER
+   Keep these consistent with the Home page.
+   ========================================== */
+
+/* HEADER */
+.site-header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.site-header .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.site-header .brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header .brand small,
+footer .footer-brand small {
+  display: block;
+}
+
+.site-header .nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.site-header .nav-links a {
+  text-decoration: none;
+}
+
+/* FOOTER */
+body > footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+  text-align: center;
+}
+
+body > footer .footer-brand {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+body > footer .footer-brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+body > footer > p {
+  margin: 0;
+  text-align: center;
+}
+
+body > footer .footer-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+body > footer .footer-links a {
+  text-decoration: none;
+}
+
+body > footer .copyright {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding-top: 18px;
+  text-align: center;
+}
+
+/* RESPONSIVE NAVIGATION AND FOOTER */
+@media (max-width: 768px) {
+  .site-header .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-header .nav-links {
+    justify-content: center;
+    gap: 14px 20px;
+  }
+
+  body > footer {
+    padding: 32px 18px 20px;
+  }
+
+  body > footer .footer-links {
+    gap: 14px 20px;
+  }
+}
