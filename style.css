@@ -2803,4 +2803,40 @@ footer .copyright {
   }
 }
 
+/* *** ABOUT PAGE: Fit project images inside their boxes *** */
+.about-page .about-project-card {
+    overflow: hidden;
+    min-width: 0;
+}
+
+.about-page .about-project-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* *** ABOUT PAGE: Keep linked images within the card *** */
+.about-page .about-project-card a {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.about-page .about-project-card a img {
+    transition: transform 0.3s ease;
+}
+
+.about-page .about-project-card a:hover img {
+    transform: scale(1.03);
+}
+
+/* *** ABOUT PAGE: Responsive image sizing *** */
+@media (max-width: 600px) {
+    .about-page .about-project-card img {
+        height: 190px;
+    }
+}
+
 
