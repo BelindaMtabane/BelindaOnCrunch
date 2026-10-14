@@ -2766,46 +2766,24 @@ footer .copyright {
 }
 
 
+
+/* *** HERO — REMOVE THE EXTRA BACKGROUND PANEL */
 .home-page .home-hero {
   position: relative;
   isolation: isolate;
   gap: clamp(32px, 5vw, 76px);
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 8% 8%, rgba(85, 214, 210, 0.22), transparent 38%),
-    radial-gradient(ellipse at 90% 12%, rgba(200, 185, 240, 0.32), transparent 38%),
-    linear-gradient(135deg, #E5F6F7 0%, #F7F5F0 52%, #E7F3EC 100%);
-  border-radius: 0 0 34px 34px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
+
 
 .home-page .home-hero > *:not(.home-glow) {
   position: relative;
   z-index: 2;
 }
 
-.home-glow {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  border-radius: 50%;
-  filter: blur(3px);
-}
-
-.home-glow-one {
-  width: 300px;
-  height: 300px;
-  top: -130px;
-  left: 38%;
-  background: rgba(85, 214, 210, 0.17);
-}
-
-.home-glow-two {
-  width: 260px;
-  height: 260px;
-  right: -80px;
-  bottom: -100px;
-  background: rgba(200, 185, 240, 0.25);
-}
 
 .home-intro-label {
   display: inline-flex;
