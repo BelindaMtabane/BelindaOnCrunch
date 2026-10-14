@@ -1172,59 +1172,94 @@ a {
 
 /* ==========================================
    SHARED PORTFOLIO HEADER AND FOOTER
-   Keep these consistent with the Home page.
+   *** Match the Home page layout and text colour.
+   Keep all Projects visuals unchanged.
    ========================================== */
 
-/* HEADER */
+/* *** HEADER: Logo on the left, navigation on the right */
 .site-header {
   width: 100%;
   box-sizing: border-box;
+  padding: 0 32px;
 }
 
 .site-header .navigation {
+  width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
 
+/* *** Brand/logo text: black */
 .site-header .brand {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
   flex-shrink: 0;
+  color: #000000;
   text-decoration: none;
 }
 
 .site-header .brand > span:last-child {
   display: flex;
   flex-direction: column;
+  color: #000000;
 }
 
-.site-header .brand small,
-footer .footer-brand small {
+.site-header .brand small {
   display: block;
+  color: #000000;
 }
 
+/* *** Keep the B logo accent colour */
+.site-header .brand .brand-mark {
+  color: var(--lavender-dark);
+}
+
+/* *** Navigation stays on the right */
 .site-header .nav-links {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 22px;
 }
 
 .site-header .nav-links a {
+  color: #000000;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* FOOTER */
+/* *** Active Projects link */
+.site-header .nav-links a[aria-current="page"] {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* *** Navigation hover */
+.site-header .nav-links a:hover {
+  color: var(--lavender-dark);
+}
+
+/* ==========================================
+   FOOTER
+   Keep the existing footer design and layout.
+   ========================================== */
+
 body > footer {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 18px;
-  width: 100%;
-  box-sizing: border-box;
   margin-top: 0;
   text-align: center;
 }
@@ -1235,6 +1270,7 @@ body > footer .footer-brand {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -1242,7 +1278,17 @@ body > footer .footer-brand > span:last-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: #000000;
   text-align: left;
+}
+
+body > footer .footer-brand small {
+  display: block;
+  color: #000000;
+}
+
+body > footer .footer-brand .brand-mark {
+  color: var(--lavender-dark);
 }
 
 body > footer > p {
@@ -1260,7 +1306,12 @@ body > footer .footer-links {
 }
 
 body > footer .footer-links a {
+  color: #000000;
   text-decoration: none;
+}
+
+body > footer .footer-links a:hover {
+  color: var(--lavender-dark);
 }
 
 body > footer .copyright {
@@ -1268,18 +1319,23 @@ body > footer .copyright {
   box-sizing: border-box;
   margin-top: 8px;
   padding-top: 18px;
+  color: #000000;
   text-align: center;
 }
 
-/* RESPONSIVE NAVIGATION AND FOOTER */
+/* *** RESPONSIVE: Stack the header on smaller screens */
 @media (max-width: 768px) {
+  .site-header {
+    padding: 20px 18px;
+  }
+
   .site-header .navigation {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .site-header .nav-links {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 14px 20px;
   }
 
@@ -1290,33 +1346,5 @@ body > footer .copyright {
   body > footer .footer-links {
     gap: 14px 20px;
   }
-}
-/* Highlight the active Projects navigation link */
-.projects-page .nav-links a[aria-current="page"] {
-  color: var(--turquoise);
-  font-weight: 700;
-}
-
-/* *** FIX: Match the Projects header text to the Home page */
-.projects-page .site-header .brand,
-.projects-page .site-header .brand > span:last-child,
-.projects-page .site-header .nav-links a {
-  color: #172640;
-}
-
-/* *** Keep the brand logo accent colour */
-.projects-page .site-header .brand .brand-mark {
-  color: #7869c8;
-}
-
-/* *** Highlight the active Projects link */
-.projects-page .site-header .nav-links a[aria-current="page"] {
-  color: #172640;
-  font-weight: 700;
-}
-
-/* *** Keep the navigation colour consistent on hover */
-.projects-page .site-header .nav-links a:hover {
-  color: #7869c8;
 }
 
