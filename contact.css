@@ -717,7 +717,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -725,7 +725,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: #000000;
+  color: #ffffff;
   text-align: left;
 }
 
@@ -753,7 +753,7 @@
 }
 
 .contact-page > footer .footer-links a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
