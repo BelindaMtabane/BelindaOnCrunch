@@ -920,3 +920,30 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+/* *** Shared footer colours for Projects and Contact pages *** */
+.site-footer {
+  background-color: #172640;
+  color: #ffffff;
+}
+
+.site-footer p,
+.site-footer .brand,
+.site-footer .footer-links a,
+.site-footer .copyright {
+  color: #ffffff;
+}
+
+.site-footer .brand-mark {
+  background-color: #a9eee7;
+  color: #172640;
+}
+
+.site-footer .brand small {
+  color: #a9eee7;
+}
+
+.site-footer .footer-links a:hover {
+  color: #a9eee7;
+}
+
