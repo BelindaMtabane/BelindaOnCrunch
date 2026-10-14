@@ -44,15 +44,22 @@
   outline-offset: 4px;
 }
 
+
 /* =========================================================
    SHARED HEADER
-   Same horizontal layout as the homepage.
+   *** Updated to match the CV navbar styling.
    ========================================================= */
 
 .contact-page .site-header {
-  width: 100%;
+  width: min(1180px, calc(100% - 48px));
+  min-height: 82px;
+  margin: 0 auto;
   box-sizing: border-box;
-  padding-inline: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid rgba(70, 114, 135, 0.13);
 }
 
 .contact-page .site-header .navigation {
@@ -68,9 +75,14 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  gap: 11px;
   flex-shrink: 0;
   color: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .contact-page .site-header .brand > span:last-child {
@@ -81,11 +93,25 @@
 
 .contact-page .site-header .brand small {
   display: block;
-  color: #000000;
+  margin-top: 3px;
+  color: #62677b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .contact-page .site-header .brand .brand-mark {
-  color: var(--contact-lavender-dark);
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #45cfd2, #a99aff);
+  box-shadow: 0 8px 24px rgba(90, 181, 201, 0.25);
+  font-size: 22px;
+  font-weight: 800;
 }
 
 .contact-page .site-header .nav-links {
@@ -94,25 +120,49 @@
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 8px;
 }
 
 .contact-page .site-header .nav-links a {
-  color: #000000;
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: #62677b;
+  font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.contact-page .site-header .nav-links a:hover {
-  color: var(--contact-lavender-dark);
-}
-
+.contact-page .site-header .nav-links a:hover,
 .contact-page .site-header .nav-links a[aria-current="page"] {
-  color: #000000;
-  font-weight: 800;
+  color: #168d9a;
+  background: rgba(85, 214, 217, 0.15);
 }
+
+/* *** Responsive navbar for smaller screens. */
+@media (max-width: 768px) {
+  .contact-page .site-header {
+    width: calc(100% - 32px);
+    padding-block: 14px;
+  }
+
+  .contact-page .site-header .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .contact-page .site-header .nav-links {
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  .contact-page .site-header .nav-links a {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
 
 /* =========================================================
    CONTACT HERO
