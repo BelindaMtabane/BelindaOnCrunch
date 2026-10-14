@@ -888,4 +888,13 @@
 .cv-page button {
     font-family: "Inter", sans-serif;
 }
+/* *** Hide Home-page hero decorations if shared styles display them on the CV page. */
+.cv-page .hero,
+.cv-page .hero-section,
+.cv-page .hero-visual,
+.cv-page .code-card,
+.cv-page .floating-code,
+.cv-page .tech-tags {
+    display: none !important;
+}
 
