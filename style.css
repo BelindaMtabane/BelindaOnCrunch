@@ -3702,5 +3702,95 @@ footer .copyright {
         font-size: 1rem !important;
     }
 }
+/* *** PROJECTS PAGE HEADER FIX ONLY *** */
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.site-header .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(var(--page-width), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.site-header .brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.site-header .brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header .brand small {
+  display: block;
+}
+
+.site-header .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  min-width: 0;
+}
+
+.site-header .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* *** RESPONSIVE HEADER *** */
+@media (max-width: 1000px) {
+  .site-header .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .site-header .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header .navigation {
+    width: calc(100% - 32px);
+    gap: 12px;
+  }
+
+  .site-header .brand {
+    font-size: 12px;
+  }
+
+  .site-header .brand-mark {
+    width: 39px;
+    height: 39px;
+  }
+
+  .site-header .nav-links {
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  .site-header .nav-links a {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+}
 
