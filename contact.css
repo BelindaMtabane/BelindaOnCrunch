@@ -457,7 +457,7 @@
 
 .contact-page .contact-details {
   width: 100%;
-  max-width: 1000px; /* *** More room for the contact cards */
+  max-width: 2000px; /* *** More room for the contact cards */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -503,7 +503,7 @@
 
 .contact-page .contact-methods {
   width: 100%;
-  max-width: 1000px; /* *** Expanded from 850px */
+  max-width: 2000px; /* *** Expanded from 850px */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
