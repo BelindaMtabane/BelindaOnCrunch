@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +9,11 @@
   <title>Belinda On Crunch | Developer Portfolio</title>
 
   <!-- Shared design for the header, footer and navigation -->
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-<!-- Projects page-specific design -->
-<link rel="stylesheet" href="projects.css">
+  <!-- Projects page-specific design -->
+  <link rel="stylesheet" href="projects.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,36 +21,42 @@
 
 <body class="projects-page">
 
-<!-- *** PROJECTS HEADER FIX: KEEP THE REST OF THE PAGE UNCHANGED *** -->
-<header class="site-header">
-  <nav class="navigation" aria-label="Main navigation">
+  <!-- PROJECTS HEADER -->
+  <header class="site-header">
+    <nav class="navigation" aria-label="Main navigation">
 
-    <a class="brand" href="index.html" aria-label="Belinda on Crunch home">
-      <span class="brand-mark">B</span>
-      <span>
-        BELINDA ON CRUNCH
-        <small>GAME &amp; APP DEVELOPMENT</small>
-      </span>
-    </a>
+      <a class="brand" href="index.html" aria-label="Belinda on Crunch home">
+        <span class="brand-mark">B</span>
+        <span>
+          BELINDA ON CRUNCH
+          <small>GAME &amp; APP DEVELOPMENT</small>
+        </span>
+      </a>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html" aria-current="page">Projects</a>
-      <a href="showcase.html">Showcase</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="cv.html">CV</a>
-    </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cv.html">CV</a>
+      </div>
 
-  </nav>
-</header>
-<!-- *** END PROJECTS HEADER FIX *** -->
- 
+    </nav>
+  </header>
+
   <main class="home-main">
-    <!-- HERO -->
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
     <section class="hero">
       <div class="hero-content">
-        <p class="eyebrow"><span class="status-dot"></span> MY WORK · MY PROCESS · MY PROGRESS</p>
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          MY WORK · MY PROCESS · MY PROGRESS
+        </p>
 
         <h1>
           Ideas become<br>
@@ -66,22 +74,28 @@
         </a>
       </div>
 
+      <!-- Decorative project illustration -->
       <div class="hero-art" aria-label="Decorative project illustration">
         <div class="art-orbit orbit-one"></div>
         <div class="art-orbit orbit-two"></div>
+
         <div class="art-card art-card-back">
           <span class="art-card-label">CREATIVE THINKING</span>
           <span class="art-symbol">✳</span>
         </div>
+
         <div class="art-card art-card-front">
           <span class="art-card-label">BUILD. TEST. IMPROVE.</span>
+
           <div class="art-blocks">
             <span class="art-block block-a"></span>
             <span class="art-block block-b"></span>
             <span class="art-block block-c"></span>
           </div>
+
           <span class="art-caption">One idea at a time.</span>
         </div>
+
         <span class="floating-star star-one">✦</span>
         <span class="floating-star star-two">✳</span>
         <span class="floating-dot dot-one"></span>
@@ -89,7 +103,10 @@
       </div>
     </section>
 
-    <!-- PROJECT NAVIGATION -->
+    <!-- =====================================================
+         PROJECT NAVIGATION
+         ===================================================== -->
+
     <section class="project-index" id="projects">
       <div class="section-intro">
         <p class="eyebrow">THE PROJECT COLLECTION</p>
@@ -98,6 +115,7 @@
       </div>
 
       <div class="index-grid">
+
         <a class="index-card index-aqua" href="#drop-by-drop">
           <span class="index-number">01</span>
           <span class="index-icon">💧</span>
@@ -121,13 +139,16 @@
           <span class="index-subtitle">Unreal Engine · C++ · Tower defence</span>
           <span class="index-arrow">Explore project ↗</span>
         </a>
+
       </div>
     </section>
 
     <!-- =====================================================
          PROJECT 1: DROP BY DROP
          ===================================================== -->
+
     <section class="case-study" id="drop-by-drop">
+
       <div class="case-topline">
         <span class="project-count">PROJECT 01</span>
         <span class="project-category">EDUCATIONAL GAME</span>
@@ -136,7 +157,12 @@
       <div class="case-heading">
         <div class="case-title-wrap">
           <p class="eyebrow">UNITY · C# · SDG 6</p>
-          <h2>Drop by Drop:<br><span class="text-aqua">Flow of Hope.</span></h2>
+
+          <h2>
+            Drop by Drop:<br>
+            <span class="text-aqua">Flow of Hope.</span>
+          </h2>
+
           <p class="case-lead">
             A runner game inspired by water scarcity in rural South African
             communities. Guide Zuri through hazards, collect resources and
@@ -146,81 +172,70 @@
 
         <a class="button button-dark"
            href="https://github.com/BelindaMtabane/ZurisMission"
-           target="_blank" rel="noopener noreferrer">
+           target="_blank"
+           rel="noopener noreferrer">
           View GitHub <span aria-hidden="true">↗</span>
         </a>
       </div>
 
-      <!-- SCREENSHOT PLACEHOLDERS -->
+      <!-- PROJECT COVER IMAGE -->
       <div class="gallery-section">
+
         <div class="gallery-heading">
           <div>
             <p class="eyebrow">A CLOSER LOOK</p>
-            <h3>Inside the game</h3>
+            <h3>Drop by Drop: Flow of Hope</h3>
           </div>
-          <p class="scroll-hint">Scroll sideways <span>→</span></p>
         </div>
 
         <div class="gallery">
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-aqua">
-              <span class="placeholder-number">01</span>
-              <span class="placeholder-icon">▧</span>
-              <strong>Add gameplay screenshot</strong>
-              <small>Character movement and lanes</small>
-            </div>
-            <figcaption>Gameplay and movement</figcaption>
-          </figure>
 
           <figure class="gallery-item">
-            <div class="image-placeholder placeholder-lavender">
-              <span class="placeholder-number">02</span>
-              <span class="placeholder-icon">◈</span>
-              <strong>Add HUD screenshot</strong>
-              <small>Water, health or resources</small>
-            </div>
-            <figcaption>Resource collection and HUD</figcaption>
+            <a class="gallery-image-link"
+               href="assets/images/drop-by-drop-cover.jpg"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Open the Drop by Drop project cover image">
+
+              <img
+                class="gallery-image"
+                src="assets/images/drop-by-drop-cover.jpg"
+                alt="Drop by Drop: Flow of Hope project cover"
+                loading="lazy">
+            </a>
+
+            <figcaption>
+              <strong>💧 Flow of Hope</strong>
+              An educational adventure about water conservation.
+            </figcaption>
           </figure>
 
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-peach">
-              <span class="placeholder-number">03</span>
-              <span class="placeholder-icon">◇</span>
-              <strong>Add level screenshot</strong>
-              <small>Level environment and hazards</small>
-            </div>
-            <figcaption>Level design and obstacles</figcaption>
-          </figure>
-
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-blue">
-              <span class="placeholder-number">04</span>
-              <span class="placeholder-icon">⌁</span>
-              <strong>Add repair screenshot</strong>
-              <small>Water-restoration objective</small>
-            </div>
-            <figcaption>Repair and progression</figcaption>
-          </figure>
         </div>
       </div>
 
       <!-- PROJECT DETAILS -->
       <div class="details-grid">
+
         <article class="detail-card detail-overview">
           <p class="eyebrow">01 / OVERVIEW</p>
           <h3>The idea behind the game.</h3>
+
           <p>
             Drop by Drop: Flow of Hope uses gameplay to introduce players to
             the importance of clean water and sanitation. Players navigate
             environments, collect useful items, avoid hazards and work
             towards restoring water infrastructure.
           </p>
+
           <div class="mini-highlight">
             <span class="highlight-icon">✦</span>
+
             <div>
               <strong>Core objective</strong>
-              <p>Connect an enjoyable game experience to Sustainable
-              Development Goal 6: clean water and sanitation.</p>
+              <p>
+                Connect an enjoyable game experience to Sustainable
+                Development Goal 6: clean water and sanitation.
+              </p>
             </div>
           </div>
         </article>
@@ -228,6 +243,7 @@
         <article class="detail-card">
           <p class="eyebrow">02 / GAMEPLAY</p>
           <h3>Key features.</h3>
+
           <ul class="feature-list">
             <li>Four-lane movement and jumping controls.</li>
             <li>Collectible items and hazards to avoid.</li>
@@ -243,34 +259,49 @@
 
           <div class="challenge-item">
             <span class="challenge-mark">A</span>
+
             <div>
               <h4>Balancing difficulty</h4>
-              <p><strong>Challenge:</strong> Keep gameplay engaging without
-              making it too frustrating for younger players.</p>
-              <p><strong>Approach:</strong> Use readable hazards, clear
-              warnings and playtesting to review resource effects.</p>
+              <p>
+                <strong>Challenge:</strong> Keep gameplay engaging without
+                making it too frustrating for younger players.
+              </p>
+              <p>
+                <strong>Approach:</strong> Use readable hazards, clear
+                warnings and playtesting to review resource effects.
+              </p>
             </div>
           </div>
 
           <div class="challenge-item">
             <span class="challenge-mark">B</span>
+
             <div>
               <h4>Explaining objectives</h4>
-              <p><strong>Challenge:</strong> Help players understand what
-              to collect and what to avoid while moving.</p>
-              <p><strong>Approach:</strong> Use tutorial instructions,
-              visible HUD values and distinct prompts.</p>
+              <p>
+                <strong>Challenge:</strong> Help players understand what
+                to collect and what to avoid while moving.
+              </p>
+              <p>
+                <strong>Approach:</strong> Use tutorial instructions,
+                visible HUD values and distinct prompts.
+              </p>
             </div>
           </div>
 
           <div class="challenge-item">
             <span class="challenge-mark">C</span>
+
             <div>
               <h4>Connecting the theme to play</h4>
-              <p><strong>Challenge:</strong> Make water scarcity part of
-              the gameplay rather than just the story.</p>
-              <p><strong>Approach:</strong> Link water collection, resource
-              pressure and repair objectives to the main mission.</p>
+              <p>
+                <strong>Challenge:</strong> Make water scarcity part of
+                the gameplay rather than just the story.
+              </p>
+              <p>
+                <strong>Approach:</strong> Link water collection, resource
+                pressure and repair objectives to the main mission.
+              </p>
             </div>
           </div>
         </article>
@@ -278,6 +309,7 @@
         <article class="detail-card">
           <p class="eyebrow">04 / REFLECTION</p>
           <h3>Process and learning.</h3>
+
           <p>
             The project combines movement, collectibles, hazards, resource
             tracking, interface feedback and repair objectives. Building
@@ -286,6 +318,7 @@
           </p>
 
           <h4 class="subheading">What I learned</h4>
+
           <ul class="feature-list">
             <li>Connecting mechanics to an educational theme.</li>
             <li>Making HUD feedback clear during fast gameplay.</li>
@@ -294,17 +327,23 @@
           </ul>
 
           <div class="tags">
-            <span>Unity</span><span>C#</span><span>Game design</span>
-            <span>Level design</span><span>GitHub</span>
+            <span>Unity</span>
+            <span>C#</span>
+            <span>Game design</span>
+            <span>Level design</span>
+            <span>GitHub</span>
           </div>
         </article>
+
       </div>
     </section>
 
     <!-- =====================================================
          PROJECT 2: FISCAL FLOW
          ===================================================== -->
+
     <section class="case-study case-lavender" id="fiscal-flow">
+
       <div class="case-topline">
         <span class="project-count">PROJECT 02</span>
         <span class="project-category">PLANNING / INTERFACE</span>
@@ -313,7 +352,9 @@
       <div class="case-heading">
         <div class="case-title-wrap">
           <p class="eyebrow">PRODUCT THINKING · UI/UX</p>
+
           <h2>Fiscal <span class="text-lavender">Flow.</span></h2>
+
           <p class="case-lead">
             A finance-focused project exploring how a clear, approachable
             interface can help people understand information and make more
@@ -321,83 +362,72 @@
           </p>
         </div>
 
-        <!-- Replace # with your actual Fiscal Flow repository URL. -->
+        <!-- Replace this link when the correct repository URL is confirmed. -->
         <a class="button button-dark"
-           href="#fiscal-flow-gallery"
-           onclick="return false;"
-           title="https://github.com/InsidiousVillian/FiscalFlow">
-          Add GitHub link <span aria-hidden="true">↗</span>
+           href="https://github.com/InsidiousVillian/FiscalFlow"
+           target="_blank"
+           rel="noopener noreferrer">
+          View GitHub <span aria-hidden="true">↗</span>
         </a>
       </div>
 
+      <!-- PROJECT COVER IMAGE -->
       <div class="gallery-section" id="fiscal-flow-gallery">
+
         <div class="gallery-heading">
           <div>
             <p class="eyebrow">A CLOSER LOOK</p>
-            <h3>From concept to interface</h3>
+            <h3>Fiscal Flow</h3>
           </div>
-          <p class="scroll-hint">Scroll sideways <span>→</span></p>
         </div>
 
         <div class="gallery">
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-lavender">
-              <span class="placeholder-number">01</span>
-              <span class="placeholder-icon">▧</span>
-              <strong>Add overview screenshot</strong>
-              <small>Concept or landing screen</small>
-            </div>
-            <figcaption>Project overview</figcaption>
-          </figure>
 
           <figure class="gallery-item">
-            <div class="image-placeholder placeholder-aqua">
-              <span class="placeholder-number">02</span>
-              <span class="placeholder-icon">◈</span>
-              <strong>Add dashboard screenshot</strong>
-              <small>Main information screen</small>
-            </div>
-            <figcaption>Dashboard and hierarchy</figcaption>
+            <a class="gallery-image-link"
+               href="assets/images/fiscal-flow-cover.jpg"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Open the Fiscal Flow project cover image">
+
+              <img
+                class="gallery-image"
+                src="assets/images/fiscal-flow-cover.jpg"
+                alt="Fiscal Flow project cover"
+                loading="lazy">
+            </a>
+
+            <figcaption>
+              <strong>✳ Fiscal Flow</strong>
+              A project focused on financial planning and management.
+            </figcaption>
           </figure>
 
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-peach">
-              <span class="placeholder-number">03</span>
-              <span class="placeholder-icon">◇</span>
-              <strong>Add planning screenshot</strong>
-              <small>Show a key user task</small>
-            </div>
-            <figcaption>Planning flow</figcaption>
-          </figure>
-
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-blue">
-              <span class="placeholder-number">04</span>
-              <span class="placeholder-icon">⌁</span>
-              <strong>Add another screen</strong>
-              <small>Prototype or responsive view</small>
-            </div>
-            <figcaption>Additional interface detail</figcaption>
-          </figure>
         </div>
       </div>
 
+      <!-- PROJECT DETAILS -->
       <div class="details-grid">
+
         <article class="detail-card detail-overview">
           <p class="eyebrow">01 / OVERVIEW</p>
           <h3>The idea behind the project.</h3>
+
           <p>
             Fiscal Flow is presented here as a project focused on making
-            financial planning easier to follow. Use this case study to
-            showcase the actual screens, user flow and design decisions
-            from your implementation or prototype.
+            financial planning easier to follow. This case study highlights
+            the project concept, interface direction and design decisions.
           </p>
+
           <div class="mini-highlight">
             <span class="highlight-icon">✦</span>
+
             <div>
               <strong>Core objective</strong>
-              <p>Make information understandable, organised and easy to
-              navigate, with a focus on clear hierarchy and useful feedback.</p>
+              <p>
+                Make information understandable, organised and easy to
+                navigate, with a focus on clear hierarchy and useful feedback.
+              </p>
             </div>
           </div>
         </article>
@@ -405,6 +435,7 @@
         <article class="detail-card">
           <p class="eyebrow">02 / DESIGN</p>
           <h3>Key features.</h3>
+
           <ul class="feature-list">
             <li>Clear information hierarchy and grouping.</li>
             <li>A planning flow that guides users between tasks.</li>
@@ -419,34 +450,49 @@
 
           <div class="challenge-item">
             <span class="challenge-mark">A</span>
+
             <div>
               <h4>Presenting complex information</h4>
-              <p><strong>Challenge:</strong> Make information readable
-              without overwhelming the user.</p>
-              <p><strong>Approach:</strong> Group related details and give
-              important information clear visual priority.</p>
+              <p>
+                <strong>Challenge:</strong> Make information readable
+                without overwhelming the user.
+              </p>
+              <p>
+                <strong>Approach:</strong> Group related details and give
+                important information clear visual priority.
+              </p>
             </div>
           </div>
 
           <div class="challenge-item">
             <span class="challenge-mark">B</span>
+
             <div>
               <h4>Keeping navigation clear</h4>
-              <p><strong>Challenge:</strong> Make the main actions easy
-              to locate.</p>
-              <p><strong>Approach:</strong> Use consistent labels,
-              predictable navigation and a clear screen hierarchy.</p>
+              <p>
+                <strong>Challenge:</strong> Make the main actions easy
+                to locate.
+              </p>
+              <p>
+                <strong>Approach:</strong> Use consistent labels,
+                predictable navigation and a clear screen hierarchy.
+              </p>
             </div>
           </div>
 
           <div class="challenge-item">
             <span class="challenge-mark">C</span>
+
             <div>
               <h4>Improving the design</h4>
-              <p><strong>Challenge:</strong> Avoid relying only on personal
-              preference when reviewing a design.</p>
-              <p><strong>Approach:</strong> Use feedback and task reviews
-              to identify confusing screens and guide improvements.</p>
+              <p>
+                <strong>Challenge:</strong> Avoid relying only on personal
+                preference when reviewing a design.
+              </p>
+              <p>
+                <strong>Approach:</strong> Use feedback and task reviews
+                to identify confusing screens and guide improvements.
+              </p>
             </div>
           </div>
         </article>
@@ -454,6 +500,7 @@
         <article class="detail-card">
           <p class="eyebrow">04 / REFLECTION</p>
           <h3>Process and learning.</h3>
+
           <p>
             Document the stages you actually followed, such as requirements,
             research, wireframes, interface design, implementation or
@@ -462,6 +509,7 @@
           </p>
 
           <h4 class="subheading">What I learned</h4>
+
           <ul class="feature-list">
             <li>Turning a broad idea into focused user tasks.</li>
             <li>Using layout and hierarchy to improve readability.</li>
@@ -470,17 +518,22 @@
           </ul>
 
           <div class="tags">
-            <span>UI/UX</span><span>Planning</span>
-            <span>Prototyping</span><span>Add actual tools</span>
+            <span>UI/UX</span>
+            <span>Planning</span>
+            <span>Prototyping</span>
+            <span>Interface design</span>
           </div>
         </article>
+
       </div>
     </section>
 
     <!-- =====================================================
          PROJECT 3: THE GROVE MEADOWS
          ===================================================== -->
+
     <section class="case-study" id="grove-meadows">
+
       <div class="case-topline">
         <span class="project-count">PROJECT 03</span>
         <span class="project-category">GAMEPLAY SYSTEMS</span>
@@ -489,7 +542,9 @@
       <div class="case-heading">
         <div class="case-title-wrap">
           <p class="eyebrow">UNREAL ENGINE · C++ · BLUEPRINTS</p>
+
           <h2>The Grove <span class="text-green">Meadows.</span></h2>
+
           <p class="case-lead">
             A fantasy tower-defence game where players use defenders,
             resources and wave-based combat to protect a magical grove
@@ -498,80 +553,71 @@
         </div>
 
         <a class="button button-dark"
-           href="https://github.com/harrietaleck/ProceduralGenGade3B/tree/part2"
-           target="_blank" rel="noopener noreferrer">
+           href="https://github.com/BelindaMtabane/ProceduralGen3B"
+           target="_blank"
+           rel="noopener noreferrer">
           View GitHub <span aria-hidden="true">↗</span>
         </a>
       </div>
 
+      <!-- PROJECT COVER IMAGE -->
       <div class="gallery-section">
+
         <div class="gallery-heading">
           <div>
             <p class="eyebrow">A CLOSER LOOK</p>
-            <h3>Inside the grove</h3>
+            <h3>The Grove Meadows</h3>
           </div>
-          <p class="scroll-hint">Scroll sideways <span>→</span></p>
         </div>
 
         <div class="gallery">
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-green">
-              <span class="placeholder-number">01</span>
-              <span class="placeholder-icon">▧</span>
-              <strong>Add environment screenshot</strong>
-              <small>Show the game world</small>
-            </div>
-            <figcaption>Environment and atmosphere</figcaption>
-          </figure>
 
           <figure class="gallery-item">
-            <div class="image-placeholder placeholder-lavender">
-              <span class="placeholder-number">02</span>
-              <span class="placeholder-icon">◈</span>
-              <strong>Add defender screenshot</strong>
-              <small>Show placement or combat</small>
-            </div>
-            <figcaption>Defenders and placement</figcaption>
+            <a class="gallery-image-link"
+               href="assets/images/grove-meadows-cover.jpg"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Open The Grove Meadows project cover image">
+
+              <img
+                class="gallery-image"
+                src="assets/images/grove-meadows-cover.jpg"
+                alt="The Grove Meadows fantasy tower defence game cover"
+                loading="lazy">
+            </a>
+
+            <figcaption>
+              <strong>🌿 The Grove Meadows</strong>
+              A fantasy tower-defence game set in a magical forest.
+            </figcaption>
           </figure>
 
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-peach">
-              <span class="placeholder-number">03</span>
-              <span class="placeholder-icon">◇</span>
-              <strong>Add enemy screenshot</strong>
-              <small>Show an enemy or wave</small>
-            </div>
-            <figcaption>Enemy encounters</figcaption>
-          </figure>
-
-          <figure class="gallery-item">
-            <div class="image-placeholder placeholder-blue">
-              <span class="placeholder-number">04</span>
-              <span class="placeholder-icon">⌁</span>
-              <strong>Add HUD screenshot</strong>
-              <small>Resources or match state</small>
-            </div>
-            <figcaption>HUD and player feedback</figcaption>
-          </figure>
         </div>
       </div>
 
+      <!-- PROJECT DETAILS -->
       <div class="details-grid">
+
         <article class="detail-card detail-overview">
           <p class="eyebrow">01 / OVERVIEW</p>
           <h3>The idea behind the game.</h3>
+
           <p>
             The Grove Meadows is a fantasy tower-defence project centred
             on protecting a grove. Players manage resources, place defenders
             and respond to enemies that move along a path towards a defended
             objective.
           </p>
+
           <div class="mini-highlight">
             <span class="highlight-icon">✦</span>
+
             <div>
               <strong>Core objective</strong>
-              <p>Combine resource decisions, defender placement, enemy
-              movement, combat and wave progression into a clear gameplay loop.</p>
+              <p>
+                Combine resource decisions, defender placement, enemy
+                movement, combat and wave progression into a clear gameplay loop.
+              </p>
             </div>
           </div>
         </article>
@@ -579,6 +625,7 @@
         <article class="detail-card">
           <p class="eyebrow">02 / GAMEPLAY</p>
           <h3>Key features.</h3>
+
           <ul class="feature-list">
             <li>Build locations for strategic defender placement.</li>
             <li>A resource wallet that informs build decisions.</li>
@@ -594,35 +641,50 @@
 
           <div class="challenge-item">
             <span class="challenge-mark">A</span>
+
             <div>
               <h4>Reliable enemy movement</h4>
-              <p><strong>Challenge:</strong> Move enemies through the level
-              without relying on a navigation mesh.</p>
-              <p><strong>Approach:</strong> Use waypoint-following and test
-              path order, turning and arrival behaviour.</p>
+              <p>
+                <strong>Challenge:</strong> Move enemies through the level
+                without relying on a navigation mesh.
+              </p>
+              <p>
+                <strong>Approach:</strong> Use waypoint-following and test
+                path order, turning and arrival behaviour.
+              </p>
             </div>
           </div>
 
           <div class="challenge-item">
             <span class="challenge-mark">B</span>
+
             <div>
               <h4>Target selection and combat</h4>
-              <p><strong>Challenge:</strong> Keep enemies focused on valid
-              targets and moving when combat ends.</p>
-              <p><strong>Approach:</strong> Define targeting rules for
-              defenders and the tower, then test damage, death and
-              target-loss cases.</p>
+              <p>
+                <strong>Challenge:</strong> Keep enemies focused on valid
+                targets and moving when combat ends.
+              </p>
+              <p>
+                <strong>Approach:</strong> Define targeting rules for
+                defenders and the tower, then test damage, death and
+                target-loss cases.
+              </p>
             </div>
           </div>
 
           <div class="challenge-item">
             <span class="challenge-mark">C</span>
+
             <div>
               <h4>Balancing enemy types</h4>
-              <p><strong>Challenge:</strong> Make enemy types feel different
-              without making one unfair.</p>
-              <p><strong>Approach:</strong> Tune health, speed, damage and
-              rewards together, then test combinations across waves.</p>
+              <p>
+                <strong>Challenge:</strong> Make enemy types feel different
+                without making one unfair.
+              </p>
+              <p>
+                <strong>Approach:</strong> Tune health, speed, damage and
+                rewards together, then test combinations across waves.
+              </p>
             </div>
           </div>
         </article>
@@ -630,6 +692,7 @@
         <article class="detail-card">
           <p class="eyebrow">04 / REFLECTION</p>
           <h3>Process and learning.</h3>
+
           <p>
             This project combines C++ gameplay systems with Unreal Engine
             workflows. A useful development cycle is to build one system,
@@ -638,6 +701,7 @@
           </p>
 
           <h4 class="subheading">What I learned</h4>
+
           <ul class="feature-list">
             <li>Dividing gameplay logic into focused systems and components.</li>
             <li>Connecting waypoint movement with explicit targeting rules.</li>
@@ -646,24 +710,37 @@
           </ul>
 
           <div class="tags">
-            <span>Unreal Engine</span><span>C++</span>
-            <span>Blueprints</span><span>Gameplay AI</span><span>GitHub</span>
+            <span>Unreal Engine</span>
+            <span>C++</span>
+            <span>Blueprints</span>
+            <span>Gameplay AI</span>
+            <span>GitHub</span>
           </div>
         </article>
+
       </div>
     </section>
 
-    <!-- CONTACT CALL TO ACTION -->
+    <!-- =====================================================
+         CONTACT CALL TO ACTION
+         ===================================================== -->
+
     <section class="contact-cta">
       <div class="cta-decoration cta-decoration-one"></div>
       <div class="cta-decoration cta-decoration-two"></div>
 
       <p class="eyebrow">THE NEXT CHAPTER</p>
-      <h2>Every project is<br><span>another step forward.</span></h2>
+
+      <h2>
+        Every project is<br>
+        <span>another step forward.</span>
+      </h2>
+
       <p>
         I'm always learning, building and exploring new ways to bring
         creative ideas to life.
       </p>
+
       <a class="button button-primary" href="contact.html">
         Let's connect <span aria-hidden="true">↗</span>
       </a>
@@ -671,11 +748,12 @@
 
   </main>
 
-  
-  <!-- SHARED FOOTER — MATCHES HOME -->
-  <footer>
+  <!-- SHARED FOOTER -->
+  <footer class="site-footer">
+
     <a class="brand footer-brand" href="index.html">
       <span class="brand-mark">B</span>
+
       <span>
         BELINDA ON CRUNCH
         <small>GAME &amp; APP DEVELOPMENT</small>
@@ -688,20 +766,25 @@
       <a href="https://github.com/BelindaMtabane"
          target="_blank"
          rel="noopener noreferrer">GitHub ↗</a>
+
       <a href="contact.html">Contact</a>
       <a href="cv.html">CV</a>
     </div>
 
     <p class="copyright">
-      © 2026 Belinda Mtabane. All rights reserved.
+      © <span id="current-year">2026</span> Belinda Mtabane. All rights reserved.
     </p>
+
   </footer>
 
-
+  <!-- AUTOMATIC FOOTER YEAR -->
   <script>
-    // Automatically update the footer year.
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
+    // *** Update the footer year using the element that exists in this page.
+    const yearElement = document.getElementById("current-year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
   </script>
 
 </body>
