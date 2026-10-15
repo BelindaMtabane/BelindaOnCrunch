@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Showcase | Belinda On Crunch</title>
+  <meta
+    name="description"
+    content="Explore Belinda Mtabane's game development, animation, AI video creation and creative experiments."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="showcase.css">
+  <script src="showcase.js" defer></script>
+</head>
+
+<body class="showcase-page">
+
+  <!-- SHARED WEBSITE HEADER -->
+  <header class="site-header">
+    <nav class="navigation" aria-label="Main navigation">
+
+      <a class="brand" href="index.html">
+        <span class="brand-mark">B</span>
+        <span>
+          BELINDA ON CRUNCH
+          <small>GAME &amp; APP DEVELOPMENT</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="showcase.html" aria-current="page">Showcase</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cv.html">CV</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- INTRODUCTION -->
+    <section class="showcase-hero">
+      <div class="showcase-hero-content">
+
+        <p class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          THE CREATIVE PLAYGROUND
+        </p>
+
+        <h1>
+          Ideas in motion.<br>
+          <span>Creativity in action.</span>
+        </h1>
+
+        <p class="hero-description">
+          Welcome to my showcase — a collection of videos, game
+          development experiments, animations and creative projects.
+          Explore the process, discover the tools, and see how ideas
+          become experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a class="showcase-button primary-button" href="#video-library">
+            Explore the videos <span aria-hidden="true">↘</span>
+          </a>
+
+          <a class="showcase-button secondary-button" href="projects.html">
+            Explore my projects
+          </a>
+        </div>
+
+        <div class="hero-tags" aria-label="Showcase topics">
+          <span>Game Development</span>
+          <span>AI Video</span>
+          <span>Animation</span>
+          <span>Creative Technology</span>
+        </div>
+
+      </div>
+
+      <div class="hero-art" aria-label="Abstract creative digital artwork">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-orbit orbit-three"></div>
+
+        <div class="art-glow"></div>
+
+        <div class="art-panel panel-back">
+          <span>CREATE</span>
+          <span>EXPERIMENT</span>
+        </div>
+
+        <div class="art-panel panel-front">
+          <span class="play-symbol">▶</span>
+          <span class="panel-label">IDEAS COME ALIVE</span>
+          <span class="panel-number">01 / ∞</span>
+        </div>
+
+        <span class="floating-shape shape-one">✳</span>
+        <span class="floating-shape shape-two">✦</span>
+        <span class="floating-shape shape-three">+</span>
+      </div>
+    </section>
+
+    <!-- SHOWCASE INTRO -->
+    <section class="showcase-introduction section-container">
+      <div>
+        <p class="eyebrow">BEHIND THE SCREEN</p>
+        <h2>More than just a finished product.</h2>
+      </div>
+
+      <p>
+        Every project has a story. These showcases highlight what each
+        experience does, how it was created, and the skills behind it —
+        from gameplay systems and world-building to storytelling and
+        AI-assisted video production.
+      </p>
+    </section>
+
+    <!-- VIDEO LIBRARY -->
+    <section class="video-library section-container" id="video-library">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WATCH • DISCOVER • LEARN</p>
+          <h2>The video library</h2>
+          <p class="section-description">
+            Select a category or explore the collection below.
+          </p>
+        </div>
+
+        <span class="collection-count" id="collection-count">
+          03 SHOWCASES
+        </span>
+      </div>
+
+      <!-- Category filters are populated and controlled by JavaScript -->
+      <div class="showcase-filters" aria-label="Filter showcase videos">
+        <button class="filter-button active" data-filter="all" type="button">
+          All work
+        </button>
+
+        <button class="filter-button" data-filter="games" type="button">
+          Game development
+        </button>
+
+        <button class="filter-button" data-filter="animation" type="button">
+          Animation &amp; AI video
+        </button>
+
+        <button class="filter-button" data-filter="process" type="button">
+          Creative process
+        </button>
+      </div>
+
+      <div class="video-grid" id="video-grid" aria-live="polite">
+        <!-- JavaScript creates the video cards here. -->
+      </div>
+
+      <p class="video-note">
+        Video links and previews will become active when the actual
+        video URLs are added to showcase.js.
+      </p>
+
+    </section>
+
+    <!-- SKILLS AND PROCESS -->
+    <section class="creative-process">
+      <div class="section-container">
+
+        <div class="process-heading">
+          <p class="eyebrow">THE WORK BEHIND THE WORK</p>
+          <h2>From the first idea to the final frame.</h2>
+          <p>
+            I combine creative thinking, technical problem-solving and
+            experimentation to build interactive and visual experiences.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card">
+            <span class="process-number">01</span>
+            <div class="process-icon">⌘</div>
+            <h3>Design &amp; imagine</h3>
+            <p>
+              Developing concepts, visual direction, mechanics and
+              experiences around a clear creative goal.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">02</span>
+            <div class="process-icon">◈</div>
+            <h3>Build &amp; experiment</h3>
+            <p>
+              Working with game engines, code, digital tools and
+              iterative problem-solving to bring ideas to life.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">03</span>
+            <div class="process-icon">▶</div>
+            <h3>Create &amp; share</h3>
+            <p>
+              Turning the process into playable experiences, visual
+              stories, demonstrations and videos.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="tools-strip">
+          <span class="tools-label">TOOLS &amp; TECHNOLOGIES</span>
+          <div class="tools-list">
+            <span>Unity</span>
+            <span>Unreal Engine</span>
+            <span>C#</span>
+            <span>Blueprints</span>
+            <span>Blender</span>
+            <span>AI Video Tools</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="showcase-cta section-container">
+      <div class="cta-content">
+        <p class="eyebrow">HAVE AN IDEA?</p>
+        <h2>Let's create something meaningful.</h2>
+        <p>
+          Interested in a project, collaboration or creative experiment?
+          I'd love to hear what you're imagining.
+        </p>
+
+        <div class="hero-actions">
+          <a class="showcase-button primary-button" href="contact.html">
+            Let's connect <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="showcase-text-link" href="projects.html">
+            View all projects →
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-decoration" aria-hidden="true">
+        <span>IDEA</span>
+        <span>+</span>
+        <span>EXECUTION</span>
+        <span>=</span>
+        <span>IMPACT</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SHARED WEBSITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <a class="brand footer-logo" href="index.html">
+          <span class="brand-mark">B</span>
+          <span>
+            BELINDA ON CRUNCH
+            <small>GAME &amp; APP DEVELOPMENT</small>
+          </span>
+        </a>
+
+        <p>Thoughtfully built. Boldly imagined.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/BelindaMtabane"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+
+        <a href="contact.html">Contact</a>
+        <a href="cv.html">CV</a>
+      </div>
+
+      <p class="footer-copyright">
+        © 2026 Belinda Mtabane. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
