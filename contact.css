@@ -44,148 +44,137 @@
 }
 
 /* =========================================================
-   *** FIXED: CONTACT HEADER
-   *** Contact is active; Projects is not active on this page.
+   *** FIX: SHARED HEADER — CONTACT PAGE
+   *** Match the same header design used by Home and CV.
+   *** Only the active navigation link changes.
    ========================================================= */
 
 .contact-page .site-header {
-  width: 100%;
-  min-height: 82px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: rgba(251, 250, 246, 0.96);
-  border: 0;
-  box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+    width: 100%;
+    min-height: 82px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgba(251, 250, 246, 0.96);
+    border: 0;
+    box-shadow: none;
 }
 
 .contact-page .site-header .navigation {
-  width: min(1180px, calc(100% - 48px));
-  min-height: 82px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  border-bottom: 1px solid rgba(70, 114, 135, 0.13);
+    width: min(1180px, calc(100% - 48px));
+    min-height: 82px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid rgba(70, 114, 135, 0.13);
 }
 
 .contact-page .site-header .brand {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 11px;
-  color: #172640;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  line-height: 1.3;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.contact-page .site-header .brand > span:last-child {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #172640;
-}
-
-.contact-page .site-header .brand .brand-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  color: #172640;
-  white-space: normal;
-}
-
-.contact-page .site-header .brand .brand-name {
-  color: #172640;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1.2px;
-  line-height: 1.2;
-}
-
-.contact-page .site-header .brand small {
-  display: block;
-  margin-top: 3px;
-  color: #168d9a;
-  font-family: "Inter", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: 1.4;
-}
-
-.contact-page .site-header .brand .brand-text small {
-  margin-top: 0;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.3;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .contact-page .site-header .brand .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 39px;
-  height: 39px;
-  flex: 0 0 39px;
-  border: 0;
-  border-radius: 13px;
-  color: #ffffff;
-  background: linear-gradient(135deg, #45cfd2, #a99aff);
-  box-shadow: 0 8px 24px rgba(90, 181, 201, 0.25);
-  font-family: "Inter", sans-serif;
-  font-size: 22px;
-  font-weight: 800;
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    color: #ffffff;
+    background: linear-gradient(135deg, #45cfd2, #a99aff);
+    border: 0;
+    border-radius: 13px;
+    box-shadow: 0 8px 24px rgba(90, 181, 201, 0.25);
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.contact-page .site-header .brand > span:last-child {
+    display: flex;
+    flex-direction: column;
+    color: #172640;
+}
+
+.contact-page .site-header .brand small {
+    display: block;
+    margin-top: 3px;
+    color: #62677b;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .contact-page .site-header .nav-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .contact-page .site-header .nav-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 15px;
-  border: 0;
-  border-radius: 30px;
-  background: transparent;
-  color: #62677b;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 30px;
+    background: transparent;
+    color: #62677b;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* *** FIX: Only the current Contact link receives the active styling. */
-.contact-page .site-header .nav-links a[aria-current="page"],
-.contact-page .site-header .nav-links a.active {
-  color: #168d9a;
-  background: rgba(85, 214, 217, 0.15);
+.contact-page .site-header .nav-links a:hover,
+.contact-page .site-header .nav-links a[aria-current="page"] {
+    color: #168d9a;
+    background: rgba(85, 214, 217, 0.15);
 }
 
-.contact-page .site-header .nav-links a:hover {
-  color: #168d9a;
-  background: rgba(85, 214, 217, 0.15);
+/* *** FIX: Responsive header — same layout rules across pages. */
+@media (max-width: 768px) {
+    .contact-page .site-header .navigation {
+        width: calc(100% - 32px);
+        min-height: auto;
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .contact-page .site-header .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    .contact-page .site-header .nav-links a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
 }
 
 /* =========================================================
