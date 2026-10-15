@@ -1,8 +1,7 @@
-
 /* =========================================================
    BELINDA ON CRUNCH — CONTACT PAGE
-   *** Contact-specific styles only.
-   *** Keeps the existing homepage design language.
+   *** Contact-specific styles.
+   *** Shared header highlights Contact, not Projects.
    ========================================================= */
 
 :root {
@@ -44,164 +43,149 @@
   outline-offset: 4px;
 }
 
-
-
 /* =========================================================
    *** FIXED: CONTACT HEADER
-   *** Match the CV header without changing cv.css.
-   *** Keep the existing Contact page content and footer.
+   *** Contact is active; Projects is not active on this page.
    ========================================================= */
 
-/* *** FIX: Full-width header with a centered inner navigation. */
 .contact-page .site-header {
-    width: 100%;
-    min-height: 82px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: rgba(251, 250, 246, 0.96);
-    border: 0;
-    box-shadow: none;
+  width: 100%;
+  min-height: 82px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgba(251, 250, 246, 0.96);
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-/* *** FIX: Keep the 1180px navigation content centered. */
 .contact-page .site-header .navigation {
-    width: min(1180px, calc(100% - 48px));
-    min-height: 82px;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    border-bottom: 1px solid rgba(70, 114, 135, 0.13);
+  width: min(1180px, calc(100% - 48px));
+  min-height: 82px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid rgba(70, 114, 135, 0.13);
 }
 
-/* *** FIX: Consistent brand alignment and typography. */
 .contact-page .site-header .brand {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    flex-shrink: 0;
-    gap: 11px;
-    color: #172640;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    line-height: 1.3;
-    text-decoration: none;
-    white-space: nowrap;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 11px;
+  color: #172640;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1.3;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-/* *** FIX: Style the logo separately from the brand text. */
-.contact-page .site-header .brand .brand-mark {
-    display: grid;
-    place-items: center;
-    width: 39px;
-    height: 39px;
-    flex: 0 0 39px;
-    border: 0;
-    border-radius: 13px;
-    color: #ffffff;
-    background: linear-gradient(135deg, #45cfd2, #a99aff);
-    box-shadow: 0 8px 24px rgba(90, 181, 201, 0.25);
-    font-family: "Inter", sans-serif;
-    font-size: 22px;
-    font-weight: 800;
+.contact-page .site-header .brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #172640;
 }
 
-/* *** FIX: Stack the name and subtitle reliably. */
 .contact-page .site-header .brand .brand-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    color: #172640;
-    white-space: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  color: #172640;
+  white-space: normal;
 }
 
-/* *** FIX: Style the main brand name. */
 .contact-page .site-header .brand .brand-name {
-    color: #172640;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    line-height: 1.2;
+  color: #172640;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
 }
 
-/* *** FIX: Show the subtitle underneath the brand name. */
+.contact-page .site-header .brand small {
+  display: block;
+  margin-top: 3px;
+  color: #168d9a;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
 .contact-page .site-header .brand .brand-text small {
-    display: block;
-    margin: 0;
-    color: #168d9a;
-    font-family: "Inter", sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    line-height: 1.4;
+  margin-top: 0;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
-/* *** FIX: Match the CV navigation layout. */
+.contact-page .site-header .brand .brand-mark {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  border: 0;
+  border-radius: 13px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #45cfd2, #a99aff);
+  box-shadow: 0 8px 24px rgba(90, 181, 201, 0.25);
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
 .contact-page .site-header .nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-/* *** FIX: Match the CV navigation link appearance. */
 .contact-page .site-header .nav-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 15px;
-    border: 0;
-    border-radius: 30px;
-    color: #62677b;
-    background: transparent;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4;
-    text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 30px;
+  background: transparent;
+  color: #62677b;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* *** FIX: Aqua hover and active-page styling. */
-.contact-page .site-header .nav-links a:hover,
+/* *** FIX: Only the current Contact link receives the active styling. */
 .contact-page .site-header .nav-links a[aria-current="page"],
 .contact-page .site-header .nav-links a.active {
-    color: #168d9a;
-    background: rgba(85, 214, 217, 0.15);
+  color: #168d9a;
+  background: rgba(85, 214, 217, 0.15);
 }
 
-/* *** FIX: Responsive header on tablets and phones. */
-@media (max-width: 768px) {
-    .contact-page .site-header .navigation {
-        width: calc(100% - 32px);
-        min-height: auto;
-        padding: 14px 0;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .contact-page .site-header .nav-links {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 4px;
-    }
-
-    .contact-page .site-header .nav-links a {
-        padding: 8px 10px;
-        font-size: 13px;
-    }
+.contact-page .site-header .nav-links a:hover {
+  color: #168d9a;
+  background: rgba(85, 214, 217, 0.15);
 }
 
 /* =========================================================
@@ -785,10 +769,10 @@
 
 /* =========================================================
    SHARED FOOTER
-   Same structure as the homepage.
    ========================================================= */
 
-.contact-page > footer {
+.contact-page > footer,
+.contact-page .site-footer {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -796,22 +780,27 @@
   align-items: center;
   justify-content: center;
   gap: 18px;
-  margin-top: 0;
+  margin: 0;
   padding: 30px 24px;
+  background-color: #172640;
+  color: #ffffff;
   text-align: center;
 }
 
-.contact-page > footer .footer-brand {
+.contact-page > footer .footer-brand,
+.contact-page .site-footer .footer-brand {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  margin: 0;
   color: #ffffff;
   text-decoration: none;
 }
 
-.contact-page > footer .footer-brand > span:last-child {
+.contact-page > footer .footer-brand > span:last-child,
+.contact-page .site-footer .footer-brand > span:last-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -819,46 +808,66 @@
   text-align: left;
 }
 
-.contact-page > footer .footer-brand small {
+.contact-page > footer .footer-brand small,
+.contact-page .site-footer .footer-brand small {
   display: block;
-  color: #ffffff;
+  color: #a9eee7;
 }
 
-.contact-page > footer .footer-brand .brand-mark {
-  color: var(--contact-lavender-dark);
+.contact-page > footer .footer-brand .brand-mark,
+.contact-page .site-footer .brand-mark {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  background: #a9eee7;
+  color: #172640;
+  border: 0;
+  border-radius: 13px;
+  box-shadow: none;
 }
 
-.contact-page > footer > p {
+.contact-page > footer p,
+.contact-page .site-footer p {
   margin: 0;
+  color: #ffffff;
   text-align: center;
 }
 
-.contact-page > footer .footer-links {
+.contact-page > footer .footer-links,
+.contact-page .site-footer .footer-links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 22px;
+  margin: 0;
 }
 
-.contact-page > footer .footer-links a {
+.contact-page > footer .footer-links a,
+.contact-page .site-footer .footer-links a {
   color: #ffffff;
+  font-size: 13px;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.contact-page > footer .footer-links a:hover {
-  color: var(--contact-lavender-dark);
+.contact-page > footer .footer-links a:hover,
+.contact-page .site-footer .footer-links a:hover {
+  color: #a9eee7;
 }
 
-.contact-page > footer .copyright {
+.contact-page > footer .copyright,
+.contact-page .site-footer .copyright {
   width: 100%;
   box-sizing: border-box;
   margin-top: 8px;
   padding-top: 18px;
-  border-top: 1px solid var(--contact-line);
-  color: var(--contact-muted);
-  font-size: 0.76rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -886,23 +895,27 @@
   }
 }
 
+/* *** FIX: One consistent responsive header rule. */
 @media (max-width: 768px) {
-  .contact-page .site-header {
-    padding: 20px 18px;
-  }
-
   .contact-page .site-header .navigation {
-    flex-direction: column;
+    width: calc(100% - 32px);
+    min-height: auto;
+    padding: 14px 0;
     align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
   }
 
   .contact-page .site-header .nav-links {
+    width: 100%;
     justify-content: flex-start;
-    gap: 14px 20px;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 
   .contact-page .site-header .nav-links a {
-    font-size: 0.84rem;
+    padding: 8px 10px;
+    font-size: 13px;
   }
 
   .contact-hero {
@@ -942,11 +955,13 @@
     padding-block: 70px;
   }
 
-  .contact-page > footer {
+  .contact-page > footer,
+  .contact-page .site-footer {
     padding: 32px 18px 20px;
   }
 
-  .contact-page > footer .footer-links {
+  .contact-page > footer .footer-links,
+  .contact-page .site-footer .footer-links {
     gap: 14px 20px;
   }
 }
@@ -1010,353 +1025,3 @@
     animation-iteration-count: 1 !important;
   }
 }
-
-/* *** Shared footer colours for Projects and Contact pages *** */
-.site-footer {
-  background-color: #172640;
-  color: #ffffff;
-}
-
-.site-footer p,
-.site-footer .brand,
-.site-footer .footer-links a,
-.site-footer .copyright {
-  color: #ffffff;
-}
-
-.site-footer .brand-mark {
-  background-color: #a9eee7;
-  color: #172640;
-}
-
-.site-footer .brand small {
-  color: #a9eee7;
-}
-
-.site-footer .footer-links a:hover {
-  color: #a9eee7;
-}
-/* =========================================================
-   *** UPDATED: SHARED HEADER AND FOOTER
-   *** Projects and Contact pages match the CV/Home design.
-   *** Keep existing page content and section styles.
-   ========================================================= */
-
-
-/* =========================================================
-   *** SHARED HEADER AND NAVIGATION
-   ========================================================= */
-
-/* *** Updated: Keep the header aligned with the 1180px layout. */
-.projects-page .site-header,
-.contact-page .site-header {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: rgba(251, 250, 246, 0.96);
-    border: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-}
-
-/* *** Updated: Match the CV navbar dimensions and border. */
-.projects-page .site-header .navigation,
-.contact-page .site-header .navigation {
-    width: min(1180px, calc(100% - 48px));
-    min-height: 82px;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-
-    border-bottom: 1px solid rgba(70, 114, 135, 0.13);
-}
-
-/* *** Updated: Match the CV brand typography and spacing. */
-.projects-page .site-header .brand,
-.contact-page .site-header .brand {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 11px;
-    flex-shrink: 0;
-
-    color: #000000;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    line-height: 1.3;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-/* *** Updated: Keep the brand text and subtitle stacked. */
-.projects-page .site-header .brand > span:last-child,
-.contact-page .site-header .brand > span:last-child {
-    display: flex;
-    flex-direction: column;
-    color: #000000;
-}
-
-/* *** Updated: Match the brand subtitle to the shared navbar. */
-.projects-page .site-header .brand small,
-.contact-page .site-header .brand small {
-    display: block;
-    margin-top: 3px;
-
-    color: #62677b;
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* *** Updated: Match the 39px gradient brand symbol. */
-.projects-page .site-header .brand .brand-mark,
-.contact-page .site-header .brand .brand-mark {
-    display: grid;
-    place-items: center;
-
-    width: 39px;
-    height: 39px;
-    flex-shrink: 0;
-
-    color: #ffffff;
-    background: linear-gradient(135deg, #45cfd2, #a99aff);
-    border: 0;
-    border-radius: 13px;
-
-    box-shadow: 0 8px 24px rgba(90, 181, 201, 0.25);
-
-    font-family: "Inter", sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-}
-
-/* *** Updated: Match the CV navigation spacing. */
-.projects-page .site-header .nav-links,
-.contact-page .site-header .nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-/* *** Updated: Match the CV navigation link appearance. */
-.projects-page .site-header .nav-links a,
-.contact-page .site-header .nav-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 15px;
-    border: 0;
-    border-radius: 30px;
-
-    background: transparent;
-    color: #62677b;
-
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4;
-    text-decoration: none;
-
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-/* *** Updated: Use the same aqua active and hover state. */
-.projects-page .site-header .nav-links a:hover,
-.projects-page .site-header .nav-links a[aria-current="page"],
-.contact-page .site-header .nav-links a:hover,
-.contact-page .site-header .nav-links a[aria-current="page"] {
-    color: #168d9a;
-    background: rgba(85, 214, 217, 0.15);
-}
-
-
-/* =========================================================
-   *** UPDATED: SHARED FONTS
-   ========================================================= */
-
-/* *** Updated: Match the Home and CV body font. */
-.projects-page,
-.contact-page {
-    font-family: "Inter", sans-serif;
-}
-
-/* *** Updated: Match the Home and CV heading font. */
-.projects-page h1,
-.projects-page h2,
-.projects-page h3,
-.contact-page h1,
-.contact-page h2,
-.contact-page h3 {
-    font-family: "Space Grotesk", sans-serif;
-}
-
-/* *** Updated: Keep form controls consistent on Contact. */
-.contact-page input,
-.contact-page select,
-.contact-page textarea,
-.contact-page button {
-    font-family: "Inter", sans-serif;
-}
-
-
-/* =========================================================
-   *** UPDATED: SHARED HOMEPAGE FOOTER
-   ========================================================= */
-
-/* *** Updated: Give both pages the same full-width navy footer. */
-.projects-page > footer,
-.contact-page > footer,
-.projects-page .site-footer,
-.contact-page .site-footer {
-    width: 100%;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-
-    margin: 0;
-    padding: 30px 24px;
-
-    background-color: #172640;
-    color: #ffffff;
-
-    text-align: center;
-}
-
-/* *** Updated: Keep the footer brand centered. */
-.projects-page > footer .footer-brand,
-.contact-page > footer .footer-brand,
-.projects-page .site-footer .footer-brand,
-.contact-page .site-footer .footer-brand {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-    margin: 0;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-/* *** Updated: Keep the footer brand text aligned correctly. */
-.projects-page > footer .footer-brand > span:last-child,
-.contact-page > footer .footer-brand > span:last-child,
-.projects-page .site-footer .footer-brand > span:last-child,
-.contact-page .site-footer .footer-brand > span:last-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    color: #ffffff;
-    text-align: left;
-}
-
-/* *** Updated: Match the footer subtitle aqua colour. */
-.projects-page > footer .footer-brand small,
-.contact-page > footer .footer-brand small,
-.projects-page .site-footer .footer-brand small,
-.contact-page .site-footer .footer-brand small {
-    display: block;
-    color: #a9eee7;
-}
-
-/* *** Updated: Give the footer symbol the shared aqua background. */
-.projects-page > footer .footer-brand .brand-mark,
-.contact-page > footer .footer-brand .brand-mark,
-.projects-page .site-footer .brand-mark,
-.contact-page .site-footer .brand-mark {
-    display: grid;
-    place-items: center;
-
-    width: 39px;
-    height: 39px;
-    flex-shrink: 0;
-
-    background: #a9eee7;
-    color: #172640;
-    border: 0;
-    border-radius: 13px;
-
-    box-shadow: none;
-}
-
-/* *** Updated: Make footer paragraphs white. */
-.projects-page > footer p,
-.contact-page > footer p,
-.projects-page .site-footer p,
-.contact-page .site-footer p {
-    color: #ffffff;
-}
-
-/* *** Updated: Keep footer link groups centered and responsive. */
-.projects-page > footer .footer-links,
-.contact-page > footer .footer-links,
-.projects-page .site-footer .footer-links,
-.contact-page .site-footer .footer-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-
-    margin: 0;
-}
-
-/* *** Updated: Match the shared footer link colours. */
-.projects-page > footer .footer-links a,
-.contact-page > footer .footer-links a,
-.projects-page .site-footer .footer-links a,
-.contact-page .site-footer .footer-links a {
-    color: #ffffff;
-    font-size: 13px;
-    text-decoration: none;
-
-    transition: color 0.2s ease;
-}
-
-/* *** Updated: Use aqua for footer link hover. */
-.projects-page > footer .footer-links a:hover,
-.contact-page > footer .footer-links a:hover,
-.projects-page .site-footer .footer-links a:hover,
-.contact-page .site-footer .footer-links a:hover {
-    color: #a9eee7;
-}
-
-/* *** Updated: Standardise footer copyright styling. */
-.projects-page > footer .copyright,
-.contact-page > footer .copyright,
-.projects-page .site-footer .copyright,
-.contact-page .site-footer .copyright {
-    width: 100%;
-    box-sizing: border-box;
-
-    margin-top: 8px;
-    padding-top: 18px;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
-
-    color: #ffffff;
-    font-size: 12px;
-    text-align: center;
-}
-
-
