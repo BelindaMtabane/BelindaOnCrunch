@@ -24,8 +24,8 @@ const showcaseVideos = [
       "Environmental storytelling"
     ],
 
-    // *** Replace this with your actual YouTube or video URL.
-    videoUrl: "https://youtube.com/playlist?list=PLXWg0O5uyjRA&si=I2mM0mkZd080uY7l",
+    // *** Replace this with your actual video or playlist URL.
+    videoUrl: "https://youtu.be/lZ7PN-mgPag?si=OukfhZGtozUWF5hU",
 
     
   },
@@ -34,7 +34,7 @@ const showcaseVideos = [
     title: "The Grove Meadows",
     category: "games",
     categoryLabel: "Game Development",
-    symbol: "✦",
+    symbol: "🌳",
     thumbnailText: "DEFEND THE GROVE",
 
     description:
@@ -46,11 +46,39 @@ const showcaseVideos = [
       "Tower-defence systems"
     ],
 
-    // *** Replace this with your actual YouTube or video URL.
-    videoUrl: "https://youtube.com/playlist?list=PLXWg0O5uyjRA&si=I2mM0mkZd080uY7l",
+    // *** Replace this with the actual video or playlist URL.
+    videoUrl: "https://youtu.be/8zs7T26HlO8?si=C5IiZL5cafEG8TlC",
+
+    // *** Add a thumbnail URL here, or leave empty.
+    thumbnailUrl: ""
   },
 
-  
+  {
+    // *** Fiscal Flow is now included as the third showcase card.
+    title: "Fiscal Flow",
+    category: "apps",
+    categoryLabel: "Application Development",
+    symbol: "💰",
+    thumbnailText: "TAKE CONTROL OF YOUR FINANCES",
+
+    description:
+      "Explore Fiscal Flow, a budgeting and finance application designed to help users organise their finances, track expenses and understand their spending through a user-friendly digital experience.",
+
+    demonstrates: [
+      "Android development",
+      "Kotlin",
+      "User interface design",
+      "Budgeting features"
+    ],
+
+    // *** Replace this with your actual Fiscal Flow demo URL.
+    // Leave empty until you have a working video link.
+    videoUrl: "https://youtu.be/Yg5snHO7Fbg",
+
+    
+  }
+];
+
 /* =========================================================
    ELEMENT REFERENCES
    ========================================================= */
@@ -75,8 +103,10 @@ function createVideoCard(video) {
   thumbnail.className = "video-thumbnail";
   thumbnail.setAttribute("aria-label", `Watch ${video.title}`);
 
-  // *** Only make the thumbnail clickable if a real URL exists.
-  if (video.videoUrl.trim()) {
+  // *** Safely check whether a video URL exists.
+  const hasVideo = Boolean(video.videoUrl?.trim());
+
+  if (hasVideo) {
     thumbnail.href = video.videoUrl;
     thumbnail.target = "_blank";
     thumbnail.rel = "noopener noreferrer";
@@ -87,7 +117,8 @@ function createVideoCard(video) {
   }
 
   // *** Use a supplied thumbnail image when available.
-  if (video.thumbnailUrl.trim()) {
+  // *** Optional chaining prevents errors when the image URL is empty.
+  if (video.thumbnailUrl?.trim()) {
     thumbnail.style.backgroundImage =
       `linear-gradient(rgba(32,34,60,.12), rgba(32,34,60,.12)), url("${video.thumbnailUrl}")`;
 
@@ -106,7 +137,7 @@ function createVideoCard(video) {
 
   const playOverlay = document.createElement("span");
   playOverlay.className = "play-overlay";
-  playOverlay.textContent = "▶";
+  playOverlay.textContent = hasVideo ? "▶" : "＋";
   playOverlay.setAttribute("aria-hidden", "true");
 
   thumbnail.append(thumbnailArt, thumbnailCaption, playOverlay);
@@ -139,25 +170,27 @@ function createVideoCard(video) {
     skills.appendChild(skillTag);
   });
 
-  // *** Provide a useful message when the URL has not been added.
+  // *** Create the video or project link.
   const watchLink = document.createElement("a");
   watchLink.className = "watch-link";
 
-  if (video.videoUrl.trim()) {
+  if (hasVideo) {
     watchLink.href = video.videoUrl;
     watchLink.target = "_blank";
     watchLink.rel = "noopener noreferrer";
-    watchLink.innerHTML = "Watch video <span aria-hidden=\"true\">↗</span>";
+    watchLink.innerHTML =
+      'Watch video <span aria-hidden="true">↗</span>';
   } else {
+    // *** Keep Fiscal Flow visible even before a demo is available.
     watchLink.href = "#";
     watchLink.classList.add("is-disabled");
     watchLink.setAttribute("aria-disabled", "true");
-    watchLink.textContent = "Add video link to activate";
+    watchLink.textContent = "Project showcase coming soon";
   }
 
-  // *** Prevent empty links from jumping to the top of the page.
+  // *** Prevent inactive links from jumping to the top of the page.
   [thumbnail, watchLink].forEach((link) => {
-    if (!video.videoUrl.trim()) {
+    if (!hasVideo) {
       link.addEventListener("click", (event) => {
         event.preventDefault();
       });
@@ -184,6 +217,10 @@ function createVideoCard(video) {
 
 function renderShowcase(filter = "all") {
   if (!videoGrid || !collectionCount) {
+    // *** Stop safely if the expected HTML elements are missing.
+    console.warn(
+      "Showcase could not load: check video-grid and collection-count in showcase.html."
+    );
     return;
   }
 
@@ -203,12 +240,12 @@ function renderShowcase(filter = "all") {
   collectionCount.textContent =
     `${String(count).padStart(2, "0")} ${label}`;
 
-  // *** Show a message if no videos match the selected category.
+  // *** Show a message if no projects match the selected category.
   if (count === 0) {
     const emptyMessage = document.createElement("p");
     emptyMessage.className = "video-note";
     emptyMessage.textContent =
-      "No videos are available in this category yet.";
+      "No showcases are available in this category yet.";
 
     videoGrid.appendChild(emptyMessage);
   }
@@ -233,7 +270,7 @@ filterButtons.forEach((button) => {
       );
     });
 
-    // *** Render only videos matching the selected category.
+    // *** Render only projects matching the selected category.
     renderShowcase(selectedFilter);
   });
 
@@ -248,4 +285,6 @@ filterButtons.forEach((button) => {
    INITIALISE THE PAGE
    ========================================================= */
 
+// *** Display all three projects when the page first loads.
 renderShowcase("all");
+
