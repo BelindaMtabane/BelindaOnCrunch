@@ -25,10 +25,9 @@ const showcaseVideos = [
     ],
 
     // *** Replace this with your actual YouTube or video URL.
-    videoUrl: "",
+    videoUrl: "https://youtube.com/playlist?list=PLXWg0O5uyjRA&si=I2mM0mkZd080uY7l",
 
-    // *** Optional: add a thumbnail image URL.
-    thumbnailUrl: ""
+    
   },
 
   {
@@ -48,36 +47,10 @@ const showcaseVideos = [
     ],
 
     // *** Replace this with your actual YouTube or video URL.
-    videoUrl: "",
-
-    // *** Optional: add a thumbnail image URL.
-    thumbnailUrl: ""
+    videoUrl: "https://youtube.com/playlist?list=PLXWg0O5uyjRA&si=I2mM0mkZd080uY7l",
   },
 
-  {
-    title: "Lumi Melody",
-    category: "animation",
-    categoryLabel: "Animation & AI Video",
-    symbol: "♫",
-    thumbnailText: "STORIES THAT INSPIRE",
-
-    description:
-      "Explore a children's storytelling project featuring Naledi and her friends. The creative direction combines AI-assisted visuals, music and positive stories that encourage kindness and character development.",
-
-    demonstrates: [
-      "AI-assisted video",
-      "Visual storytelling",
-      "Creative direction"
-    ],
-
-    // *** Replace this with your actual YouTube or video URL.
-    videoUrl: "",
-
-    // *** Optional: add a thumbnail image URL.
-    thumbnailUrl: ""
-  }
-];
-
+  
 /* =========================================================
    ELEMENT REFERENCES
    ========================================================= */
