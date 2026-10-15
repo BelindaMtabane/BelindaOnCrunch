@@ -61,13 +61,93 @@
 
 /* =========================================================
    SHARED HEADER
-   *** Intentionally keeps the existing header structure.
+   *** Brand first, navigation underneath.
    ========================================================= */
 
 .contact-page .site-header {
   position: relative;
   z-index: 10;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(251, 250, 246, 0.96);
+  border: 0;
+  box-shadow: none;
+}
+
+.contact-page .site-header .navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.contact-page .site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  color: var(--contact-navy);
+  text-decoration: none;
+}
+
+.contact-page .site-header .brand-mark {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 auto;
+  border-radius: 13px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #45cfd2, #a99aff);
+  box-shadow: 0 8px 24px rgba(90, 181, 201, 0.25);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.contact-page .site-header .brand small {
+  display: block;
+  margin-top: 3px;
+  color: var(--contact-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-page .site-header .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.contact-page .site-header .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 13px;
+  border-radius: 30px;
+  color: #62677b;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-page .site-header .nav-links a:hover,
+.contact-page .site-header .nav-links a[aria-current="page"] {
+  color: #168d9a;
+  background: rgba(85, 214, 217, 0.15);
+}
+
+.contact-page .site-header .nav-links a[aria-current="page"] {
+  font-weight: 700;
 }
 
 /* =========================================================
