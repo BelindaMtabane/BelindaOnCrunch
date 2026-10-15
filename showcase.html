@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +96,6 @@
         <div class="art-orbit orbit-one"></div>
         <div class="art-orbit orbit-two"></div>
         <div class="art-orbit orbit-three"></div>
-
         <div class="art-glow"></div>
 
         <div class="art-panel panel-back">
@@ -130,8 +130,145 @@
       </p>
     </section>
 
+    <!-- FEATURED PROJECT IMAGE GALLERY -->
+    <section
+      class="featured-showcases section-container"
+      id="featured-projects"
+    >
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MY CREATIVE WORLDS</p>
+          <h2>Featured projects</h2>
+          <p class="section-description">
+            Three ideas. Three different worlds. One creative journey.
+          </p>
+        </div>
+
+        <span class="collection-count">03 PROJECTS</span>
+      </div>
+
+      <div class="featured-showcase-grid">
+
+        <!-- PROJECT 1: DROP BY DROP -->
+        <article class="featured-showcase-card">
+
+          <a
+            class="featured-image-link"
+            href="projects.html"
+            aria-label="Explore Drop by Drop: Flow of Hope"
+          >
+            <img
+              class="featured-showcase-image"
+              src="assets/images/drop-by-drop-cover.jpg"
+              alt="Drop by Drop: Flow of Hope game cover"
+              loading="lazy"
+            >
+
+            <span class="featured-image-label">
+              GAME DEVELOPMENT
+            </span>
+          </a>
+
+          <div class="featured-showcase-content">
+            <p class="eyebrow">UNITY • SDG 6</p>
+
+            <h3>💧 Drop by Drop: Flow of Hope</h3>
+
+            <p>
+              Join Zuri on an adventure about water scarcity, resource
+              management and restoring hope to her community.
+            </p>
+
+            <a class="showcase-text-link" href="projects.html">
+              Explore the project →
+            </a>
+          </div>
+
+        </article>
+
+        <!-- PROJECT 2: THE GROVE MEADOWS -->
+        <article class="featured-showcase-card">
+
+          <a
+            class="featured-image-link"
+            href="projects.html"
+            aria-label="Explore The Grove Meadows"
+          >
+            <img
+              class="featured-showcase-image"
+              src="assets/images/grove-meadows-cover.jpg"
+              alt="The Grove Meadows fantasy tower defence game cover"
+              loading="lazy"
+            >
+
+            <span class="featured-image-label">
+              UNREAL ENGINE
+            </span>
+          </a>
+
+          <div class="featured-showcase-content">
+            <p class="eyebrow">C++ • BLUEPRINTS</p>
+
+            <h3>🌲 The Grove Meadows</h3>
+
+            <p>
+              Defend a magical forest in a fantasy tower defence game
+              featuring enemy waves, strategic placement and combat systems.
+            </p>
+
+            <a class="showcase-text-link" href="projects.html">
+              Explore the project →
+            </a>
+          </div>
+
+        </article>
+
+        <!-- PROJECT 3: FISCAL FLOW -->
+        <article class="featured-showcase-card">
+
+          <a
+            class="featured-image-link"
+            href="projects.html"
+            aria-label="Explore Fiscal Flow"
+          >
+            <img
+              class="featured-showcase-image"
+              src="assets/images/fiscal-flow-cover.jpg"
+              alt="Fiscal Flow application cover"
+              loading="lazy"
+            >
+
+            <span class="featured-image-label">
+              APP DEVELOPMENT
+            </span>
+          </a>
+
+          <div class="featured-showcase-content">
+            <p class="eyebrow">PLANNING • ORGANISATION</p>
+
+            <h3>📊 Fiscal Flow</h3>
+
+            <p>
+              Explore my application project and its approach to organising
+              information through a practical digital experience.
+            </p>
+
+            <a class="showcase-text-link" href="projects.html">
+              Explore the project →
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
     <!-- VIDEO LIBRARY -->
-    <section class="video-library section-container" id="video-library">
+    <section
+      class="video-library section-container"
+      id="video-library"
+    >
 
       <div class="section-heading">
         <div>
@@ -147,32 +284,51 @@
         </span>
       </div>
 
-      <!-- Category filters are populated and controlled by JavaScript -->
-      <div class="showcase-filters" aria-label="Filter showcase videos">
-        <button class="filter-button active" data-filter="all" type="button">
+      <!-- Category filters are controlled by showcase.js -->
+      <div
+        class="showcase-filters"
+        aria-label="Filter showcase videos"
+      >
+        <button
+          class="filter-button active"
+          data-filter="all"
+          type="button"
+        >
           All work
         </button>
 
-        <button class="filter-button" data-filter="games" type="button">
+        <button
+          class="filter-button"
+          data-filter="games"
+          type="button"
+        >
           Game development
         </button>
 
-        <button class="filter-button" data-filter="animation" type="button">
+        <button
+          class="filter-button"
+          data-filter="animation"
+          type="button"
+        >
           Animation &amp; AI video
         </button>
 
-        <button class="filter-button" data-filter="process" type="button">
+        <button
+          class="filter-button"
+          data-filter="process"
+          type="button"
+        >
           Creative process
         </button>
       </div>
 
       <div class="video-grid" id="video-grid" aria-live="polite">
-        <!-- JavaScript creates the video cards here. -->
+        <!-- Video cards are generated by showcase.js -->
       </div>
 
       <p class="video-note">
-        Video links and previews will become active when the actual
-        video URLs are added to showcase.js.
+        Video previews depend on the video URLs and thumbnail paths
+        configured in showcase.js.
       </p>
 
     </section>
@@ -184,6 +340,7 @@
         <div class="process-heading">
           <p class="eyebrow">THE WORK BEHIND THE WORK</p>
           <h2>From the first idea to the final frame.</h2>
+
           <p>
             I combine creative thinking, technical problem-solving and
             experimentation to build interactive and visual experiences.
@@ -226,6 +383,7 @@
 
         <div class="tools-strip">
           <span class="tools-label">TOOLS &amp; TECHNOLOGIES</span>
+
           <div class="tools-list">
             <span>Unity</span>
             <span>Unreal Engine</span>
@@ -241,16 +399,21 @@
 
     <!-- CALL TO ACTION -->
     <section class="showcase-cta section-container">
+
       <div class="cta-content">
         <p class="eyebrow">HAVE AN IDEA?</p>
         <h2>Let's create something meaningful.</h2>
+
         <p>
           Interested in a project, collaboration or creative experiment?
           I'd love to hear what you're imagining.
         </p>
 
         <div class="hero-actions">
-          <a class="showcase-button primary-button" href="contact.html">
+          <a
+            class="showcase-button primary-button"
+            href="contact.html"
+          >
             Let's connect <span aria-hidden="true">↗</span>
           </a>
 
@@ -267,42 +430,46 @@
         <span>=</span>
         <span>IMPACT</span>
       </div>
+
     </section>
 
   </main>
 
-  
-<!-- SHARED WEBSITE FOOTER -->
-<footer class="site-footer">
-  <div class="footer-content">
+  <!-- SHARED WEBSITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
 
-    <div class="footer-brand">
-      <a class="brand footer-logo" href="index.html">
-        <span class="brand-mark">B</span>
-        <span>
-          BELINDA ON CRUNCH
-          <small>GAME &amp; APP DEVELOPMENT</small>
-        </span>
-      </a>
+      <div class="footer-brand">
+        <a class="brand footer-logo" href="index.html">
+          <span class="brand-mark">B</span>
+          <span>
+            BELINDA ON CRUNCH
+            <small>GAME &amp; APP DEVELOPMENT</small>
+          </span>
+        </a>
 
-      <p>Thoughtfully built. Boldly imagined.</p>
+        <p>Thoughtfully built. Boldly imagined.</p>
+      </div>
+
+      <div class="footer-links">
+        <a
+          href="https://github.com/BelindaMtabane"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub ↗
+        </a>
+
+        <a href="contact.html">Contact</a>
+        <a href="cv.html">CV</a>
+      </div>
+
+      <p class="footer-copyright">
+        © 2026 Belinda Mtabane. All rights reserved.
+      </p>
+
     </div>
-
-    <div class="footer-links">
-      <a href="https://github.com/BelindaMtabane"
-         target="_blank"
-         rel="noopener noreferrer">GitHub ↗</a>
-      <a href="contact.html">Contact</a>
-      <a href="cv.html">CV</a>
-    </div>
-
-    <p class="footer-copyright">
-      © 2026 Belinda Mtabane. All rights reserved.
-    </p>
-
-  </div>
-</footer>
-
+  </footer>
 
 </body>
 </html>
