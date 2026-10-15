@@ -1,4 +1,3 @@
-
 /* =========================================================
    BELINDA ON CRUNCH — CONTACT PAGE
    *** Centres the Contact page content.
@@ -61,7 +60,7 @@
 
 /* =========================================================
    SHARED HEADER
-   *** Brand first, navigation underneath.
+   *** Changed: branding and navigation sit side by side.
    ========================================================= */
 
 .contact-page .site-header {
@@ -76,11 +75,12 @@
 }
 
 .contact-page .site-header .navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 16px;
+  display: flex; /* *** */
+  flex-direction: row; /* *** */
+  align-items: center; /* *** */
+  justify-content: space-between; /* *** */
+  flex-wrap: wrap; /* *** */
+  gap: 18px 28px; /* *** */
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
   padding: 20px 0;
@@ -121,22 +121,24 @@
 .contact-page .site-header .nav-links {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end; /* *** */
   flex-wrap: wrap;
-  gap: 8px;
-  width: 100%;
+  gap: 5px; /* *** */
+  width: auto; /* *** */
+  margin-left: auto; /* *** */
 }
 
 .contact-page .site-header .nav-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 9px 13px;
+  padding: 9px 11px; /* *** */
   border-radius: 30px;
   color: #62677b;
-  font-size: 14px;
+  font-size: 13px; /* *** */
   font-weight: 500;
   text-decoration: none;
+  white-space: nowrap; /* *** */
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -160,7 +162,7 @@
   width: 100%;
   min-height: 0;
   margin: 0;
-  padding: clamp(65px, 9vw, 110px) 24px 75px;
+  padding: clamp(65px, 7vw, 90px) 24px 65px; /* *** Slightly tighter spacing */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -440,12 +442,12 @@
 .contact-page .contact-main {
   width: 100%;
   margin: 0;
-  padding: clamp(65px, 8vw, 95px) 24px;
+  padding: clamp(60px, 7vw, 80px) 24px; /* *** Reduced excess space */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 35px;
+  gap: 28px; /* *** Brings section elements closer together */
   background: #ffffff;
   text-align: center;
   scroll-margin-top: 30px;
@@ -455,7 +457,7 @@
 
 .contact-page .contact-details {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px; /* *** More room for the contact cards */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -487,7 +489,7 @@
 .contact-page .contact-muted {
   width: 100%;
   max-width: 660px;
-  margin: 0 auto 35px;
+  margin: 0 auto 28px; /* *** Closer to the contact cards */
   color: var(--contact-muted);
   font-size: 0.96rem;
   line-height: 1.9;
@@ -496,26 +498,26 @@
 
 /* =========================================================
    CONTACT CARDS
-   *** Three equal cards centred inside the content width.
+   *** Expanded cards with more room for Email, GitHub and LinkedIn.
    ========================================================= */
 
 .contact-page .contact-methods {
   width: 100%;
-  max-width: 850px;
+  max-width: 1000px; /* *** Expanded from 850px */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   justify-content: center;
-  gap: 20px;
+  gap: 24px; /* *** Extra spacing between wider cards */
   text-align: center;
 }
 
 .contact-page .contact-method {
   min-width: 0;
-  min-height: 205px;
+  min-height: 225px; /* *** Taller cards */
   margin: 0;
-  padding: 25px 18px;
+  padding: 30px 24px; /* *** More internal space */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -619,7 +621,7 @@
 .contact-page .contact-availability {
   width: 100%;
   max-width: 750px;
-  margin: 32px auto 0;
+  margin: 24px auto 0; /* *** Closer to the contact cards */
   padding: 25px 28px;
   display: flex;
   align-items: center;
@@ -862,6 +864,16 @@
    ========================================================= */
 
 @media (max-width: 800px) {
+  /* *** Allow the header navigation to wrap neatly on smaller screens. */
+  .contact-page .site-header .navigation {
+    gap: 15px;
+  }
+
+  .contact-page .site-header .nav-links {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
   .contact-page .contact-hero {
     padding: 65px 24px;
   }
@@ -871,7 +883,7 @@
   }
 
   .contact-page .contact-methods {
-    max-width: 600px;
+    max-width: 700px; /* *** Wider tablet cards */
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
@@ -892,6 +904,26 @@
    ========================================================= */
 
 @media (max-width: 520px) {
+  /* *** Stack brand and navigation on narrow screens to prevent overflow. */
+  .contact-page .site-header .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    width: calc(100% - 32px);
+    padding: 16px 0;
+  }
+
+  .contact-page .site-header .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  .contact-page .site-header .nav-links a {
+    padding: 8px 9px;
+    font-size: 12px;
+  }
+
   .contact-page .contact-hero {
     padding: 55px 20px 60px;
   }
