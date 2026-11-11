@@ -4,14 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#22283D">
-  <meta name="description" content="Belinda Mtabane's creative portfolio featuring game development, app development, interactive systems and creative technology.">
-  <title>Belinda On Crunch | Developer Portfolio</title>
+  <meta name="theme-color" content="#17172B">
+  <meta name="description" content="Belinda Mtabane — Creative technologist, AI explorer, digital artist and game developer creating imaginative digital experiences.">
+  <meta name="author" content="Belinda Mtabane">
+
+  <title>Belinda on Crunch | Creative Technology & Digital Art</title>
 
   <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="home-page">
@@ -19,48 +23,135 @@
   <!-- HEADER -->
   <header class="site-header">
     <nav class="navigation" aria-label="Main navigation">
+
       <a class="brand" href="index.html" aria-label="Belinda on Crunch home">
         <span class="brand-mark">B</span>
-        <span>BELINDA ON CRUNCH<small>GAME &amp; APP DEVELOPMENT</small></span>
+        <span>
+          BELINDA ON CRUNCH
+          <small>CREATIVE TECHNOLOGY & DIGITAL ART</small>
+        </span>
       </a>
 
-      <div class="nav-links">
+      <!-- *** Added responsive mobile navigation button -->
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="primary-navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="projects.html">Projects</a>
         <a href="showcase.html">Showcase</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-         <!-- *** Removed: CV navigation link. -->
       </div>
+
     </nav>
   </header>
 
   <main class="home-main">
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero home-hero" id="home">
+
+      <!-- *** Decorative artistic background -->
+      <div class="hero-art-background" aria-hidden="true">
+        <div class="art-orb art-orb-one"></div>
+        <div class="art-orb art-orb-two"></div>
+        <div class="art-orb art-orb-three"></div>
+        <div class="art-ring"></div>
+      </div>
 
       <div class="hero-content home-hero-content">
 
         <div class="home-intro-label">
           <span class="availability-dot"></span>
-          CREATIVE TECHNOLOGY · GAME DEVELOPMENT
+          CREATIVE TECHNOLOGY · DIGITAL ART · GAME DEVELOPMENT
         </div>
 
-        <p class="eyebrow">JUNIOR GAME DEVELOPER &amp; APP DEVELOPER</p>
+        <p class="eyebrow">WELCOME TO MY CREATIVE WORLD</p>
 
         <h1>
           Thoughtfully built.<br>
           <span class="gradient-text">Boldly imagined.</span>
         </h1>
-<!-- DEVELOPER PROFILE AREA -->
+
+        <p class="hero-description">
+          I'm Belinda, a creative technology enthusiast exploring the
+          intersection of artificial intelligence, digital art,
+          game development and interactive experiences.
+
+          I turn imaginative ideas into digital creations through
+          experimentation, design and code.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="button" href="projects.html">
+            Explore my work <span>↗</span>
+          </a>
+
+          <a class="button button-secondary" href="about.html">
+            Learn about me <span>↗</span>
+          </a>
+
+        </div>
+
+        <div class="hero-tags">
+          <span>Creative AI</span>
+          <span>Digital Art</span>
+          <span>Unity</span>
+          <span>Unreal Engine</span>
+          <span>C#</span>
+        </div>
+
+        <!-- CREATIVE PROFILE STATS -->
+        <div class="home-quick-stats">
+
+          <div class="quick-stat">
+            <span class="quick-stat-icon">✧</span>
+            <span>
+              <strong>Creative</strong>
+              <small>Visual exploration</small>
+            </span>
+          </div>
+
+          <div class="quick-stat">
+            <span class="quick-stat-icon">{ }</span>
+            <span>
+              <strong>Technical</strong>
+              <small>Code and systems</small>
+            </span>
+          </div>
+
+          <div class="quick-stat">
+            <span class="quick-stat-icon">↗</span>
+            <span>
+              <strong>Innovative</strong>
+              <small>Ideas into experiences</small>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- DEVELOPER PROFILE -->
       <div class="home-visual-stage">
 
-        <!-- PROFILE CARD: PRESERVED -->
-        <aside class="developer-panel home-profile-card" aria-label="Developer introduction">
+        <aside class="developer-panel home-profile-card"
+          aria-label="Creative profile">
 
           <div class="panel-top">
-            <span>DEVELOPER PROFILE</span>
+            <span>CREATIVE PROFILE</span>
+
             <span class="panel-indicator">
               <span class="availability-dot"></span>
               PORTFOLIO
@@ -68,12 +159,13 @@
           </div>
 
           <div class="avatar-placeholder home-avatar">
+
             <div class="avatar-glow" aria-hidden="true"></div>
 
             <img
               class="profile-image"
               src="assets/images/belinda-portrait.png"
-              alt="Portrait of Belinda, game developer"
+              alt="Portrait of Belinda Mtabane"
             >
 
             <div class="orbit orbit-one" aria-hidden="true"></div>
@@ -81,29 +173,30 @@
 
             <span class="avatar-sparkle sparkle-one" aria-hidden="true">✦</span>
             <span class="avatar-sparkle sparkle-two" aria-hidden="true">✧</span>
+
           </div>
 
           <div class="profile-heading">
             <p class="profile-kicker">HELLO, I'M</p>
             <h2>Belinda Mtabane</h2>
-            <p>Game development student. Creative thinker. Always learning.</p>
+            <p>Creative thinker. Developer. AI explorer. Always creating.</p>
           </div>
 
           <div class="panel-divider"></div>
 
           <div class="profile-row">
             <span>Focus</span>
-            <strong>Interactive experiences</strong>
+            <strong>Creative technology</strong>
           </div>
 
           <div class="profile-row">
-            <span>Game engines</span>
+            <span>Development</span>
             <strong>Unity &amp; Unreal Engine</strong>
           </div>
 
           <div class="profile-row">
-            <span>Approach</span>
-            <strong>Build, test, improve</strong>
+            <span>Creative tools</span>
+            <strong>AI &amp; digital design</strong>
           </div>
 
           <div class="profile-note">
@@ -129,12 +222,20 @@
 
       <div class="home-intro-copy">
         <p class="eyebrow">A LITTLE ABOUT MY WORK</p>
-        <h2>Where creativity meets <span class="accent">technology.</span></h2>
+
+        <h2>
+          Where creativity meets
+          <span class="accent">technology.</span>
+        </h2>
+
         <p>
-          I enjoy exploring how code, design and imagination come together
-          to create useful applications and engaging interactive experiences.
-          Every project gives me an opportunity to experiment, solve problems
-          and develop new skills.
+          I explore how artificial intelligence, code, visual design
+          and imagination can come together to create meaningful
+          digital experiences.
+
+          From interactive games and applications to AI-assisted
+          artwork and storytelling, I enjoy experimenting with
+          new ways to bring ideas to life.
         </p>
       </div>
 
@@ -143,69 +244,18 @@
       </a>
 
     </section>
-        <p class="hero-description">
-          I'm a game development student exploring gameplay programming,
-          interactive systems, app development and creative problem-solving.
-          I turn ideas into interactive experiences through curiosity,
-          experimentation and a genuine love for building things.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button" href="projects.html">
-            Explore my work <span>↗</span>
-          </a>
-
-          <a class="button button-secondary" href="about.html">
-            Learn About Me <span>↗</span>
-          </a>
-        </div>
-
-        <div class="hero-tags">
-          <span>Unity</span>
-          <span>Unreal Engine</span>
-          <span>C#</span>
-          <span>Kotlin</span>
-        </div>
-
-        <!-- TECHNOLOGY STATUS PANELS -->
-        <div class="home-quick-stats">
-
-          <div class="quick-stat">
-            <span class="quick-stat-icon">✧</span>
-            <span>
-              <strong>Creative</strong>
-              <small>Problem solving</small>
-            </span>
-          </div>
-
-          <div class="quick-stat">
-            <span class="quick-stat-icon">{ }</span>
-            <span>
-              <strong>Technical</strong>
-              <small>Code and systems</small>
-            </span>
-          </div>
-
-          <div class="quick-stat">
-            <span class="quick-stat-icon">↗</span>
-            <span>
-              <strong>Growing</strong>
-              <small>Every project</small>
-            </span>
-          </div>
-
-        </div>
-      </div>
-
-
-    </section>
 
     <!-- FEATURED PROJECTS -->
     <section class="section projects-section" id="projects">
 
       <div class="section-heading home-section-heading">
         <p class="eyebrow">SELECTED WORK · 01</p>
-        <h2>Projects I've <span class="accent">worked on.</span></h2>
+
+        <h2>
+          Projects I've
+          <span class="accent">worked on.</span>
+        </h2>
+
         <p>
           A selection of game and app development projects,
           showcasing my learning, contributions and technical growth.
@@ -218,14 +268,17 @@
         <article class="project-card water-card home-project-card">
 
           <div class="project-visual visual-water">
+
             <img
               class="project-image"
               src="assets/images/drop-by-drop-cover.jpg"
               alt="Drop by Drop: Flow of Hope game"
               loading="lazy"
             >
+
             <span class="visual-caption">FLOW OF HOPE</span>
             <span class="project-image-number">01</span>
+
           </div>
 
           <div class="project-content">
@@ -238,8 +291,9 @@
             <h3>Drop by Drop: Flow of Hope</h3>
 
             <p>
-              An educational runner inspired by UN Sustainable Development
-              Goal 6, exploring clean water and sanitation through gameplay.
+              An educational runner inspired by UN Sustainable
+              Development Goal 6, exploring clean water and sanitation
+              through gameplay.
             </p>
 
             <div class="project-tags">
@@ -248,7 +302,6 @@
               <span>UI &amp; Tutorial</span>
             </div>
 
-            <!-- *** Opens the Drop by Drop project details page. -->
             <a class="project-link" href="projects/drop-by-drop.html">
               Explore project <span>↗</span>
             </a>
@@ -260,14 +313,17 @@
         <article class="project-card finance-card home-project-card">
 
           <div class="project-visual visual-finance">
+
             <img
               class="project-image"
               src="assets/images/fiscal-flow-cover.jpg"
               alt="Fiscal Flow financial app"
               loading="lazy"
             >
+
             <span class="visual-caption">FISCAL FLOW</span>
             <span class="project-image-number">02</span>
+
           </div>
 
           <div class="project-content">
@@ -290,7 +346,6 @@
               <span>Team Collaboration</span>
             </div>
 
-            <!-- *** Opens the Fiscal Flow project details page. -->
             <a class="project-link" href="projects/fiscal-flow.html">
               Explore project <span>↗</span>
             </a>
@@ -302,14 +357,17 @@
         <article class="project-card forest-card home-project-card">
 
           <div class="project-visual visual-forest">
+
             <img
               class="project-image"
               src="assets/images/grove-meadows-cover.jpg"
               alt="The Grove Meadows tower defence game"
               loading="lazy"
             >
+
             <span class="visual-caption">THE GROVE MEADOWS</span>
             <span class="project-image-number">03</span>
+
           </div>
 
           <div class="project-content">
@@ -322,8 +380,8 @@
             <h3>The Grove Meadows</h3>
 
             <p>
-              A fantasy forest tower defence game exploring enemy behaviour,
-              defender combat, wave spawning and strategic gameplay.
+              A fantasy forest tower defence game exploring enemy
+              behaviour, defender combat, wave spawning and strategic gameplay.
             </p>
 
             <div class="project-tags">
@@ -332,7 +390,6 @@
               <span>Wave Spawning</span>
             </div>
 
-            <!-- *** Opens The Grove Meadows project details page. -->
             <a class="project-link" href="projects/grove-meadows.html">
               Explore project <span>↗</span>
             </a>
@@ -356,11 +413,16 @@
       <div class="section home-process-inner">
 
         <div class="section-heading home-section-heading">
-          <p class="eyebrow">HOW I APPROACH DEVELOPMENT · 02</p>
-          <h2>Ideas become real <span class="accent">one step at a time.</span></h2>
+          <p class="eyebrow">HOW I APPROACH CREATIVITY · 02</p>
+
+          <h2>
+            Ideas become real
+            <span class="accent">one step at a time.</span>
+          </h2>
+
           <p>
-            I approach development as a process of learning,
-            experimentation and improvement.
+            I approach creativity and development as a process
+            of learning, experimentation and improvement.
           </p>
         </div>
 
@@ -371,18 +433,18 @@
             <div class="process-icon">✧</div>
             <h3>Imagine</h3>
             <p>
-              Start with an idea, explore possibilities and think about
-              the experience I want to create.
+              Start with an idea, explore possibilities and think
+              about the experience I want to create.
             </p>
           </article>
 
           <article class="home-process-card">
             <span class="process-number">02</span>
             <div class="process-icon">{ }</div>
-            <h3>Build</h3>
+            <h3>Create</h3>
             <p>
               Turn ideas into working systems using programming,
-              design tools and creative problem-solving.
+              AI tools, design and creative problem-solving.
             </p>
           </article>
 
@@ -391,12 +453,13 @@
             <div class="process-icon">↻</div>
             <h3>Improve</h3>
             <p>
-              Test what works, learn from challenges and refine
-              the experience through iteration.
+              Experiment, test what works, learn from challenges
+              and refine every experience.
             </p>
           </article>
 
         </div>
+
       </div>
 
     </section>
@@ -405,11 +468,16 @@
     <section class="section skills-section" id="skills">
 
       <div class="section-heading home-section-heading">
-        <p class="eyebrow">TECHNICAL TOOLKIT · 03</p>
-        <h2>Learning through <span class="accent">making.</span></h2>
+        <p class="eyebrow">MY CREATIVE TOOLKIT · 03</p>
+
+        <h2>
+          Learning through
+          <span class="accent">making.</span>
+        </h2>
+
         <p>
-          Technologies and development areas I've explored through
-          coursework, personal projects and collaborative work.
+          Technologies and creative development areas I've explored
+          through coursework, personal projects and experimentation.
         </p>
       </div>
 
@@ -438,9 +506,9 @@
 
         <article class="skill-card home-skill-card">
           <span class="skill-icon">✧</span>
-          <h3>Creative Tools</h3>
-          <p>Blender · Git &amp; GitHub</p>
-          <span class="skill-card-detail">3D workflows &amp; collaboration</span>
+          <h3>Creative Technology</h3>
+          <p>AI · Blender · GitHub</p>
+          <span class="skill-card-detail">Digital art &amp; experimentation</span>
         </article>
 
       </div>
@@ -453,13 +521,45 @@
 
     </section>
 
+    <!-- CREATIVE AI FEATURE -->
+    <section class="section creative-feature-section">
+
+      <div class="creative-feature-art" aria-hidden="true">
+        <span class="creative-feature-shape shape-one"></span>
+        <span class="creative-feature-shape shape-two"></span>
+        <span class="creative-feature-shape shape-three"></span>
+      </div>
+
+      <div class="creative-feature-content">
+        <p class="eyebrow">EXPERIMENT · EXPLORE · CREATE</p>
+
+        <h2>
+          Creativity has
+          <span class="gradient-text">no boundaries.</span>
+        </h2>
+
+        <p>
+          I'm fascinated by how AI and emerging creative technologies
+          can open new possibilities for art, storytelling, design
+          and interactive experiences.
+        </p>
+
+        <a class="button" href="showcase.html">
+          Enter my showcase <span>↗</span>
+        </a>
+      </div>
+
+    </section>
+
     <!-- CLOSING CALL TO ACTION -->
     <section class="home-closing-section">
 
       <div class="home-closing-glow" aria-hidden="true"></div>
 
       <div class="home-closing-content">
+
         <span class="closing-sparkle" aria-hidden="true">✦</span>
+
         <p class="eyebrow">THANK YOU FOR VISITING</p>
 
         <h2>
@@ -469,10 +569,11 @@
 
         <p>
           I'm continuing to learn, experiment and create.
-          Take a look at my projects or get in touch to connect.
+          Explore my projects or get in touch to connect.
         </p>
 
         <div class="hero-actions closing-actions">
+
           <a class="button" href="projects.html">
             Explore my projects <span>↗</span>
           </a>
@@ -480,7 +581,9 @@
           <a class="button button-secondary" href="contact.html">
             Get in touch <span>↗</span>
           </a>
+
         </div>
+
       </div>
 
     </section>
@@ -492,17 +595,25 @@
 
     <div class="footer-content">
 
-      <a class="brand footer-brand" href="index.html" aria-label="Belinda on Crunch home">
+      <a class="brand footer-brand" href="index.html"
+        aria-label="Belinda on Crunch home">
+
         <span class="brand-mark">B</span>
-        <span>BELINDA ON CRUNCH<small>GAME &amp; APP DEVELOPMENT</small></span>
+
+        <span>
+          BELINDA ON CRUNCH
+          <small>CREATIVE TECHNOLOGY & DIGITAL ART</small>
+        </span>
+
       </a>
 
       <p>Thoughtfully built. Boldly imagined.</p>
 
       <div class="footer-links">
-        <a href="https://github.com/BelindaMtabane" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://github.com/BelindaMtabane"
+          target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
         <a href="contact.html">Contact</a>
-        <!-- *** Removed: CV footer link. -->
       </div>
 
       <p class="copyright">
@@ -512,6 +623,9 @@
     </div>
 
   </footer>
+
+  <!-- *** MOBILE NAVIGATION SCRIPT -->
+  <script src="script.js"></script>
 
 </body>
 </html>
