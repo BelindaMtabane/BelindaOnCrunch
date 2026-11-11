@@ -9,7 +9,7 @@
 const CV_PASSWORD = "BelindasCV2026*";
 
 // *** Replace this with your actual PDF filename.
-const CV_PDF_PATH = "Belinda Mtabane - Undergraduate 2026 - CV Resume (2).pdf";
+const CV_PDF_PATH = "assets/Belinda Mtabane - Undergraduate 2026 - CV Resume (2).pdf";
 
 // *** Ten-minute access session.
 const CV_ACCESS_DURATION = 10 * 60 * 1000;
