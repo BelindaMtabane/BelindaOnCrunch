@@ -18,16 +18,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- *** Keep the existing password-protection JavaScript. -->
+    <!-- *** Keep the CV access JavaScript. -->
     <script src="cv.js" defer></script>
 </head>
 
 <body class="cv-page">
 
-
     <!-- NAVIGATION -->
-   
-    <!-- *** Updated: Use the shared Home page header and navigation. -->
     <header class="site-header">
         <nav class="navigation" aria-label="Main navigation">
 
@@ -50,6 +47,9 @@
 
         </nav>
     </header>
+
+    <!-- *** Added: Main content wrapper. -->
+    <main class="cv-main">
 
         <!-- INTRODUCTION -->
         <section class="cv-heading">
@@ -83,10 +83,7 @@
 
             <div class="document-topline">
                 <div>
-                    <span class="document-kicker">
-                        PRIVATE DOCUMENT
-                    </span>
-
+                    <span class="document-kicker">PRIVATE DOCUMENT</span>
                     <h2 id="cv-document-title">Curriculum Vitae</h2>
                 </div>
 
@@ -96,7 +93,7 @@
                 </span>
             </div>
 
-            <div class="cv-document-shell">
+            <div class="cv-document-shell" id="cv-document-shell">
 
                 <!-- DECORATIVE PREVIEW: NOT THE ACTUAL CV PDF -->
                 <div class="cv-placeholder-preview" id="cv-placeholder-preview" aria-hidden="true">
@@ -176,9 +173,7 @@
                             </svg>
                         </div>
 
-                        <span class="gate-eyebrow">
-                            PRIVATE ACCESS
-                        </span>
+                        <span class="gate-eyebrow">PRIVATE ACCESS</span>
 
                         <h2>Unlock my CV.</h2>
 
@@ -189,9 +184,7 @@
 
                         <form id="cv-access-form">
 
-                            <label for="cv-password">
-                                CV password
-                            </label>
+                            <label for="cv-password">CV password</label>
 
                             <div class="password-input-wrap">
                                 <input
@@ -199,7 +192,7 @@
                                     id="cv-password"
                                     name="password"
                                     placeholder="Enter your password"
-                                    autocomplete="current-password"
+                                    autocomplete="off"
                                     required
                                 >
 
@@ -234,7 +227,7 @@
 
                         <div class="secure-note">
                             <span aria-hidden="true">✦</span>
-                            Protected access · Secure document
+                            Private viewing · 10-minute access
                         </div>
 
                     </div>
@@ -244,7 +237,7 @@
                 <div class="cv-pdf-container" id="cv-pdf-container" hidden>
                     <iframe
                         id="cv-pdf-viewer"
-                        title="Belinda Mtabane's protected CV"
+                        title="Belinda Mtabane's CV"
                         loading="lazy"
                     ></iframe>
                 </div>
@@ -253,9 +246,17 @@
 
             <!-- DOCUMENT CONTROLS -->
             <div class="cv-viewer-controls" id="cv-viewer-controls" hidden>
+
                 <div class="access-granted">
                     <span class="status-dot" aria-hidden="true"></span>
-                    Access granted
+                    <span>Access granted</span>
+                </div>
+
+                <!-- *** Added: Ten-minute countdown. -->
+                <div class="cv-session-timer" id="cv-session-timer" aria-live="off">
+                    <span aria-hidden="true">◷</span>
+                    <span id="cv-countdown">10:00</span>
+                    <span>remaining</span>
                 </div>
 
                 <button
@@ -263,8 +264,10 @@
                     class="cv-lock-button"
                     id="cv-lock-button"
                 >
+                    <span aria-hidden="true">🔒</span>
                     Lock CV
                 </button>
+
             </div>
 
         </section>
@@ -319,5 +322,4 @@
 
 </body>
 </html>
-
 
