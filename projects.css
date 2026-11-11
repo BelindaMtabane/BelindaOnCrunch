@@ -1122,3 +1122,145 @@ a {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================================
+   *** NEW PROJECT 04: TINY DETECTIVE
+   Comic cyberpunk visual direction
+   ========================================================= */
+
+.index-detective {
+  background: linear-gradient(135deg, #e9ddff, #d8e9ff);
+}
+
+.index-detective .index-icon {
+  filter: drop-shadow(0 3px 5px rgba(115, 75, 190, 0.2));
+}
+
+.index-detective .index-arrow {
+  color: #7851c9;
+}
+
+.case-detective {
+  background: #f5f0ff;
+  border-top-color: #ded2ff;
+}
+
+.case-detective .detail-card {
+  border-color: #e3d9fa;
+}
+
+.case-detective .challenge-mark {
+  background: #e9ddff;
+  color: #7951c9;
+}
+
+.text-cyber {
+  background: linear-gradient(100deg, #8654df, #d34eaa, #398fbd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.case-detective .mini-highlight {
+  background: #eee6ff;
+}
+
+.case-detective .highlight-icon {
+  background: #d7c5ff;
+}
+
+.case-detective .feature-list li::marker {
+  color: #8956d5;
+}
+
+.case-detective .tags span {
+  background: #f1eaff;
+  border-color: #dfd0ff;
+}
+
+
+/* =========================================================
+   *** NEW PROJECT 05: MEMORY MAYHEM
+   Royal purple and gold visual direction
+   ========================================================= */
+
+.index-kingdom {
+  background: linear-gradient(135deg, #fff0c9, #f1e2ff);
+}
+
+.index-kingdom .index-icon {
+  filter: drop-shadow(0 3px 5px rgba(180, 135, 50, 0.2));
+}
+
+.index-kingdom .index-arrow {
+  color: #98702b;
+}
+
+.case-kingdom {
+  background: #fff9ed;
+  border-top-color: #efdfbd;
+}
+
+.case-kingdom .detail-card {
+  border-color: #eee0c4;
+}
+
+.case-kingdom .challenge-mark {
+  background: #fff0cf;
+  color: #98702b;
+}
+
+.text-gold {
+  background: linear-gradient(100deg, #a97828, #d6a84d, #9361b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.case-kingdom .mini-highlight {
+  background: #fff2d9;
+}
+
+.case-kingdom .highlight-icon {
+  background: #f5d99e;
+}
+
+.case-kingdom .feature-list li::marker {
+  color: #b28a3d;
+}
+
+.case-kingdom .tags span {
+  background: #fff5e2;
+  border-color: #eddfc2;
+}
+
+
+/* =========================================================
+   *** UPDATED PROJECT INDEX RESPONSIVENESS
+   Five projects instead of three
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .index-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .index-card:last-child {
+    grid-column: auto;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .index-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .index-card:last-child {
+    grid-column: auto;
+  }
+
+}
+
