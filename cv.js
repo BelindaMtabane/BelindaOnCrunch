@@ -1,13 +1,23 @@
 
-// ==========================================
-// BELINDA ON CRUNCH — CV ACCESS
-// ==========================================
+/* ==========================================
+   BELINDA ON CRUNCH — CV ACCESS
+   ========================================== */
 
-// *** Configure this after deploying your Supabase Edge Function.
+/* *** Configure your CV access settings here. */
 
-const CV_UNLOCK_ENDPOINT =
-    "https://apclgxwjhweoftzkppyi.supabase.co/functions/v1/unlock-cv";
+// *** Replace this with your own password.
+const CV_PASSWORD = "YOUR_CV_PASSWORD";
 
+// *** Replace this with your actual PDF filename.
+const CV_PDF_PATH = "Belinda_CV.pdf";
+
+// *** Ten-minute access session.
+const CV_ACCESS_DURATION = 10 * 60 * 1000;
+
+
+/* ==========================================
+   HTML ELEMENTS
+   ========================================== */
 
 const form = document.getElementById("cv-access-form");
 const passwordInput = document.getElementById("cv-password");
@@ -23,9 +33,27 @@ const pdfViewer = document.getElementById("cv-pdf-viewer");
 const viewerControls = document.getElementById("cv-viewer-controls");
 const lockButton = document.getElementById("cv-lock-button");
 
-let accessExpiryTimer = null;
+// *** Added: Countdown elements.
+const countdownDisplay = document.getElementById("cv-countdown");
+const sessionTimer = document.getElementById("cv-session-timer");
 
-// *** Added: Display accessible status and error messages.
+
+/* ==========================================
+   SESSION VARIABLES
+   ========================================== */
+
+// *** Added: Track the access expiry time.
+let accessExpiryTime = null;
+
+// *** Added: Store the countdown interval.
+let countdownInterval = null;
+
+
+/* ==========================================
+   FEEDBACK
+   ========================================== */
+
+// *** Display success and error messages.
 function showFeedback(message, type = "error") {
     feedback.textContent = message;
     feedback.className = "cv-feedback";
@@ -35,92 +63,171 @@ function showFeedback(message, type = "error") {
     }
 }
 
-// *** Added: Disable the submit button while the server checks the password.
+
+/* ==========================================
+   BUTTON LOADING STATE
+   ========================================== */
+
+// *** Added: Manage the unlock button state.
 function setLoading(isLoading) {
     unlockButton.disabled = isLoading;
     passwordInput.disabled = isLoading;
-    buttonText.textContent = isLoading ? "Verifying access..." : "Unlock my CV";
+
+    buttonText.textContent = isLoading
+        ? "Unlocking..."
+        : "Unlock CV";
 }
 
-// *** Added: Ask the server to verify the password.
-// The password is sent over HTTPS and is never stored in this script.
-form.addEventListener("submit", async (event) => {
+
+/* ==========================================
+   COUNTDOWN DISPLAY
+   ========================================== */
+
+// *** Added: Format remaining time as MM:SS.
+function formatCountdown(milliseconds) {
+    const totalSeconds = Math.max(
+        0,
+        Math.ceil(milliseconds / 1000)
+    );
+
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+
+    return (
+        String(minutes).padStart(2, "0") +
+        ":" +
+        String(seconds).padStart(2, "0")
+    );
+}
+
+
+// *** Added: Update the visible countdown.
+function updateCountdown() {
+
+    if (accessExpiryTime === null) {
+        return;
+    }
+
+    const remainingTime = accessExpiryTime - Date.now();
+
+    // *** Automatically lock the CV when time expires.
+    if (remainingTime <= 0) {
+        lockDocument(
+            "Your 10-minute access session has expired. Enter your password again."
+        );
+
+        return;
+    }
+
+    countdownDisplay.textContent = formatCountdown(remainingTime);
+
+    // *** Warn the visitor when less than one minute remains.
+    if (remainingTime <= 60 * 1000) {
+        sessionTimer.classList.add("expiring");
+    } else {
+        sessionTimer.classList.remove("expiring");
+    }
+}
+
+
+/* ==========================================
+   START ACCESS SESSION
+   ========================================== */
+
+// *** Added: Start the ten-minute access countdown.
+function startAccessSession() {
+
+    // *** Clear any previous countdown.
+    clearInterval(countdownInterval);
+
+    // *** Calculate the exact expiry time.
+    accessExpiryTime = Date.now() + CV_ACCESS_DURATION;
+
+    // *** Display the initial countdown.
+    countdownDisplay.textContent = "10:00";
+
+    // *** Remove any previous warning styling.
+    sessionTimer.classList.remove("expiring");
+
+    // *** Update the countdown every 250 milliseconds.
+    countdownInterval = setInterval(() => {
+        updateCountdown();
+    }, 250);
+}
+
+
+/* ==========================================
+   UNLOCK CV
+   ========================================== */
+
+form.addEventListener("submit", (event) => {
+
     event.preventDefault();
 
-    const password = passwordInput.value;
+    const enteredPassword = passwordInput.value;
 
-    if (!password) {
+    // *** Check that a password was entered.
+    if (!enteredPassword.trim()) {
         showFeedback("Please enter your access password.");
         passwordInput.focus();
         return;
     }
 
-    if (CV_UNLOCK_ENDPOINT.includes("YOUR_PROJECT_REF")) {
+    // *** Check that the password placeholder was replaced.
+    if (CV_PASSWORD === "YOUR_CV_PASSWORD") {
         showFeedback(
-            "Secure access is not configured yet. Please finish the backend setup."
+            "Please configure your CV password in cv.js first."
         );
+
         return;
     }
 
+    // *** Verify the entered password.
+    if (enteredPassword !== CV_PASSWORD) {
+
+        showFeedback(
+            "That password is incorrect. Please try again."
+        );
+
+        passwordInput.value = "";
+        passwordInput.focus();
+
+        return;
+    }
+
+    // *** Start loading state.
     setLoading(true);
     showFeedback("");
 
     try {
-        const response = await fetch(CV_UNLOCK_ENDPOINT, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ password })
-        });
 
-        const result = await response.json().catch(() => ({}));
+        // *** Load the actual CV PDF.
+        pdfViewer.src = CV_PDF_PATH;
 
-        if (!response.ok) {
-            if (response.status === 429) {
-                throw new Error(
-                    "Too many attempts. Please wait before trying again."
-                );
-            }
-
-            if (response.status === 401) {
-                throw new Error("That password is incorrect. Please try again.");
-            }
-
-            throw new Error(
-                result.error || "Access could not be verified. Please try again."
-            );
-        }
-
-        // *** Security: Only accept the authorised HTTPS document URL.
-        if (
-            typeof result.signedUrl !== "string" ||
-            !result.signedUrl.startsWith("https://")
-        ) {
-            throw new Error("The server did not return a valid document link.");
-        }
-
-        // *** Added: Load the real PDF only after server authorisation.
-        pdfViewer.src = result.signedUrl;
+        // *** Show the PDF viewer.
         pdfContainer.hidden = false;
+
+        // *** Remove the password overlay.
         gateOverlay.hidden = true;
+
+        // *** Hide the decorative CV preview.
         placeholderPreview.hidden = true;
+
+        // *** Show the document controls.
         viewerControls.hidden = false;
 
+        // *** Clear the password field.
         passwordInput.value = "";
-        showFeedback("", "success");
 
-        // *** Added: Clear the viewer when the signed link is expected to expire.
-        clearTimeout(accessExpiryTimer);
+        // *** Reset password visibility.
+        passwordInput.type = "password";
+        togglePasswordButton.textContent = "Show";
+        togglePasswordButton.setAttribute("aria-pressed", "false");
 
-        const expiresInSeconds = Number(result.expiresIn) || 600;
+        // *** Start the ten-minute countdown.
+        startAccessSession();
 
-        accessExpiryTimer = setTimeout(() => {
-            lockDocument(
-                "Your access session has expired. Enter the password again."
-            );
-        }, Math.max(1, expiresInSeconds - 10) * 1000);
-
+        // *** Scroll to the document.
         document.getElementById("cv-document-shell").scrollIntoView({
             behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
                 ? "auto"
@@ -129,51 +236,128 @@ form.addEventListener("submit", async (event) => {
         });
 
     } catch (error) {
+
+        // *** Display an error if the unlock process fails.
         showFeedback(
-            error.message || "Something went wrong. Please try again."
+            "Something went wrong while opening your CV. Please try again."
         );
+
     } finally {
+
+        // *** Restore the button state.
         setLoading(false);
     }
 });
 
-// *** Added: Toggle password visibility.
+
+/* ==========================================
+   SHOW / HIDE PASSWORD
+   ========================================== */
+
+// *** Toggle password visibility.
 togglePasswordButton.addEventListener("click", () => {
+
     const isPassword = passwordInput.type === "password";
 
     passwordInput.type = isPassword ? "text" : "password";
-    togglePasswordButton.textContent = isPassword ? "Hide" : "Show";
+
+    togglePasswordButton.textContent = isPassword
+        ? "Hide"
+        : "Show";
+
+    togglePasswordButton.setAttribute(
+        "aria-pressed",
+        String(isPassword)
+    );
+
     togglePasswordButton.setAttribute(
         "aria-label",
         isPassword ? "Hide password" : "Show password"
     );
 });
 
-// *** Added: Remove the PDF from the viewer when the visitor locks the page.
-// This removes the displayed document; it cannot revoke a URL already copied.
-function lockDocument(message = "") {
-    clearTimeout(accessExpiryTimer);
 
+/* ==========================================
+   LOCK CV
+   ========================================== */
+
+// *** Remove the PDF from the viewer and restore the overlay.
+function lockDocument(message = "") {
+
+    // *** Stop the countdown.
+    clearInterval(countdownInterval);
+    countdownInterval = null;
+
+    // *** Reset the expiry time.
+    accessExpiryTime = null;
+
+    // *** Remove the PDF from the iframe.
     pdfViewer.removeAttribute("src");
+
+    // *** Hide the PDF viewer.
     pdfContainer.hidden = true;
+
+    // *** Restore the password overlay.
     gateOverlay.hidden = false;
+
+    // *** Restore the decorative preview.
     placeholderPreview.hidden = false;
+
+    // *** Hide the viewer controls.
     viewerControls.hidden = true;
 
+    // *** Reset the countdown.
+    countdownDisplay.textContent = "10:00";
+
+    // *** Remove the expiry warning.
+    sessionTimer.classList.remove("expiring");
+
+    // *** Clear the password field.
     passwordInput.value = "";
+
+    // *** Restore password visibility.
+    passwordInput.type = "password";
+    togglePasswordButton.textContent = "Show";
+    togglePasswordButton.setAttribute("aria-pressed", "false");
+
+    // *** Restore the button state.
+    setLoading(false);
+
+    // *** Display the locking message.
     showFeedback(message);
 
+    // *** Return focus to the password field.
     passwordInput.focus({ preventScroll: true });
 }
 
+
+/* ==========================================
+   MANUAL LOCK BUTTON
+   ========================================== */
+
+// *** Allow visitors to lock their CV immediately.
 lockButton.addEventListener("click", () => {
-    lockDocument("The document is locked. Enter the password to view it again.");
+
+    lockDocument(
+        "Your CV is now locked. Enter the password to view it again."
+    );
+
 });
 
-// *** Added: Lock the visible document when this page is hidden.
-// This is a privacy convenience, not a substitute for server security.
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden && !pdfContainer.hidden) {
-        lockDocument("The document was locked when you left this page.");
-    }
-});
+
+/* ==========================================
+   INITIAL PAGE STATE
+   ========================================== */
+
+// *** Always start with the CV locked after a page load.
+pdfViewer.removeAttribute("src");
+
+pdfContainer.hidden = true;
+gateOverlay.hidden = false;
+placeholderPreview.hidden = false;
+viewerControls.hidden = true;
+
+countdownDisplay.textContent = "10:00";
+sessionTimer.classList.remove("expiring");
+
+// *** The visitor must enter the password again after refreshing.
