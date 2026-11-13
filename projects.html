@@ -156,7 +156,14 @@
     <span class="index-subtitle">HTML · CSS · JavaScript · Memory game</span>
     <span class="index-arrow">Explore project ↗</span>
   </a>
-
+<!-- PROJECT 06: MAYAH'S BEAUTY -->
+<a class="index-card index-kingdom" href="#mayahs-beauty">
+  <span class="index-number">06</span>
+  <span class="index-icon">💄</span>
+  <span class="index-title">Mayah's Beauty & Spa</span>
+  <span class="index-subtitle">Wix · Web Design · Beauty & Wellness</span>
+  <span class="index-arrow">Explore project ↗</span>
+</a>
       </div>
      
     </section>
@@ -1353,7 +1360,151 @@
   </div>
 
 </section>
+<!-- =====================================================
+<!-- PROJECT 06: MAYAH'S BEAUTY -->
+ ===================================================== -->
 
+<section class="case-study" id="mayahs-beauty">
+
+  <div class="case-topline">
+    <span class="project-count">PROJECT 06</span>
+    <span class="project-category">BUSINESS WEBSITE</span>
+  </div>
+
+  <div class="case-heading">
+    <div class="case-title-wrap">
+      <p class="eyebrow">WIX · WEB DESIGN · BUSINESS BRANDING</p>
+
+      <h2>
+        Mayah's Beauty
+        <br>
+        <span class="text-aqua">& Spa.</span>
+      </h2>
+
+      <p class="case-lead">
+        A beauty and wellness website designed to establish
+        an online presence for Mayah's Beauty & Spa. The website
+        introduces the brand and provides visitors with a
+        convenient way to explore its beauty services.
+      </p>
+    </div>
+
+    <div class="project-buttons">
+
+      <a class="button button-dark"
+         href="https://mayahsbeautyandspa.wixsite.com/mayah"
+         target="_blank"
+         rel="noopener noreferrer">
+        Visit Website <span aria-hidden="true">↗</span>
+      </a>
+
+      <button class="button button-dark"
+              type="button"
+              onclick="toggleProjectLinks('mayah-links', this)"
+              aria-expanded="false">
+        Explore Links ↓
+      </button>
+
+    </div>
+  </div>
+
+  <!-- EXTRA PROJECT LINKS -->
+  <div class="project-links-panel" id="mayah-links" hidden>
+    <p class="eyebrow">EXPLORE THIS PROJECT</p>
+
+    <a href="https://mayahsbeautyandspa.wixsite.com/mayah"
+       target="_blank" rel="noopener noreferrer">
+      Live Website ↗
+    </a>
+  </div>
+
+  <!-- PROJECT DETAILS -->
+  <div class="details-grid">
+
+    <article class="detail-card detail-overview">
+      <p class="eyebrow">01 / OVERVIEW</p>
+      <h3>Building a digital beauty brand.</h3>
+
+      <p>
+        Mayah's Beauty & Spa is a business website created
+        to give a beauty and wellness brand an online presence.
+        It provides a digital point of contact where potential
+        customers can discover the business and its offerings.
+      </p>
+
+      <div class="mini-highlight">
+        <span class="highlight-icon">✦</span>
+        <div>
+          <strong>Project objective</strong>
+          <p>
+            Create an accessible online platform that presents
+            the beauty brand professionally and makes it easier
+            for customers to discover its services.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="detail-card">
+      <p class="eyebrow">02 / FEATURES</p>
+      <h3>Website features.</h3>
+
+      <ul class="feature-list">
+        <li>Business-focused website presentation.</li>
+        <li>Beauty and wellness brand identity.</li>
+        <li>Online information for potential customers.</li>
+        <li>Website navigation and content organisation.</li>
+        <li>Accessible online business presence.</li>
+      </ul>
+    </article>
+
+    <article class="detail-card">
+      <p class="eyebrow">03 / DESIGN APPROACH</p>
+      <h3>Creating a professional experience.</h3>
+
+      <div class="challenge-item">
+        <span class="challenge-mark">A</span>
+        <div>
+          <h4>Brand presentation</h4>
+          <p>
+            Focus on presenting the business and its beauty
+            and wellness identity through a dedicated website.
+          </p>
+        </div>
+      </div>
+
+      <div class="challenge-item">
+        <span class="challenge-mark">B</span>
+        <div>
+          <h4>Information organisation</h4>
+          <p>
+            Structure website content so visitors can
+            discover relevant business information.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="detail-card">
+      <p class="eyebrow">04 / REFLECTION</p>
+      <h3>What I learned.</h3>
+
+      <p>
+        This project demonstrates how web design can support
+        a real business by creating an online identity and
+        making information available to potential customers.
+      </p>
+
+      <div class="tags">
+        <span>Wix</span>
+        <span>Web Design</span>
+        <span>Branding</span>
+        <span>UI Design</span>
+      </div>
+    </article>
+
+  </div>
+</section>
     <!-- =====================================================
          CONTACT CALL TO ACTION
          ===================================================== -->
@@ -1419,6 +1570,35 @@
       yearElement.textContent = new Date().getFullYear();
     }
   </script>
+ 
+// *** PROJECT LINKS DROPDOWN FUNCTIONALITY ***
 
+function toggleProjectLinks(panelId, button) {
+
+  const panel = document.getElementById(panelId);
+
+  if (!panel) return;
+
+  const isOpening = panel.hidden;
+
+  // *** Close all other project link panels
+  document.querySelectorAll('.project-links-panel').forEach(item => {
+    item.hidden = true;
+  });
+
+  // *** Reset all project buttons
+  document.querySelectorAll('.project-buttons button').forEach(item => {
+    item.setAttribute('aria-expanded', 'false');
+    item.textContent = 'Explore Links ↓';
+  });
+
+  // *** Toggle selected panel
+  if (isOpening) {
+    panel.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+    button.textContent = 'Close Links ↑';
+  }
+
+}
 </body>
 </html>
