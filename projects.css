@@ -1261,6 +1261,27 @@ a {
   .index-card:last-child {
     grid-column: auto;
   }
+/* *** PROJECT LINKS BUTTONS */
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
 
+.project-buttons .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-buttons .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 180, 190, 0.2);
+}
 }
 
