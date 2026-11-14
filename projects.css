@@ -1283,5 +1283,55 @@ a {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 180, 190, 0.2);
 }
+   
+/* *** PROJECT 07: LUMI'S MELODY */
+
+.case-lumi {
+    position: relative;
+}
+
+/* *** Lumi's Melody project accent */
+.case-lumi .eyebrow {
+    color: #36bfc5;
+}
+
+.case-lumi .case-title {
+    color: #e8fbff;
+}
+
+/* *** Gallery image */
+.case-lumi .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.case-lumi .gallery-image-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.case-lumi .gallery-image-link:hover .gallery-image {
+    transform: scale(1.03);
+}
+
+/* *** Highlight panel */
+.case-lumi .mini-highlight {
+    padding: 18px;
+    margin-top: 18px;
+    border-left: 3px solid #36bfc5;
+    border-radius: 10px;
+    background: rgba(54, 191, 197, 0.08);
+}
+
+/* *** Project tags */
+.case-lumi .tags span {
+    border-color: rgba(54, 191, 197, 0.35);
+}
+
 }
 
