@@ -1284,22 +1284,29 @@ a {
     box-shadow: 0 8px 20px rgba(0, 180, 190, 0.2);
 }
    
-/* *** PROJECT 07: LUMI'S MELODY */
+
+/* =====================================================
+   PROJECT 07: LUMI'S MELODY
+   ===================================================== */
 
 .case-lumi {
     position: relative;
 }
 
-/* *** Lumi's Melody project accent */
+/* *** PROJECT ACCENT */
+
 .case-lumi .eyebrow {
-    color: #36bfc5;
+    color: #65dcd5;
 }
 
-.case-lumi .case-title {
-    color: #e8fbff;
+/* *** PROJECT HEADING */
+
+.case-lumi h2 .text-aqua {
+    color: #65dcd5;
 }
 
-/* *** Gallery image */
+/* *** GALLERY */
+
 .case-lumi .gallery-image {
     width: 100%;
     height: auto;
@@ -1319,19 +1326,52 @@ a {
     transform: scale(1.03);
 }
 
-/* *** Highlight panel */
+/* *** CORE OBJECTIVE */
+
 .case-lumi .mini-highlight {
-    padding: 18px;
-    margin-top: 18px;
-    border-left: 3px solid #36bfc5;
+    border-left: 3px solid #65dcd5;
+    background: rgba(101, 220, 213, 0.08);
     border-radius: 10px;
-    background: rgba(54, 191, 197, 0.08);
+    padding: 18px;
 }
 
-/* *** Project tags */
+/* *** PROJECT TAGS */
+
 .case-lumi .tags span {
-    border-color: rgba(54, 191, 197, 0.35);
+    border-color: rgba(101, 220, 213, 0.35);
 }
+
+/* *** CHANNEL BUTTON */
+
+.case-lumi .project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.case-lumi .project-buttons .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* *** MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .case-lumi .project-buttons {
+        width: 100%;
+    }
+
+    .case-lumi .project-buttons .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
 
 }
 
